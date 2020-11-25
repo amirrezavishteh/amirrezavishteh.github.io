@@ -3,21 +3,22 @@ layout: posts
 title: My new picture
 ---
 
-## This is my team at Microsoft
-People in the picture are:
-- Arul
-- Fai
-- Scott
-- Me
+## Its my favorite university
+This is ***oxford***:
+- In **England**
+- 
+ 
+ 
 
 [my favorite website](http://www.google.com)
 
-kajsdlfk jsaldfkj saldkjflaskdjflaskjdlfkasjdlfkjasdl fjsad fkajsldkfjlaskdj flakjds fksad flaksj dlfkjads l
-kfajdskfajsdf sakd fjksad jfksdj fksdj f
+I love this **university**:
+- I hope to continue my studies at this university(**oxford**)
 
 
 
-![alt text](../assets/images/grouppic.jpg "Team Picture")
+
+![alt text](../assets/images/oxford.jpg "university Picture")
 
 ---
-**Test**: This is atest
+**oxsford**: is the **best**
