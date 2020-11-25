@@ -12,7 +12,7 @@ This is ***oxford***:
 
 [my favorite website](http://www.google.com)
 
-I love this **university**:
+I like this **university**:
 - I hope to continue my studies at this **oxford university**
 
 
