@@ -21,4 +21,4 @@ I love this **university**:
 ![alt text](../assets/images/oxford.jpg "university Picture")
 
 ---
-**oxsford**: is the **best**
+**oxsford**: is the best
