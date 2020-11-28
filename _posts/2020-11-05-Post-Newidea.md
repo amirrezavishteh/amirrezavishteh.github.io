@@ -16,7 +16,7 @@ I like this **university**:
 - I hope to continue my studies at this **oxford university**
 
 
-![alt text]({{amirrezavishteh.github.io}})/assert/images/oxford university.jpg "university)
+![alt text](../assert/images/oxford university.jpg "university")
 
 ![alt text](../assets/images/oxford.jpg "university Picture")
 
