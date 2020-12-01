@@ -9,6 +9,6 @@ comments: false
 ---
 
 
-* [BJJ](http://www.bjjheros.com/)
+* [football](http://https://www.livescore.in/no/)
 
 
