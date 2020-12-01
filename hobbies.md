@@ -9,6 +9,6 @@ comments: false
 ---
 
 
-* [football](http://https://www.livescore.in/no/)
+* [football](http://https://www.livescore.in/no)
 
 
