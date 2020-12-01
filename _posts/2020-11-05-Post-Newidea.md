@@ -2,7 +2,8 @@
 layout: posts
 title: My new picture
 ---
-
+# secret of sucsses 
+- make a plan and do it
 ## Its my favorite university
 This is ***oxford***:
 - In **England**

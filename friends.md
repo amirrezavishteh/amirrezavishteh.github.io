@@ -9,9 +9,10 @@ comments: true
 ---
 
 ### همکلاسی‌ها
-* علی حسینی 
-* بهداد محمدی
-
+* ghazavi
+* mirmohamdi
+* konteratchi
+* shahsavar
 
 
 
