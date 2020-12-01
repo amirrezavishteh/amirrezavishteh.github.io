@@ -3,13 +3,14 @@ layout: posts
 title: My new picture
 ---
 # secret of sucsses 
-- make a plan and do it
+- Make a plan and do it
+- Mr samavat told me to divide my time into 4 parts , which are lesson,rest,class,sleep and do my work at 4 to 8 o'clock.
 ## Its my favorite university
 This is ***oxford***:
 - In **England**
-- The best unniversity
-- this university is first inthe world
-- this university have best descoveries
+- The best unniversity.
+- this university is first inthe world.
+- this university have best descoveries.
 
 [my favorite website](http://www.google.com)
 [useful website](http://www.github.io)
@@ -22,4 +23,4 @@ I like this **university**:
 ![alt text](../assets/images/oxford.jpg "university Picture")
 
 ---
-**oxsford**: is the best
+**oxsford**
