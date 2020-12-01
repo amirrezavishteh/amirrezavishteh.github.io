@@ -9,6 +9,6 @@ comments: false
 ---
 
 
-* [football](http://https://www.livescore.in/no)
+* [football](https://ro.pinterest.com/ivladoi/fotball/)
 
 
