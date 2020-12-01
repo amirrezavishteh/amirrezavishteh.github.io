@@ -8,7 +8,7 @@ modified: 9-14-2019
 comments: false
 gallery:
   - url: /assets/images/oxford.jpg
-    image_path: /assets/images/1.jpg
+    image_path: /assets/images/oxford.jpg
     alt: "oxford image 1"
     title: "Image 1 title caption"
   - url: /assets/images/2.jpg
