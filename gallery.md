@@ -15,8 +15,8 @@ gallery:
     image_path: /assets/images/dog.jpg
     alt: "placeholder image 2"
     title: "Image 2 title caption"
-  - url: /assets/images/lobor1.jpg
-    image_path: /assets/images/lombor1.jpg
+  - url: /assets/images/lambor1.jpg
+    image_path: /assets/images/lambor1.jpg
     alt: "placeholder image 3"
     title: "Image 3 title caption"  
   - url: /assets/images/4.jpg
