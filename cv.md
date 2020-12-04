@@ -23,7 +23,7 @@ comments: false
 
 |     |    |**Education**                                                               |
 |-----|----|----------------------------------------------------------------------------------|
-|2008 |2016|  |**computer student**, study computer Computer, IUST, Tehran, Iran
+|2020 |2025|  |**computer student**, study computer Computer, IUST, Tehran, Iran
 |-----|----|----------------------------------------------------------------------------------|
 <!-- |2003 |2005| **MSc**, Electrical and Computer Engineering, Michigan State University, East Lansing, MI |
 |-----|----|----------------------------------------------------------------------------------|
