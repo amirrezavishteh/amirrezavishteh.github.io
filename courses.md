@@ -13,10 +13,10 @@ comments: false
 |----|------|--------------------------------|
 |2020|Fall  | **<a href="">Computer Programming Fundamentals</a>**         |
 |----|------|--------------------------------|
-|2019|Fall  | **<a href="/ds98/">english course</a>** |
+|2020|Fall  | **<a href="/ds98/">english course</a>** |
 |----|------|--------------------------------|
-|2019|Fall  | **<a href="">math</a>** |
-|2019|Fall  | **<a href="">andisheh eslamic</a>** |
+|2020|Fall  | **<a href="">math</a>** |
+|2020|Fall  | **<a href="">andisheh eslamic</a>** |
 
 <!-- |           | **Past**                       |
 |----|------|--------------------------------|
