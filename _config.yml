@@ -118,9 +118,9 @@ author:
   github: sauleh
   instagram: amirreza_v1
   links:
-    - label: "Email"
+    - label: "gmail"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      url: mailto: amireza.vishteh@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -135,7 +135,7 @@ author:
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/amirreza_v1"
+      url: "https://instagram.com/amirreza_v1"
     - label: "Calendly"
       icon: "fas fa-calendar-alt"
       url: "http://calendly.com/pourrang_atashi"
