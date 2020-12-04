@@ -25,4 +25,6 @@ comments: false
 |-----|----|----------------------------------------------------------------------------------|
 |2020 |2025|  |**computer student**, study computer Computer, IUST, Tehran, Iran
 |-----|----|----------------------------------------------------------------------------------|
-![alt text]({{amirrezavishteh.github.io}}/assets/images/oxford university.jpg "university")
+
+![alt text]({{amirrezavishteh.github.io}}/assets/images/iust.jpg "university")
+![alt text]({{amirrezavishteh.github.io}}/assets/images/iust2.jpg "university")
