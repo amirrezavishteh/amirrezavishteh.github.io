@@ -28,7 +28,7 @@ This is ***oxford***:
 I like this **university**:
 - I hope to continue my studies at this **Oxford University**
 
-![alt text]({{amirrezavishteh.github.io}}/assets/images/parsa Mr Parsa.jpg "He work at the Amazon")
+![alt text]({{amirrezavishteh.github.io}}/assets/images/Mr Parsa.jpg "He work at the Amazon")
 - Mr Parsa
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/oxford university.jpg "university")
 
