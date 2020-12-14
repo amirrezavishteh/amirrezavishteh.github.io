@@ -25,11 +25,11 @@ This is ***oxford***:
 
 [my favorite website](http://www.google.com)
 [useful website](http://www.github.io)
-I like this **university**:
+**oxfrd university** and **Mr parsa**:
 - I hope to continue my studies at this **Oxford University**
 
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/Parsa.jpg "He work at the Amazon")
-- Mr Parsa
+
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/oxford university.jpg "university")
 
 ![alt text](../assets/images/oxford.jpg "university Picture")
