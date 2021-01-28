@@ -11,7 +11,7 @@ gallery:
     image_path: /assets/images/oxford.jpg
     alt: "oxford image 1"
     title: "Image 1 title caption"
-  - url: /assets/images/dog.jpg
+  - url: /assets/images/mydog.jpg
     image_path: /assets/images/dog.jpg
     alt: "placeholder image 2"
     title: "Image 2 title caption"
