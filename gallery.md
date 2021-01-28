@@ -12,7 +12,7 @@ gallery:
     alt: "oxford image 1"
     title: "Image 1 title caption"
   - url: /assets/images/mydog.jpg
-    image_path: /assets/images/dog.jpg
+    image_path: /assets/images/mydog.jpg
     alt: "placeholder image 2"
     title: "Image 2 title caption"
   - url: /assets/images/lambor1.jpg
@@ -26,7 +26,8 @@ gallery:
   - url: /assets/images/beautiful.jpg
     image_path: /assets/images/beautiful.jpg
     alt: "placeholder image 5"
-    title: "Image 5 title caption"    
+    title: "Image 5 title caption"   
+  - url: /assets/images/nature.jpg 
     image_path: /assets/images/nature.jpg
     alt: "placeholder image 5"
     title: "Image 5 title caption"    
