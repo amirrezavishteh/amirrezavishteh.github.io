@@ -23,8 +23,11 @@ gallery:
     image_path: /assets/images/4.jpg
     alt: "placeholder image 4"
     title: "Image 4 title caption"
-  - url: /assets/images/5.jpg
+  - url: /assets/images/beautiful.jpg
     image_path: /assets/images/5.jpg
+    alt: "placeholder image 5"
+    title: "Image 5 title caption"    
+    image_path: /assets/images/nature.jpg
     alt: "placeholder image 5"
     title: "Image 5 title caption"    
 ---
