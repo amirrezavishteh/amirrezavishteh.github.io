@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: My new picture
+title: مصاحبه
 ---
 #  My works and wishes
 ## Success secret  
@@ -25,14 +25,9 @@ This is ***oxford***:
 
 [my favorite website](http://www.google.com)
 [useful website](http://www.github.io)
-**oxfrd university** and **Mr parsa**:
-- I hope to continue my studies at this **Oxford University**
+
 
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/parsa.jpg "He work at the Amazon")
-
-![alt text]({{amirrezavishteh.github.io}}/assets/images/oxford university.jpg "university")
-
-![alt text](../assets/images/oxford.jpg "university Picture")
 
 ---
 **Oxsford**
