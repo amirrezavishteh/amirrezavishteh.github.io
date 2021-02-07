@@ -6,8 +6,8 @@ title: Sonic pi
 
 ## My sonic pi project :
 
--. استlonley,fadded های دو اهنگ chord این موسیقی دارای 
-- 
+- های دو اهنگ chord این موسیقی دارای 
+- استlonley,fadded 
 - 
 
 
