@@ -13,7 +13,7 @@ title: Sonic pi
 . هم چنین عکسی از یکی از صفحه این برنامه به همراه کد های ساده ای در زیر امده است 
 </div>
 <audio controls>
-    <source src= "../assets/sonicpi.wav" type="audio/wav">
+    <source src= "../assets/sonic.wav" type="audio/wav">
 </audio>
 
 
