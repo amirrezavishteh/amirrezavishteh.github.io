@@ -12,7 +12,7 @@ title: Sonic pi
 . توانستم این اهنگ را بسازمliveloop ,sample دراین پوروژه بنده با کار بر روی 
 . هم چنین عکسی از یکی از صفحه این برنامه به همراه کد های ساده ای در زیر امده است 
 </div>
-<audio contoroles>
+<audio controls>
     <source src= "../assets/sonicpi.wav" type="audio/wav">
 </audio>
 
