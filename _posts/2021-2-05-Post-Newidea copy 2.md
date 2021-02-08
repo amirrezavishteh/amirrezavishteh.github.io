@@ -6,9 +6,14 @@ title: Sonic pi
 
 ## My sonic pi project :
 
-- های دو اهنگ chord این موسیقی دارای 
-- استlonley,fadded 
-- 
+<div dir="rtl">
+
+
+</div>
+<audio contoroles>
+    <source src= "../assets/sonicpi.wav" type="audio/wav">
+</audio>
+
 
 
 
