@@ -19,9 +19,9 @@ title: Sonic pi
 <audio controls>
     <source src= "../assets/sonic.wav" type="audio/wav">
 </audio>
-
-![alt text](../assets/images/sonic.jpg "sonic pi")
 <br>
+![alt text](../assets/images/sonic.jpg "sonic pi")
+
 
 ---
 
