@@ -7,9 +7,17 @@ tags: [Studying, courses]
 modified: 9-14-2019
 comments: false
 ---
-
-
 |           | **Current**                    |
+|----|------|--------------------------------|
+|2020|Fall  | **<a href="">Computer Advanced Programming</a>**         |
+|----|------|--------------------------------|
+|2020|Fall  | **<a href="/ds98/">history lesson</a>** |
+|----|------|--------------------------------|
+|2020|Fall  | **<a href="">Web Design</a>** |
+|2020|Fall  | **<a href="">math2</a>** |
+|2020|Fall  | **<a href="">andisheh eslamic2</a>** |
+
+|           | **Past**                       |
 |----|------|--------------------------------|
 |2020|Fall  | **<a href="">Computer Programming Fundamentals</a>**         |
 |----|------|--------------------------------|
