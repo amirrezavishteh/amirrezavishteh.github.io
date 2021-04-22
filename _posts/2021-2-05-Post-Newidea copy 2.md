@@ -20,7 +20,7 @@ title: Sonic pi
     <source src= "../assets/sonic.wav" type="audio/wav">
 </audio>
 </br>
-<br>
+
 <script>
 createjs.Sound.on("fileload", handleLoadComplete);
 createjs.Sound.alternateExtensions = ["mp3"];
@@ -29,7 +29,7 @@ function handleLoadComplete(event) {
 	createjs.Sound.play("sound");
 }
 </script>
-</br>
+
 ![alt text](../assets/images/sonic.jpg "sonic pi")
 
 
