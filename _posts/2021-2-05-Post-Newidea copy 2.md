@@ -19,7 +19,17 @@ title: Sonic pi
 <audio controls>
     <source src= "../assets/sonic.wav" type="audio/wav">
 </audio>
+</br>
 <br>
+<script>
+createjs.Sound.on("fileload", handleLoadComplete);
+createjs.Sound.alternateExtensions = ["mp3"];
+createjs.Sound.registerSound({src:"../assets/sonic.wav", id:"sonic"});
+function handleLoadComplete(event) {
+	createjs.Sound.play("sound");
+}
+</script>
+</br>
 ![alt text](../assets/images/sonic.jpg "sonic pi")
 
 
