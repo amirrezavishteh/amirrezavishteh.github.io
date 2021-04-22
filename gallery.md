@@ -40,5 +40,5 @@ gallery:
 </audio>
 <br>
 
-{% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE**." %}
+{% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE And Music**." %}
 
