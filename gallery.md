@@ -33,8 +33,9 @@ gallery:
     title: "Image 5 title caption"    
     
 ---
+<h1>Music</h1>
+![alt text]({{amirrezavishteh.github.io}}/assets/images/music.jpg "Welcome")
 <br>
-</div>
 <audio controls>
     <source src= "../assets/music.mp3" type="audio/mp3">
 </audio>
