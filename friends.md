@@ -9,6 +9,9 @@ comments: true
 ---
 
 ### همکلاسی‌ها
+* ghazavi
+* mirmohamdi
+* shahsavar
 
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/friends.jpg "hobbies")
 
