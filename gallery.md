@@ -20,7 +20,7 @@ gallery:
     alt: "placeholder image 3"
     title: "Image 3 title caption"  
   - url: /assets/images/4.jpg
-    image_path: /assets/images/4.jpg
+    image_path: /assets/images/3.jpg
     alt: "placeholder image 4"
     title: "Image 4 title caption"
   - url: /assets/images/beautiful.jpg
@@ -34,6 +34,7 @@ gallery:
     
 ---
 <h1>Music</h1>
+
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/music.jpg "Welcome")
 <br>
 <audio controls>
