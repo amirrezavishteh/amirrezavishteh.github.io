@@ -31,7 +31,14 @@ gallery:
     image_path: /assets/images/nature.jpg
     alt: "placeholder image 5"
     title: "Image 5 title caption"    
+    
 ---
+<br>
+</div>
+<audio controls>
+    <source src= "../assets/music.mp3" type="audio/mp3">
+</audio>
+<br>
 
 {% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE**." %}
 
