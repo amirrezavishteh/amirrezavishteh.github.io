@@ -9,10 +9,6 @@ comments: true
 ---
 
 ### همکلاسی‌ها
-* ghazavi
-* mirmohamdi
-* konteratchi
-* shahsavar
 
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/friends.jpg "hobbies")
 
