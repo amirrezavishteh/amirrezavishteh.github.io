@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: My Heroku project
+title: My Heroku project with blazore
 ---
 
 
