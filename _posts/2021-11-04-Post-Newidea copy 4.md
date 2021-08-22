@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: My web site in lab exam(hacketan)
+title: My Heroku project
 ---
 
 
