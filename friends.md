@@ -11,6 +11,8 @@ comments: true
 ### همکلاسی‌ها
 
 
-![alt text]({{amirrezavishteh.github.io}}/assets/images/friends.jpg "hobbies")
+![alt text]({{amirrezavishteh.github.io}}/assets/images/mdog.jpg "hobbies")
+![alt text]({{amirrezavishteh.github.io}}/assets/images/dog.jpg "hobbies")
+
 
 
