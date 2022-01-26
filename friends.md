@@ -196,12 +196,12 @@ div.desc {
                     <label for="tab-1">
                         <div class="tab">
                             <img
-                                src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg"/>
+                                src="https://images.pexels.com/photos/1559117/pexels-photo-1559117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         </div>
                     </label>
                     <div class="content">
                         <img
-                            src="{{amirrezavishteh.github.io}}/assets/images/dog1.jpg"/>
+                            src="https://images.pexels.com/photos/1559117/pexels-photo-1559117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                     </div>
                 </li>
                 <li>
@@ -209,12 +209,12 @@ div.desc {
                     <label for="tab-2">
                         <div class="tab">
                             <img
-                                src="{{amirrezavishteh.github.io}}/assets/images/dg2.jpg" />
+                                src="https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         </div>
                     </label>
                     <div class="content">
                         <img
-                            src="{{amirrezavishteh.github.io}}/assets/images/dg.jpg" />
+                            src="https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                     </div>
                 </li>
                 <li>
