@@ -120,7 +120,7 @@ body {
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/dg.jpg "hobbies")
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/dg2.jpg "hobbies") -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
