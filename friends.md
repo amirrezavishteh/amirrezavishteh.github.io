@@ -48,8 +48,8 @@ comments: true
 </html> -->
 <div class="container-fluid">
   <div class="jumbotron">
-    <h1>Life Of Monks</h1>
-    <p>Monks spent most of their time praying, meditating, teaching, reading, etc.The first clocks created in medieval England were the work of monks.</p>
+    <h1>Dogs</h1>
+    
   </div>
   
   <div class="row gallery">
