@@ -2,8 +2,8 @@
 layout: single
 author_profile: true
 permalink: /friends/
-title: My Classmates
-tags: [friends]
+title: My Pets
+tags: [Pets]
 modified: 4-10-2019
 comments: true
 ---
