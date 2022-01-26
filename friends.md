@@ -74,7 +74,6 @@ div.desc {
     <img src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg" alt="Cinque Terre" width="600" height="400">
   </a>
   <div class="desc">Barack</div>
-  <div class="desc">Molinois</div>
 </div>
 <div class="gallery">
   <a target="_blank" href="img_forest.jpg">
