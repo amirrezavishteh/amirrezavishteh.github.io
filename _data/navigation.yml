@@ -14,8 +14,6 @@ main:
     url: /hobbies/  
   - title: "Gallery And Music"
     url: /gallery/
-    - title: "Gallery"
-    url: /allery/
   - title: "Blog"
     url: /blog/
   # - title: "About"
