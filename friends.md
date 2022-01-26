@@ -146,12 +146,6 @@ body {
                 <figure class="gallery__item gallery__item--4">
                     <img src="{{amirrezavishteh.github.io}}/assets/images/dg2.jpg" alt="Gallery image 4" class="gallery__img">
                 </figure>
-                <figure class="gallery__item gallery__item--5">
-                    <img src="img/image-5.jpg" alt="Gallery image 5" class="gallery__img">
-                </figure>
-                <figure class="gallery__item gallery__item--6">
-                    <img src="img/image-6.jpg" alt="Gallery image 6" class="gallery__img">
-                </figure>
             </div>
         </div>
     </body>
