@@ -16,6 +16,25 @@ comments: true
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/dg.jpg "hobbies")
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/dg2.jpg "hobbies")
 
-
+<div class=”gallery”>
+  <figure class=”gallery__item gallery__item--1">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg class="gallery__img" alt="Image 1">
+  </figure>
+  <figure class="gallery__item gallery__item--2">
+    <img src="/assets/images/mdog1.jpg" class="gallery__img" alt="Image 2">
+  </figure>
+  <figure class="gallery__item gallery__item--3">
+    <img src="images/mdog1.jpg" class="gallery__img" alt="Image 3">
+  </figure>
+  <figure class="gallery__item gallery__item--4">
+    <img src="img/image-4.jpg" class="gallery__img" alt="Image 4">
+  </figure>
+  <figure class="gallery__item gallery__item--5">
+    <img src="img/image-5.jpg" class="gallery__img" alt="Image 5">
+  </figure>
+  <figure class="gallery__item gallery__item--6">
+    <img src="img/image-6.jpg" class="gallery__img" alt="Image 6">
+  </figure>
+</div>
 
 
