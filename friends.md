@@ -53,7 +53,7 @@ div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
-  width: 360px;
+  width: 180px;
 }
 div.gallery:hover {
   border: 1px solid #777;
@@ -73,6 +73,7 @@ div.desc {
   <a target="_blank" href="img_5terre.jpg">
     <img src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg" alt="Cinque Terre" width="600" height="400">
   </a>
+  <div class="desc">Barack</div>
   <div class="desc">Molinois</div>
 </div>
 <div class="gallery">
