@@ -79,19 +79,19 @@ div.desc {
   <a target="_blank" href="img_forest.jpg">
     <img src="{{amirrezavishteh.github.io}}/assets/images/dog1.jpg" alt="Forest" width="600" height="400">
   </a>
-  <div class="desc">Molinois</div>
+  <div class="desc">Barack</div>
 </div>
 <div class="gallery">
   <a target="_blank" href="img_lights.jpg">
     <img src="{{amirrezavishteh.github.io}}/assets/images/dg2.jpg" alt="Northern Lights" width="600" height="400">
   </a>
-  <div class="desc">German Shepherd</div>
+  <div class="desc">Jordan</div>
 </div>
 <div class="gallery">
   <a target="_blank" href="img_mountains.jpg">
     <img src="{{amirrezavishteh.github.io}}/assets/images/dg.jpg" alt="Mountains" width="600" height="400">
   </a>
-  <div class="desc">German Shepherd</div>
+  <div class="desc">Jordan</div>
 </div>
 </body>
 </html>
