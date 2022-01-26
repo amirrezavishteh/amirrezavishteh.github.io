@@ -1,9 +1,9 @@
 ---
 layout: single
 author_profile: true
-permalink: /friends/
+permalink: /riends/
 title: My Classmates
-tags: [friends]
+tags: [riends]
 modified: 4-10-2019
 comments: true
 ---
