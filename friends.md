@@ -46,57 +46,52 @@ comments: true
         </div>
     </body>
 </html> -->
-<div class="container-fluid">
-  <div class="jumbotron">
-    <h1>Dogs</h1>
-  </div>
-  <div class="row gallery">
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
-        <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
-        <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
-        <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
-        <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
-        <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
-        <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
-        <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
-        <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
-      </a>
-    </div>
-  </div>
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+div.gallery:hover {
+  border: 1px solid #777;
+}
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Barack</div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
-<script>
-  baguetteBox.run(".gallery", {
-    animation: "slideIn"
-  });
-</script>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/dog1.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Barack</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/dg2.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Jordan</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/dg.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Jordanrdan</div>
+</div>
+</body>
+</html>
