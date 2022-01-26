@@ -52,42 +52,42 @@ comments: true
   </div>
   <div class="row gallery">
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="https://cdn.pixabay.com/photo/2017/04/08/22/26/buddhism-2214532__480.jpg">
+      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
         <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
       </a>
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="https://cdn.pixabay.com/photo/2016/11/08/05/16/boy-1807518__340.jpg">
+      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
         <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
       </a>
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="https://cdn.pixabay.com/photo/2019/08/21/09/31/monk-4420676__340.jpg">
+      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
         <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
       </a>
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="https://cdn.pixabay.com/photo/2016/11/14/04/14/monks-1822569__340.jpg">
+      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
         <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
       </a>
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="https://cdn.pixabay.com/photo/2016/11/08/05/20/boy-1807525__340.jpg">
+      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
         <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
       </a>
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="https://cdn.pixabay.com/photo/2016/11/08/05/22/buddhist-1807526__340.jpg">
+      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
         <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
       </a>
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="https://cdn.pixabay.com/photo/2016/11/03/04/02/boys-1793421__340.jpg">
+      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
         <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
       </a>
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="https://cdn.pixabay.com/photo/2016/10/30/05/46/monk-1782432__340.jpg">
+      <a href="http://www.amirrezavishteh.ir/friends/mdog1.jpg">
         <img class="img-fluid"src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg">
       </a>
     </div>
