@@ -91,7 +91,7 @@ div.desc {
   <a target="_blank" href="img_mountains.jpg">
     <img src="{{amirrezavishteh.github.io}}/assets/images/dg.jpg" alt="Mountains" width="600" height="400">
   </a>
-  <div class="desc">Jordanrdan</div>
+  <div class="desc">Jordan</div>
 </div>
 </body>
 </html>
