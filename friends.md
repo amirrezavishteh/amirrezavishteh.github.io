@@ -27,8 +27,8 @@ gallery:
     image_path: /assets/images/personal.jpg
     alt: "placeholder image 5"
     title: "Image 5 title caption"   
-  - url: /assets/images/nature.jpg 
-    image_path: /assets/images/nature.jpg
+  - url: /assets/images/reza.jpg 
+    image_path: /assets/images/reza.jpg
     alt: "placeholder image 5"
     title: "Image 5 title caption"    
     
