@@ -58,5 +58,5 @@ gallery:
 <br> -->
 <h1>Gallery</h1> 
 
-{% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE And Music**." %}
+{% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE **." %}
 

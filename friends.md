@@ -6,11 +6,39 @@ title: My Pictures
 tags: [Pets]
 modified: 4-10-2019
 comments: true
+gallery:
+  - url: /assets/images/reza1.jpg
+    image_path: /assets/images/reza1.jpg
+    alt: "oxford image 1"
+    title: "Image 1 title caption"
+  - url: /assets/images/home.jpg
+    image_path: /assets/images/home.jpg
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+  - url: /assets/images/reza2.jpg
+    image_path: /assets/images/reza2.jpg
+    alt: "placeholder image 3"
+    title: "Image 3 title caption"  
+  - url: /assets/images/reza3.jpg
+    image_path: /assets/images/reza3.jpg
+    alt: "placeholder image 4"
+    title: "Image 4 title caption"
+  - url: /assets/images/personal.jpg
+    image_path: /assets/images/personal.jpg
+    alt: "placeholder image 5"
+    title: "Image 5 title caption"   
+  - url: /assets/images/nature.jpg 
+    image_path: /assets/images/nature.jpg
+    alt: "placeholder image 5"
+    title: "Image 5 title caption"    
+    
+
 ---
 
 ### My pictures
 
 
+{% include gallery caption="" %}
 <!-- ![alt text]({{amirrezavishteh.github.io}}/assets/images/mdog1.jpg "hobbies")
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/dog1.jpg "hobbies")
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/dg.jpg "hobbies")
@@ -46,7 +74,7 @@ comments: true
         </div>
     </body>
 </html> -->
-<html>
+<!-- <html>
 <head>
 <style>
 div.gallery {
@@ -97,4 +125,4 @@ div.desc {
 </div>
 
 </body>
-</html>
+</html> -->
