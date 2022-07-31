@@ -55,8 +55,8 @@ gallery:
 <audio controls>
     <source src= "../assets/music.mp3" type="audio/mp3">
 </audio>
-<br>
-<h1>Gallery</h1> -->
+<br> -->
+<h1>Gallery</h1> 
 
 {% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE And Music**." %}
 
