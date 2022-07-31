@@ -12,7 +12,7 @@ main:
     url: /links/
   - title: "Hobbies"
     url: /hobbies/  
-  - title: "Gallery And Music"
+  - title: "Gallery"
     url: /gallery/
   - title: "Blog"
     url: /blog/
