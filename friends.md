@@ -89,6 +89,11 @@ div.desc {
     <img src="{{amirrezavishteh.github.io}}/assets/images/home.jpg" alt="Mountains" width="600" height="400">
   </a>
   <div class="desc">home</div>
+</div><div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/personal.jpg" alt="Mountains" width="600" height="400">
+  </a>
 </div>
+
 </body>
 </html>
