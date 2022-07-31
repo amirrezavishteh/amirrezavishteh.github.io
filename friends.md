@@ -8,7 +8,7 @@ modified: 4-10-2019
 comments: true
 ---
 
-### My dogs
+### My pictures
 
 
 <!-- ![alt text]({{amirrezavishteh.github.io}}/assets/images/mdog1.jpg "hobbies")
@@ -71,27 +71,24 @@ div.desc {
 <body>
 <div class="gallery">
   <a target="_blank" href="img_5terre.jpg">
-    <img src="{{amirrezavishteh.github.io}}/assets/images/mdog1.jpg" alt="Cinque Terre" width="600" height="400">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/reza1.jpg" alt="Cinque Terre" width="600" height="400">
   </a>
-  <div class="desc">Barack</div>
 </div>
 <div class="gallery">
   <a target="_blank" href="img_forest.jpg">
-    <img src="{{amirrezavishteh.github.io}}/assets/images/dog1.jpg" alt="Forest" width="600" height="400">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/reza2.jpg" alt="Forest" width="600" height="400">
   </a>
-  <div class="desc">Barack</div>
 </div>
 <div class="gallery">
   <a target="_blank" href="img_lights.jpg">
-    <img src="{{amirrezavishteh.github.io}}/assets/images/dg2.jpg" alt="Northern Lights" width="600" height="400">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/reza3.jpg" alt="Northern Lights" width="600" height="400">
   </a>
-  <div class="desc">Jordan</div>
 </div>
 <div class="gallery">
   <a target="_blank" href="img_mountains.jpg">
-    <img src="{{amirrezavishteh.github.io}}/assets/images/dg.jpg" alt="Mountains" width="600" height="400">
+    <img src="{{amirrezavishteh.github.io}}/assets/images/home.jpg" alt="Mountains" width="600" height="400">
   </a>
-  <div class="desc">Jordan</div>
+  <div class="desc">home</div>
 </div>
 </body>
 </html>
