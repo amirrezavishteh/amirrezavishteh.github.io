@@ -2,7 +2,7 @@
 layout: single
 author_profile: true
 permalink: /gallery/
-title: Gallery 
+title: Gallery
 tags: [gallery]
 modified: 9-14-2019
 comments: false
@@ -11,8 +11,8 @@ gallery:
     image_path: /assets/images/oxford.jpg
     alt: "oxford image 1"
     title: "Image 1 title caption"
-  - url: /assets/images/3.jpg
-    image_path: /assets/images/3.jpg
+  - url: /assets/images/home.jpg
+    image_path: /assets/images/home.jpg
     alt: "placeholder image 2"
     title: "Image 2 title caption"
   - url: /assets/images/lambor1.jpg
@@ -56,7 +56,7 @@ gallery:
     <source src= "../assets/music.mp3" type="audio/mp3">
 </audio>
 <br>
-<h1>Gallery</h1>
+<h1>Gallery</h1> -->
 
-{% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE And Music**." %} -->
+{% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE And Music**." %}
 
