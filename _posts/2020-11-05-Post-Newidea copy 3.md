@@ -17,7 +17,7 @@ title: My web site in lab exam(hacketan)
 
 
 
-![alt text](../assets/images/work.jpg "exam")
+![alt text](../assets/images/work.jpg "my exam")
 
 
 ---

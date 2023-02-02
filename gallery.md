@@ -2,7 +2,7 @@
 layout: single
 author_profile: true
 permalink: /gallery/
-title: Gallery And Music
+title: Gallery
 tags: [gallery]
 modified: 9-14-2019
 comments: false
@@ -33,7 +33,7 @@ gallery:
     title: "Image 5 title caption"    
     
 ---
-<h1>Music</h1>
+<!-- <h1>Music</h1>
 
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/music.jpg "Welcome")
 
@@ -55,8 +55,7 @@ gallery:
 <audio controls>
     <source src= "../assets/music.mp3" type="audio/mp3">
 </audio>
-<br>
-<h1>Gallery</h1>
+<br> -->
 
-{% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE And Music**." %}
+{% include gallery caption="This is a my gallery  **MY FAVORIT PICTURE **." %}
 
