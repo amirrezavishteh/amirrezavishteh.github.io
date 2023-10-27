@@ -5,11 +5,11 @@ main:
   - title: "CV"
     url: /cv/
   - title: "Courses"
-    url: /courses/
+    url: /links/
   - title: "My Pictures"
     url: /friends/
-  - title: "Links"
-    url: /links/
+  # - title: "Links"
+  #   url: /links/
   - title: "Hobbies"
     url: /hobbies/  
   - title: "Gallery"
