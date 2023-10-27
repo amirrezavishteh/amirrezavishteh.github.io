@@ -22,6 +22,10 @@ comments: false
 
 | Year | Semester | Course |
 | ---- | -------- | ------ |
+| 2022 | Fall     | Artificial Intelligence |
+| 2022 | winter   | Computer Aided Design(VHDL) |
+| 2022 | winter   | Computer Vision |
+| 2021 | winter   | Algoritm |
 | 2020 | Fall     | Computer Advanced Programming |
 | 2020 | Fall     | History Lesson |
 | 2020 | Fall     | Web Design |
