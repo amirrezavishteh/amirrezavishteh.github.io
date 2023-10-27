@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-permalink: /links/
+permalink: /courses/
 title: Courses
 tags: [Studying, courses]
 modified: 9-14-2019
