@@ -13,8 +13,8 @@ comments: false
 
 | Year | Semester | Course | Image |
 | ---- | -------- | ------ | ----- |
-| 2023 | Fall     | Advanced Learning Algorithm | !assets\images\certificateAdvance.png |
-| 2023 | Fall     | Supervised Machine Learning | !assets\images\supervised.png |
+| 2023 | Fall     | Advanced Learning Algorithm | [![name](../assets/images/certificateAdvance.png)] |
+| 2023 | Fall     | Supervised Machine Learning | [![name](../assets/images/\supervised.png)] |
 | 2023 | Fall     | Natural Language Processing | !Natural Language Processing |
 | 2023 | Fall     | Deep Learning | !Deep Learning |
 
@@ -31,10 +31,4 @@ comments: false
 | 2020 | Fall     | English Course |
 | 2020 | Fall     | Math |
 | 2020 | Fall     | Andisheh Eslamic |
-<!-- 
-## More Past Courses
 
-| Year | Semester | Course |
-| ---- | -------- | ------ |
-...
--->
