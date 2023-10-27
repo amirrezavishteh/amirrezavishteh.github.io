@@ -15,7 +15,8 @@ Here are the articles I read:
 
 In addition to reading articles, I also watched several specializations on Coursera. These included courses on Advanced Learning Algorithms, Supervised Machine Learning, Natural Language Processing, and Deep Learning. Each course provided a wealth of knowledge and practical skills that I could apply in my internship.
 
-!assets\images\certificateAdvance.png
-!assets\images\supervised.png
+
+[![name](../assets/images/certificateAdvance.png)]
+[![name](../assets/images/supervised.png)]
 
 The combination of theoretical knowledge from the articles and practical skills from the courses allowed me to contribute significantly to the projects at the NLP Lab.
