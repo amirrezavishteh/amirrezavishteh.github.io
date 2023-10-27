@@ -13,10 +13,11 @@ comments: false
 
 | Year | Semester | Course | Image |
 | ---- | -------- | ------ | ----- |
-| 2023 | Fall     | Advanced Learning Algorithm | !C:\git\amirrezavishteh.github.io\assets\images\certificateAdvance.png |
-| 2023 | Fall     | Supervised Machine Learning | !C:\git\amirrezavishteh.github.io\assets\images\supervised.png |
+| 2023 | Fall     | Advanced Learning Algorithm | !assets\images\certificateAdvance.png |
+| 2023 | Fall     | Supervised Machine Learning | !assets\images\supervised.png |
 | 2023 | Fall     | Natural Language Processing | !Natural Language Processing |
 | 2023 | Fall     | Deep Learning | !Deep Learning |
+
 
 ## Past Courses
 
