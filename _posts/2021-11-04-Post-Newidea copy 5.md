@@ -2,6 +2,7 @@
 layout: posts
 title: "My Internship at the NLP Lab"
 ---
+## My Internship at the NLP Lab :
 
 During my internship at the NLP Lab, I had the opportunity to delve deep into the world of Natural Language Processing (NLP). I read six insightful articles that expanded my understanding of this fascinating field. Each article presented a unique perspective on NLP, from its applications in various industries to the latest advancements in the field.
 
