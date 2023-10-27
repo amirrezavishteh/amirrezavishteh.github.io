@@ -8,7 +8,17 @@ modified: 9-14-2019
 comments: false
 ---
 
+
 ## Current Courses
+
+| Year | Semester | Course | Image |
+| ---- | -------- | ------ | ----- |
+| 2023 | Fall     | Advanced Learning Algorithm | !C:\git\amirrezavishteh.github.io\assets\images\certificateAdvance.png |
+| 2023 | Fall     | Supervised Machine Learning | !C:\git\amirrezavishteh.github.io\assets\images\supervised.png |
+| 2023 | Fall     | Natural Language Processing | !Natural Language Processing |
+| 2023 | Fall     | Deep Learning | !Deep Learning |
+
+## Past Courses
 
 | Year | Semester | Course |
 | ---- | -------- | ------ |
@@ -17,16 +27,10 @@ comments: false
 | 2020 | Fall     | Web Design |
 | 2020 | Fall     | Math2 |
 | 2020 | Fall     | Andisheh Eslamic2 |
-
-## Past Courses
-
-| Year | Semester | Course |
-| ---- | -------- | ------ |
 | 2020 | Fall     | Computer Programming Fundamentals |
 | 2020 | Fall     | English Course |
 | 2020 | Fall     | Math |
 | 2020 | Fall     | Andisheh Eslamic |
-
 <!-- 
 ## More Past Courses
 
