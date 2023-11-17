@@ -11,7 +11,7 @@ title: "Project Iridium"
 ## 1 Introduction
 The Iridium project was carried out to create a network simulation using Docker. This network included stations as attackers, victims, and web servers.
 
-![name](../assets/images/certificateAdvance.png)
+![name](../assets/images/dockeerfile.jpg)
 
 ## 2 Project Steps
 Using Dockerfile, a Docker image was created and the necessary software was installed. Then the following steps were followed in detail:
@@ -19,17 +19,19 @@ Using Dockerfile, a Docker image was created and the necessary software was inst
 ### 2.1 Step 1
 With the use of a script, the open ports of each of the IP addresses present in the code were found.
 
-![name](../assets/images/dockeerfile.jpg)
+![name](../assets/images/scriptIpandportopen.JPG)
+
 
 ### 2.2 Step 2
 Initially, a script was written to scan the port numbers and store the data. This script scanned the ports from 1 to 254 and if they were open (using nmap), they were added to a sheet.
 
-![name](../assets/images/scriptIpandportopen.JPG)
+![name](../assets/images/scriptopenportsandips.jpg)
+
 
 ### 2.3 Step 3
 The found devices in the system were tested by a group of common usernames and passwords. The ports were tested and then it was checked whether it was possible to connect to it with a username and password or not.
 
-![name](../assets/images/scriptopenportsandips.jpg)
+![name](../assets/images/scriptgivepassandusernamer.jpg)
 
 ### 2.4 Step 4
 In this step, we first create a Django project to get and give files so that it gives the script file and after collecting data, it returns it to us.
