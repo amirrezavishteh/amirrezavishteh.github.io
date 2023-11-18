@@ -113,7 +113,7 @@ author:
   bio              : I study computer in University of Sience and Technology
   location         : "تهران"
   email            : amireza.vishteh@gmail.com
-  # twitter: sauleh_e
+  # twitter: AmirrezaVishteh
   linkedin: Amirreza Vishteh
   google_scholar: Q25s5KkAAAAJ
   github: amirrezavishteh
@@ -121,7 +121,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto: amireza.vishteh@gmail.com
+      url: mailto: amireza.vishteh@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -130,10 +130,10 @@ author:
       # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://facebook.com/amirreza.vishteh/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/amirrezavishteh"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/amirreza_v1"
@@ -149,12 +149,12 @@ footer:
       # url:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://instagram.com/amirreza_v1"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
+    # - label: "GitLab"
+    #   icon: "fab fa-fw fa-gitlab"
       # url:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
@@ -164,7 +164,7 @@ footer:
       # url:
     - label: "Calendly"
       icon: "fas fa-calendar-alt"
-      url: "http://calendly.com/pourrang_atashi"
+      url: "https://calendly.com/amireza-vishteh"
 
 
 # Reading Files
