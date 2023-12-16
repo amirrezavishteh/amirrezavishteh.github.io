@@ -21,7 +21,7 @@ gallery:
     title: "Image 3 title caption"  
   
   - url: /assets/images/rezagreen.jpeg 
-    image_path: /assets/images/rezagreeen.jpeg
+    image_path: /assets/images/rezagreen.jpeg 
     alt: "placeholder image 5"
     title: "amirreza vishteh"    
     
