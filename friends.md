@@ -2,40 +2,33 @@
 layout: single
 author_profile: true
 permalink: /friends/
-title: My Pictures
+title: Friends
 tags: [Pets]
 modified: 4-10-2019
 comments: true
 gallery:
-  - url: /assets/images/reza1.jpg
-    image_path: /assets/images/reza1.jpg
-    alt: "oxford image 1"
-    title: "Image 1 title caption"
-  - url: /assets/images/home.jpg
-    image_path: /assets/images/home.jpg
+  - url: /assets/images/amirsina.jpeg
+    image_path: /assets/images/amirsina.jpeg
+    alt: "placeholder image 1"
+    title: "sina alinejad & amirreza vishteh"
+  - url: /assets/images/amirmammd.jpeg
+    image_path: /assets/images/amirmammd.jpeg
     alt: "placeholder image 2"
     title: "Image 2 title caption"
-  - url: /assets/images/reza2.jpg
-    image_path: /assets/images/reza2.jpg
+  - url: /assets/images/realfriends.jpeg
+    image_path: /assets/images/realfriends.jpeg
     alt: "placeholder image 3"
     title: "Image 3 title caption"  
-  - url: /assets/images/reza3.jpg
-    image_path: /assets/images/reza3.jpg
-    alt: "placeholder image 4"
-    title: "Image 4 title caption"
-  - url: /assets/images/personal.jpg
-    image_path: /assets/images/personal.jpg
+  
+  - url: /assets/images/rezagreen.jpeg 
+    image_path: /assets/images/rezagreeen.jpeg
     alt: "placeholder image 5"
-    title: "Image 5 title caption"   
-  - url: /assets/images/reza.jpg 
-    image_path: /assets/images/reza.jpg
-    alt: "placeholder image 5"
-    title: "Image 5 title caption"    
+    title: "amirreza vishteh"    
     
 
 ---
 
-### My pictures
+### Friends
 
 
 {% include gallery caption="" %}
