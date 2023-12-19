@@ -29,3 +29,4 @@ gallery:
 ### Friends
 
 
+{% include gallery caption="" %}
