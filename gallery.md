@@ -7,26 +7,27 @@ tags: [gallery]
 modified: 9-14-2019
 comments: false
 gallery:
-  - url: /assets/images/oxford.jpg
-    image_path: /assets/images/oxford.jpg
-    alt: "oxford"
-    title: "oxford"
+  - url: /assets/images/littleamir.jpeg
+    image_path: /assets/images/littleamir.jpeg
+    alt: "placeholder image 5"
+    title: "childhood"   
+  - url: /assets/images/home2.jpeg
+    image_path: /assets/images/home2.jpeg
+    alt: "home"
+    title: "home"
   - url: /assets/images/home.jpg
     image_path: /assets/images/home.jpg
     alt: "placeholder image 2"
     title: "home"
-  - url: /assets/images/lambor1.jpg
-    image_path: /assets/images/lambor1.jpg
+  - url: /assets/images/home3.jpeg
+    image_path: /assets/images/home3.jpeg
     alt: "placeholder image 3"
-    title: "lambo"  
-  - url: /assets/images/4.jpg
-    image_path: /assets/images/3.jpg
-    alt: "placeholder image 4"
-    title: "Image 4 title caption"
-  - url: /assets/images/beautiful.jpg
-    image_path: /assets/images/beautiful.jpg
+    title: "home"  
+  - url: /assets/images/oxford.jpg
+    image_path: /assets/images/oxford.jpg
     alt: "placeholder image 5"
-    title: "Image 5 title caption"   
+    title: "oxford"   
+  
   - url: /assets/images/nature.jpg 
     image_path: /assets/images/nature.jpg
     alt: "placeholder image 5"

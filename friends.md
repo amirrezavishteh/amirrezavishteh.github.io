@@ -39,6 +39,16 @@ gallery:
     alt: "placeholder image 3"
     title: "sina alinejad & amirreza vishteh "
     image_size: large
+  - url: /assets/images/abasamir.jpeg
+    image_path: /assets/images/abasamir.jpeg
+    alt: "placeholder image 3"
+    title: "sina alinejad & amirreza vishteh "
+    image_size: large
+  - url: /assets/images/allsauleh.jpeg
+    image_path: /assets/images/allsauleh.jpeg
+    alt: "placeholder image 3"
+    title: "sina alinejad & amirreza vishteh "
+    image_size: large
   - url: /assets/images/friendsb.jpeg
     image_path: /assets/images/friendsb.jpeg
     alt: "placeholder image 3"
