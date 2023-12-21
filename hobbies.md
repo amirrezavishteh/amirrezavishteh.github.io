@@ -10,16 +10,16 @@ gallery:
   - url: /assets/images/amirshomal.jpeg
     image_path: /assets/images/amirshomal.jpeg
     alt: "placeholder image 5"
-    title: "childhood"   
+    title: "North"   
   
-  - url: /assets/images/nature1.jpeg
-    image_path: /assets/images/nature1.jpeg
-    alt: "placeholder image 2"
-    title: "home"
-  - url: /assets/images/nature2.jpeg 
+  - url: /assets/images/nature2.jpeg
     image_path: /assets/images/nature2.jpeg
+    alt: "Natanz"
+    title: "home"
+  - url: /assets/images/nature1.jpeg 
+    image_path: /assets/images/nature1.jpeg
     alt: "placeholder image 5"
-    title: "snow" 
+    title: "Natanz" 
 
     
 gallery2:
