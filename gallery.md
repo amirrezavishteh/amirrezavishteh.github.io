@@ -9,16 +9,16 @@ comments: false
 gallery:
   - url: /assets/images/oxford.jpg
     image_path: /assets/images/oxford.jpg
-    alt: "oxford image 1"
-    title: "Image 1 title caption"
+    alt: "oxford"
+    title: "oxford"
   - url: /assets/images/home.jpg
     image_path: /assets/images/home.jpg
     alt: "placeholder image 2"
-    title: "Image 2 title caption"
+    title: "home"
   - url: /assets/images/lambor1.jpg
     image_path: /assets/images/lambor1.jpg
     alt: "placeholder image 3"
-    title: "Image 3 title caption"  
+    title: "lambo"  
   - url: /assets/images/4.jpg
     image_path: /assets/images/3.jpg
     alt: "placeholder image 4"
@@ -30,7 +30,7 @@ gallery:
   - url: /assets/images/nature.jpg 
     image_path: /assets/images/nature.jpg
     alt: "placeholder image 5"
-    title: "Image 5 title caption"    
+    title: "snow"    
     
 ---
 <!-- <h1>Music</h1>
