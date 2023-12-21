@@ -11,7 +11,10 @@ gallery:
     image_path: /assets/images/littleamir.jpeg
     alt: "placeholder image 5"
     title: "childhood"   
-  
+   - url: /assets/images/rezagreen.jpeg
+    image_path: /assets/images/rezagreen.jpeg
+    alt: "placeholder image 5"
+    title: "childhood"
   - url: /assets/images/home.jpg
     image_path: /assets/images/home.jpg
     alt: "placeholder image 2"

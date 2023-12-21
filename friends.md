@@ -15,8 +15,8 @@ gallery:
     image_path: /assets/images/amirmammd.jpeg
     alt: "mohamad osolian"
     title: "mohamad osolian & amirreza vishteh"
-  - url: /assets/images/rezagreen.jpeg 
-    image_path: /assets/images/rezagreen.jpeg 
+  - url: /assets/images/friendsf.jpeg 
+    image_path: /assets/images/friendsf.jpeg 
     alt: "amirreza vishteh"
     title: "amirreza vishteh"    
   - url: /assets/images/mamadamir3.jpeg
