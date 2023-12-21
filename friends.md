@@ -9,20 +9,20 @@ comments: true
 gallery:
   - url: /assets/images/amirsina.jpeg
     image_path: /assets/images/amirsina.jpeg
-    alt: "placeholder image 1"
+    alt: "sina alinejad"
     title: "sina alinejad & amirreza vishteh"
   - url: /assets/images/amirmammd.jpeg
     image_path: /assets/images/amirmammd.jpeg
-    alt: "placeholder image 2"
-    title: "Image 2 title caption"
+    alt: "mohamad osolian"
+    title: "mohamad osolian & amirreza vishteh"
   - url: /assets/images/rezagreen.jpeg 
     image_path: /assets/images/rezagreen.jpeg 
-    alt: "placeholder image 5"
+    alt: "amirreza vishteh"
     title: "amirreza vishteh"    
   - url: /assets/images/realfriends.jpeg
     image_path: /assets/images/realfriends.jpeg
     alt: "placeholder image 3"
-    title: "Image 3 title caption"
+    title: "sina alinejad & amirreza vishteh & mohamad hossein abaspor & navid ebrahimi & vahid"
     image_size: large
 ---
 
