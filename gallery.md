@@ -60,5 +60,4 @@ gallery:
 </audio>
 <br> -->
 
-{% include gallery" %}
-
+{% include gallery caption="" %}
