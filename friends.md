@@ -76,7 +76,7 @@ gallery:
     image_size: large
 ---
 
-### Friends
+### Memories
 
 
 {% include gallery caption="" %}
