@@ -19,8 +19,8 @@ gallery:
     image_path: /assets/images/rezagreen.jpeg 
     alt: "amirreza vishteh"
     title: "amirreza vishteh"    
-  - url: /assets/images/mamadamir2.jpeg
-    image_path: /assets/images/mamadamir2.jpeg
+  - url: /assets/images/mamadamir3.jpeg
+    image_path: /assets/images/mamadamir3.jpeg
     alt: "placeholder image 3"
     title: " amirreza vishteh & mohamad osolian"
     image_size: large
