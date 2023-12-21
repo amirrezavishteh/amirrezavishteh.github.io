@@ -15,7 +15,7 @@ gallery:
   - url: /assets/images/nature2.jpeg
     image_path: /assets/images/nature2.jpeg
     alt: "Natanz"
-    title: "home"
+    title: "Natanz"
   - url: /assets/images/nature1.jpeg 
     image_path: /assets/images/nature1.jpeg
     alt: "placeholder image 5"
