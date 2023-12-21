@@ -11,7 +11,7 @@ gallery:
     image_path: /assets/images/littleamir.jpeg
     alt: "placeholder image 5"
     title: "childhood"   
-   - url: /assets/images/rezagreen.jpeg
+  - url: /assets/images/rezagreen.jpeg
     image_path: /assets/images/rezagreen.jpeg
     alt: "placeholder image 5"
     title: "childhood"
@@ -39,6 +39,28 @@ gallery:
      
     
 ---
+<!-- <h1>Music</h1>
 
+![alt text]({{amirrezavishteh.github.io}}/assets/images/music.jpg "Welcome")
+
+<h2>Everything I wanted</h2>
+<br>
+<audio controls>
+    <source src= "../assets/music2.mp3" type="audio/mp3">
+</audio>
+<br>
+<h2> Levitating</h2>
+<br>
+<audio controls>
+    <source src= "../assets/music3.mp3" type="audio/mp3">
+</audio>
+<br>
+
+<h2>Studio Killers</h2>
+<br>
+<audio controls>
+    <source src= "../assets/music.mp3" type="audio/mp3">
+</audio>
+<br> -->
 
 {% include gallery caption="" %}
