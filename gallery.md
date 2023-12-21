@@ -39,6 +39,7 @@ gallery:
      
     
 ---
+{% include gallery caption="" %}
 <!-- <h1>Music</h1>
 
 ![alt text]({{amirrezavishteh.github.io}}/assets/images/music.jpg "Welcome")
