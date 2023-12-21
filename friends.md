@@ -3,7 +3,7 @@ layout: single
 author_profile: true
 permalink: /friends/
 title: Friends
-tags: [Pets]
+tags: [Friends]
 modified: 4-10-2019
 comments: true
 gallery:
