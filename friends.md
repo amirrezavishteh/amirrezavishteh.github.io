@@ -39,7 +39,7 @@ gallery:
     alt: "placeholder image 3"
     title: "sina alinejad & amirreza vishteh "
     image_size: large
-  - url: /assets/images/friendsb.jpeg
+  - url: /assets/images/friendsc.jpeg
     image_path: /assets/images/friendsb.jpeg
     alt: "placeholder image 3"
     title: "sina alinejad & amirreza vishteh & mohamad hossein abaspor & navid ebrahimi & mohamad osolian"
