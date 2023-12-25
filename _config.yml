@@ -140,6 +140,9 @@ author:
     - label: "Calendly"
       icon: "fas fa-calendar-alt"
       url: "https://calendly.com/amireza-vishteh"
+    - label: "CV"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/files/rezome.pdf"
 
 # Site Footer
 footer:
