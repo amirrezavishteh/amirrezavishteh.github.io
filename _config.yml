@@ -113,17 +113,19 @@ author:
   bio              : I study computer in University of Sience and Technology
   location         : "تهران"
   email            : amireza.vishteh@gmail.com
-  # twitter: AmirrezaVishteh
+  twitter: AmirrezaVishteh
   linkedin: Amirreza Vishteh
   google_scholar: Q25s5KkAAAAJ
   github: amirrezavishteh
-  instagram: amirreza_v1
+  instagram: amirreza_v1 
+  Calendly: https://calendly.com/amireza-vishteh
+  CV: https://drive.google.com/file/d/1R0Zqcb1sDe2cnL0FP-aOqeQuRq2dyjAR/view?usp=sharing
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:amireza.vishteh@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
