@@ -127,7 +127,7 @@ author:
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+      url: "https://twitter.com/Amirrezav1"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://facebook.com/amirreza.vishteh/"
@@ -142,17 +142,17 @@ author:
       url: "https://calendly.com/amireza-vishteh"
     - label: "CV"
       icon: "fas fa-fw fa-file-pdf"
-      url: "/assets/files/rezome.pdf"
+      url: "https://drive.google.com/file/d/1R0Zqcb1sDe2cnL0FP-aOqeQuRq2dyjAR/view?usp=sharing"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/Amirrezav1"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://instagram.com/amirreza_v1"
+      url: "https://facebook.com/amirreza.vishteh/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:
