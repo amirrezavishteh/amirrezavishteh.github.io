@@ -15,6 +15,10 @@ gallery:
     image_path: /assets/images/amirrezaSnow.jpeg
     alt: "placeholder image 5"
     title: "Darakeh"
+  - url: /assets/images/amirrezasu.jpg 
+    image_path: /assets/images/amirrezasu.jpg
+    alt: "placeholder image 5"
+    title: "IUST"
   - url: /assets/images/nature2.jpeg
     image_path: /assets/images/nature2.jpeg
     alt: "Natanz"
