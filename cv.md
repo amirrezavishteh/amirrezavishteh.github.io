@@ -2,7 +2,7 @@
 layout: single
 author_profile: true
 permalink: /cv/
-title: Welcome To my Personal Website
+title: My Education
 tags: [resume, cv]
 modified: 4-14-2019
 comments: false
