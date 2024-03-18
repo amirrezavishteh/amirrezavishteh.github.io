@@ -11,7 +11,10 @@ gallery:
     image_path: /assets/images/amirshomal.jpeg
     alt: "placeholder image 5"
     title: "North"   
-  
+  - url: /assets/images/amirrezaSnow.jpeg 
+    image_path: /assets/images/amirrezaSnow.jpeg
+    alt: "placeholder image 5"
+    title: "Darakeh" 
   - url: /assets/images/nature2.jpeg
     image_path: /assets/images/nature2.jpeg
     alt: "Natanz"
@@ -20,6 +23,7 @@ gallery:
     image_path: /assets/images/nature1.jpeg
     alt: "placeholder image 5"
     title: "Natanz" 
+
 
     
 gallery2:
@@ -34,7 +38,11 @@ gallery2:
   - url: /assets/images/jordan.jpeg
     image_path: /assets/images/jordan.jpeg
     alt: "placeholder image 5"
-    title: "Barak"  
+    title: "Barak" 
+    - url: /assets/images/amirrezaLittledog.jpeg
+    image_path: /assets/images/amirrezaLittledog.jpeg
+    alt: "placeholder image 5"
+    title: "Jaky"  
     
 ---
 <!-- * [football](https://ro.pinterest.com/ivladoi/fotball/)
