@@ -1,8 +1,7 @@
 ---
 layout: posts
-title: "Multimodal Sentiment Analysis Project "
+title: "Multimodal Sentiment Analysis Project(Persian-3classes) "
 ---
-# Multimodal Sentiment Analysis Project(Persian-3classes):
 
 ## Overview
 In this project, we explore multimodal sentiment analysis, which involves analyzing both text and image data together. Our goal is to predict sentiment labels (positive or negative) based on combined information from text and images.
