@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Project Iridium"
+title: "Multimodal Sentiment Analysis Project "
 ---
 # Multimodal Sentiment Analysis Project(Persian-3classes):
 
