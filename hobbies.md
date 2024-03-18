@@ -11,7 +11,10 @@ gallery:
     image_path: /assets/images/amirshomal.jpeg
     alt: "placeholder image 5"
     title: "North"   
-  
+  - url: /assets/images/amirrezaSnow.jpeg 
+    image_path: /assets/images/amirrezaSnow.jpeg
+    alt: "placeholder image 5"
+    title: "Darakeh"
   - url: /assets/images/nature2.jpeg
     image_path: /assets/images/nature2.jpeg
     alt: "Natanz"
@@ -36,7 +39,7 @@ gallery2:
     image_path: /assets/images/jordan.jpeg
     alt: "placeholder image 5"
     title: "Barak" 
-    - url: /assets/images/amirrezaLittledog.jpeg
+  - url: /assets/images/amirrezaLittledog.jpeg
     image_path: /assets/images/amirrezaLittledog.jpeg
     alt: "placeholder image 5"
     title: "Jaky"  
