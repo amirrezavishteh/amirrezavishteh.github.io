@@ -11,10 +11,7 @@ gallery:
     image_path: /assets/images/amirshomal.jpeg
     alt: "placeholder image 5"
     title: "North"   
-  - url: /assets/images/amirrezaSnow.jpeg 
-    image_path: /assets/images/amirrezaSnow.jpeg
-    alt: "placeholder image 5"
-    title: "Darakeh" 
+  
   - url: /assets/images/nature2.jpeg
     image_path: /assets/images/nature2.jpeg
     alt: "Natanz"
