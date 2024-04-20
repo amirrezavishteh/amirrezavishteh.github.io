@@ -17,6 +17,7 @@ comments: false
 | 2023 | Fall     | Supervised Machine Learning | ![name](../assets/images/Coursera Supervised.jpg) |
 | 2023 | Fall     | Natural Language Processing |  |
 | 2023 | Fall     | Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | ![name](../assets/images/coursera improvingmodels.jpg) |
+| 2024 | spring     | Healthcare, Bioinformatics, and Computational Biology(HBC2024) | ![name](../assets/images/amirreza-vishteh_bio.jpg) |
 
 ## Past Courses
 
