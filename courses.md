@@ -8,16 +8,26 @@ modified: 9-14-2019
 comments: false
 ---
 
-
 ## Current Courses
+
+| Year | Semester | Course | Image |
+| ---- | -------- | ------ | ----- |
+| 2023 | Fall     | Natural Language Processing |  |
+
+## Seminars
+
+| Year | Semester | Course | Image |
+| ---- | -------- | ------ | ----- |
+| 2024 | spring     | Healthcare, Bioinformatics, and Computational Biology(HBC2024) | ![name](../assets/images/amirreza-vishteh_bio.jpg) |
+
+## Coursera
 
 | Year | Semester | Course | Image |
 | ---- | -------- | ------ | ----- |
 | 2023 | Fall     | Advanced Learning Algorithm | ![name](../assets/images/Coursera Advanced.jpg) |
 | 2023 | Fall     | Supervised Machine Learning | ![name](../assets/images/Coursera Supervised.jpg) |
-| 2023 | Fall     | Natural Language Processing |  |
 | 2023 | Fall     | Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | ![name](../assets/images/coursera improvingmodels.jpg) |
-| 2024 | spring     | Healthcare, Bioinformatics, and Computational Biology(HBC2024) | ![name](../assets/images/amirreza-vishteh_bio.jpg) |
+
 
 ## Past Courses
 
