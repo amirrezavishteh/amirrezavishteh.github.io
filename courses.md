@@ -24,9 +24,10 @@ comments: false
 
 | Year | Semester | Course | Image |
 | ---- | -------- | ------ | ----- |
-| 2023 | Fall     | Advanced Learning Algorithm | ![name](../assets/images/Coursera Advanced.jpg) |
-| 2023 | Fall     | Supervised Machine Learning | ![name](../assets/images/Coursera Supervised.jpg) |
-| 2023 | Fall     | Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | ![name](../assets/images/coursera improvingmodels.jpg) |
+| 2023 | Fall     | Advanced Learning Algorithm | [![name](../assets/images/Coursera_Advanced.jpg)](https://www.coursera.org/account/accomplishments/verify/BQABHRBCJBL7) |
+| 2023 | Fall     | Supervised Machine Learning | [![name](../assets/images/Coursera_Supervised.jpg)](https://www.coursera.org/account/accomplishments/verify/Y7Q6Z4BBK9AT) | |
+| 2023 | Fall     | Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | [![name](../assets/images/coursera_improvingmodels.jpg)](https://www.coursera.org/account/accomplishments/verify/5884LQ6BY6ZL) |
+
 
 
 ## Past Courses
