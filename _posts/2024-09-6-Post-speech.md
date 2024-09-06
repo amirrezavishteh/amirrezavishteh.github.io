@@ -2,7 +2,7 @@
 layout: posts
 title: "Wav2Vec2 Sentiment Analysis Using Shemo Dataset"
 ---
-
+![Model](../assets/images/modelshape.png)
 ## Overview
 In this project, we fine-tuned the **Wav2Vec2** model to perform sentiment analysis based on both voice features and text transcripts from the **Shemo dataset**. This hybrid approach allows robust emotion recognition using both audio and textual data for classification.
 
