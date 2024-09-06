@@ -39,10 +39,10 @@ We defined a custom Wav2Vec2 model for speech emotion classification, which incl
 
 In the forward() method, hidden states from Wav2Vec2 were pooled, and the resulting tensor was classified into the target emotion label.
 
-6. Trainer Setup
+## 6. Trainer Setup
 We used Hugging Face's Trainer class to fine-tune the model. A data collator was implemented for dynamic padding, and evaluation metrics (accuracy, F1-score) were set up.
 
-7. Results
+## 7. Results
 After training the model, we evaluated its performance using the following metrics:
 ![Results](../assets/images/resultspeech.png)
 
