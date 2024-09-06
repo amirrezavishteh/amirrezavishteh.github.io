@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Wav2Vec2 Sentiment Analysis Using Shemo Dataset"
 ---
 
