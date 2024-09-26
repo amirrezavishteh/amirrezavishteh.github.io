@@ -29,9 +29,11 @@ comments: false
 | 2024  | Completed **Bachelor's in Computer Engineering**, IUST, Tehran, Iran     |
 | 2024  | Currently pursuing **Master's in Computer Engineering**, Sharif University, Tehran, Iran   |
 
-<!-- ![alt text](../assets/images/Amirrezauni.jpg "university") -->
 <!-- Add images side by side -->
 <div style="display: flex; justify-content: space-around;">
   <img src="{{ site.url }}/assets/images/iust2.jpg" alt="university" style="width: 38%;"/>
   <img src="{{ site.url }}/assets/images/logo.jpg" alt="university" style="width: 62%;"/>
 </div>
+![alt text](../assets/images/uni.jpg "university")
+
+<!-- ![alt text](../assets/images/Amirrezauni.jpg "university") -->
