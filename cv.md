@@ -34,6 +34,7 @@ comments: false
   <img src="{{ site.url }}/assets/images/iust2.jpg" alt="university" style="width: 38%;"/>
   <img src="{{ site.url }}/assets/images/logo.jpg" alt="university" style="width: 62%;"/>
 </div>
-![alt text](../assets/images/uni.jpg "university")
-
+<div style="display: flex; justify-content: space-around;">
+  <img src="{{ site.url }}/assets/images/uni.jpg" alt="university" style="width: 100%;"/>
+</div>
 <!-- ![alt text](../assets/images/Amirrezauni.jpg "university") -->
