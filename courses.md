@@ -20,13 +20,14 @@ comments: false
 | ---- | -------- | ------ | ----- |
 | 2024 | spring     | Healthcare, Bioinformatics, and Computational Biology(HBC2024) | ![name](../assets/images/amirreza-vishteh_bio.jpg) |
 
-## Coursera
+## Coursera Certificates
 
 | Year | Semester | Course | Image |
 | ---- | -------- | ------ | ----- |
 | 2023 | Fall     | Advanced Learning Algorithm | [![name](../assets/images/Coursera_Advanced.jpg)](https://www.coursera.org/account/accomplishments/verify/BQABHRBCJBL7) |
-| 2023 | Fall     | Supervised Machine Learning | [![name](../assets/images/Coursera_Supervised.jpg)](https://www.coursera.org/account/accomplishments/verify/Y7Q6Z4BBK9AT) | |
+| 2023 | Fall     | Supervised Machine Learning | [![name](../assets/images/Coursera_Supervised.jpg)](https://www.coursera.org/account/accomplishments/verify/Y7Q6Z4BBK9AT) |
 | 2023 | Fall     | Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | [![name](../assets/images/coursera_improvingmodels.jpg)](https://www.coursera.org/account/accomplishments/verify/5884LQ6BY6ZL) |
+| 2024 | Fall     | AI Workflow: Machine Learning, Visual Recognition and NLP | [![name](../assets/images/coursera.png)](https://coursera.org/share/2297018fe3fbbcb113ff150980a383ebX) |
 
 
 
