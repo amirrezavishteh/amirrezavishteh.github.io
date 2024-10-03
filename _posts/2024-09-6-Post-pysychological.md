@@ -1,17 +1,22 @@
 ---
 layout: posts
-title: "Psychological Health Chatbot: Detecting and Assisting Patients in their Path to Recovery"
+title: "Psychological Health Chatbot: "
 ---
+
+
 ![Model](../assets/images/chatbot.png)
 
 ## Overview
 In this project, we developed a **Psychological Health Chatbot** aimed at detecting and assisting patients in their mental health recovery journey. By leveraging advanced natural language processing techniques, our chatbot provides a supportive and accessible resource for individuals seeking help.
 
 ## Team Members
-- [Your Name]
-- Psychological Health Chatbot Development
-- [Your Institution]
-- [Date of Submission]
+- Sadegh Jafari
+- Mohammad Erfan Zare
+- Amireza Vishte
+- Mirzae Melike
+- Zahra Amiri
+- Sima Mohammadparast
+- Sauleh Eetemadi
 
 ## Table of Contents
 1. [Data Collection](../assets/images/data.png)
