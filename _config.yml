@@ -115,7 +115,7 @@ author:
   email            : amireza.vishteh@gmail.com
   twitter: AmirrezaVishteh
   linkedin: Amirreza Vishteh
-  google_scholar: Q25s5KkAAAAJ
+  google_scholar: ukjmhFwAAAAJ
   github: amirrezavishteh
   instagram: amirreza_v1 
   calendly: https://calendly.com/amireza-vishteh
@@ -127,6 +127,10 @@ author:
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=ukjmhFwAAAAJ"
+
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/Amirrezav1"
@@ -157,6 +161,10 @@ footer:
       url: "https://facebook.com/amirreza.vishteh/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=ukjmhFwAAAAJ"
+
       # url:
     # - label: "GitLab"
     #   icon: "fab fa-fw fa-gitlab"
