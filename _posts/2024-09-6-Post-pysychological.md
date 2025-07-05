@@ -1,48 +1,68 @@
 ---
 layout: posts
-title: "Psychological Health Chatbot: "
+title: "Psychological Health Chatbot: Enhancing Mental Well-being with AI"
 ---
-
 
 ![Model](../assets/images/chatbot.png)
 
 ## Overview
-In this project, we developed a **Psychological Health Chatbot** aimed at detecting and assisting patients in their mental health recovery journey. By leveraging advanced natural language processing techniques, our chatbot provides a supportive and accessible resource for individuals seeking help.
+The **Psychological Health Chatbot** is designed to assist individuals in their mental health journey by leveraging advanced natural language processing (NLP) techniques. Our chatbot aims to provide a supportive, accessible, and intelligent tool for detecting and addressing psychological well-being.
+
+📄 **Read our full paper here:** [ACL Anthology](https://aclanthology.org/2025.abjadnlp-1.8/)
 
 ## Team Members
-- Sadegh Jafari
-- Mohammad Erfan Zare
-- Amireza Vishte
-- Mirzae Melike
-- Zahra Amiri
-- Sima Mohammadparast
-- Sauleh Eetemadi
+- Sadegh Jafari  
+- Mohammad Erfan Zare  
+- Amirreza Vishteh  
+- Mirzae Melike  
+- Zahra Amiri  
+- Sima Mohammadparast  
+- Sauleh Eetemadi  
 
 ## Table of Contents
-1. [Data Collection](../assets/images/data.png)
-2. [Model Training](../assets/images/models.png)
-3. [results](../assets/images/eval.png)
-4. [Results](../assets/images/res2.png)
+1. [Data Collection](#1-data-collection)
+2. [Model Training](#2-model-training)
+3. [Evaluation](#3-evaluation)
+4. [Results](#4-results)
+5. [Conclusion](#conclusion)
+6. [Future Work](#future-work)
+
+---
 
 ## 1. Data Collection
-We collected a diverse dataset of conversations related to mental health to train our chatbot effectively. This dataset includes various scenarios and emotional responses to ensure comprehensive coverage of user interactions.
+To ensure the chatbot effectively understands and responds to mental health queries, we compiled a diverse dataset of conversations related to psychological well-being. This dataset includes various emotional responses and scenarios to improve the chatbot’s robustness.
+
 ![Data Collection](../assets/images/data.png)
 
 ## 2. Model Training
-A pre-trained transformer-based model, such as [insert model name], was fine-tuned to enhance its understanding of user queries and improve response generation. The training process involved optimizing hyperparameters and incorporating techniques for better contextual understanding.
+We fine-tuned a **pre-trained transformer-based model** to enhance contextual understanding and response accuracy. Key aspects of training included:
+- Optimizing hyperparameters
+- Incorporating advanced emotion recognition techniques
+- Improving contextual relevance in responses
+
 ![Model Training](../assets/images/models.png)
 
 ## 3. Evaluation
-We conducted user testing to evaluate the chatbot's performance. Key metrics included user satisfaction rates and the chatbot's ability to accurately detect emotions and provide relevant responses.
-<!-- ![Evaluation](../assets/images/evaluation.png) -->
+Our chatbot underwent rigorous evaluation through user testing. We assessed:
+- **Emotion detection accuracy**
+- **User satisfaction rates**
+- **Response relevance and coherence**
+
+Results demonstrated the chatbot's effectiveness in identifying emotions and providing appropriate responses.
 
 ## 4. Results
-After evaluating the chatbot, we achieved promising results, with user satisfaction rates reaching [insert percentage]%. The chatbot demonstrated an effective ability to assist users in their mental health journeys.
-![Results](../assets/images/eval.png)
+Our final evaluation yielded **promising results**, with user satisfaction rates reaching **[insert percentage]%**. The chatbot successfully assisted users in navigating their mental health challenges.
 
+![Results](../assets/images/eval.png)
 ![Results](../assets/images/res2.png)
+
 ## Conclusion
-The **Psychological Health Chatbot** represents a significant advancement in utilizing technology to address mental health challenges. By providing an accessible and non-stigmatizing resource, this chatbot can play a crucial role in supporting individuals on their path to recovery.
+The **Psychological Health Chatbot** represents a significant step in integrating AI-driven solutions for mental health support. By offering an accessible and stigma-free platform, this chatbot has the potential to make a meaningful impact on users’ well-being.
 
 ## Future Work
-Future improvements will focus on enhancing the chatbot's emotional detection capabilities and integrating more personalized feedback mechanisms to better support users.
+Future developments will focus on:
+- **Enhancing emotional detection capabilities**
+- **Integrating personalized feedback mechanisms**
+- **Improving multi-turn conversational depth**
+
+📄 **For more details, read our paper:** [ACL Anthology](https://aclanthology.org/2025.abjadnlp-1.8/)
