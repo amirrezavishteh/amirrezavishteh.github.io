@@ -254,252 +254,280 @@
     </div>
 
     <script>
-        const tooltipCallback = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                              return label.join(' ');
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltipCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                }
+                                return label;
                             }
-                            return label;
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: '#E0E1DD'
                         }
                     }
-                },
-                legend: {
-                    labels: {
-                        color: '#E0E1DD'
-                    }
                 }
-            }
-        };
-        
-        const wrapLabel = (label, maxLength = 16) => {
-            if (label.length <= maxLength) {
-                return label;
-            }
-            const words = label.split(' ');
-            let lines = [];
-            let currentLine = '';
-            for (const word of words) {
-                if ((currentLine + ' ' + word).trim().length > maxLength) {
-                    lines.push(currentLine.trim());
-                    currentLine = word;
-                } else {
-                    currentLine = (currentLine + ' ' + word).trim();
-                }
-            }
-            if (currentLine) {
-                lines.push(currentLine.trim());
-            }
-            return lines;
-        };
-        
-        const chartColors = {
-            red: '#F94144',
-            orange: '#F3722C',
-            yellowOrange: '#F8961E',
-            maize: '#F9C74F',
-            pistachio: '#90BE6D',
-            shadowBlue: '#415A77'
-        };
-
-        new Chart(document.getElementById('attackDefenseChart'), {
-            type: 'bar',
-            data: {
-                labels: ['Methods'],
-                datasets: [{
-                    label: 'Attacks',
-                    data: [16],
-                    backgroundColor: chartColors.red,
-                    borderColor: chartColors.red,
-                    borderWidth: 1
-                }, {
-                    label: 'Defenses',
-                    data: [28],
-                    backgroundColor: chartColors.pistachio,
-                    borderColor: chartColors.pistachio,
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                maintainAspectRatio: false,
-                scales: {
-                    x: { ticks: { color: '#E0E1DD' }, grid: { color: '#415A77' } },
-                    y: { ticks: { color: '#E0E1DD' }, grid: { color: '#415A77' } }
-                },
-                ...tooltipCallback
-            }
-        });
-
-        new Chart(document.getElementById('modelsChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['ResNet', 'VGG', 'Vision Transformer', 'DenseNet', 'MobileNet', 'EfficientNet', 'ConvNeXT'],
-                datasets: [{
-                    label: 'Model Architectures',
-                    data: [1, 2, 1, 1, 1, 1, 1],
-                    backgroundColor: Object.values(chartColors),
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                ...tooltipCallback
-            }
-        });
-
-        new Chart(document.getElementById('attackCategoriesChart'), {
-            type: 'radar',
-            data: {
-                labels: ['Data Poisoning', 'Trojan', ['Frequency', 'Domain'], 'Input-Aware', 'Stealthy', 'Self-Supervised'],
-                datasets: [{
-                    label: 'Attack Focus',
-                    data: [6, 2, 2, 2, 3, 1],
-                    fill: true,
-                    backgroundColor: 'rgba(249, 65, 68, 0.2)',
-                    borderColor: chartColors.red,
-                    pointBackgroundColor: chartColors.red,
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: chartColors.red
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        angleLines: { color: '#415A77' },
-                        grid: { color: '#415A77' },
-                        pointLabels: { color: '#E0E1DD', font: { size: 10 } },
-                        ticks: { color: '#E0E1DD', backdropColor: '#0D1B2A' }
-                    }
-                },
-                ...tooltipCallback
-            }
-        });
-
-        new Chart(document.getElementById('defenseCategoriesChart'), {
-            type: 'radar',
-            data: {
-                labels: ['Model Pruning', 'Unlearning', 'Data Sanitization', 'Detection', ['Robust', 'Training'], 'Distillation'],
-                datasets: [{
-                    label: 'Defense Focus',
-                    data: [4, 3, 4, 7, 5, 1],
-                    fill: true,
-                    backgroundColor: 'rgba(144, 190, 109, 0.2)',
-                    borderColor: chartColors.pistachio,
-                    pointBackgroundColor: chartColors.pistachio,
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: chartColors.pistachio
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        angleLines: { color: '#415A77' },
-                        grid: { color: '#415A77' },
-                        pointLabels: { color: '#E0E1DD', font: { size: 10 } },
-                        ticks: { color: '#E0E1DD', backdropColor: '#0D1B2A' }
-                    }
-                },
-                ...tooltipCallback
-            }
-        });
-
-        const availableAttacks = [
-            "BadNets", "Blended", "Blind", "BppAttack", "CTRL", "FTrojan", "Input-aware",
-            "LC", "LF", "LIRA", "PoisonInk", "ReFool", "SIG", "SSBA", "TrojanNN", "WaNet"
-        ];
-
-        const availableDefenses = [
-            "ABL", "AC", "ANP", "CLP", "D-BR", "D-ST", "DBD", "EP", "BNP", "FP", "FT",
-            "FT-SAM", "I-BAU", "MCR", "NAB", "NAD", "NC", "NPD", "RNP", "SAU", "SS",
-            "STRIP", "BEATRIX", "SCAN", "SPECTRE", "AGPD", "SentiNet", "TeCo"
-        ];
-
-        async function callGeminiAPI(prompt, outputElement, loadingElement) {
-            outputElement.classList.add('hidden');
-            loadingElement.classList.remove('hidden');
-            outputElement.innerHTML = '';
+            };
+            
+            const chartColors = {
+                red: '#F94144',
+                orange: '#F3722C',
+                yellowOrange: '#F8961E',
+                maize: '#F9C74F',
+                pistachio: '#90BE6D',
+                shadowBlue: '#415A77'
+            };
 
             try {
-                let chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-                const payload = { contents: chatHistory };
-                const apiKey = ""; 
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+                new Chart(document.getElementById('attackDefenseChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['Methods'],
+                        datasets: [{
+                            label: 'Attacks',
+                            data: [16],
+                            backgroundColor: chartColors.red,
+                            borderColor: chartColors.red,
+                            borderWidth: 1
+                        }, {
+                            label: 'Defenses',
+                            data: [28],
+                            backgroundColor: chartColors.pistachio,
+                            borderColor: chartColors.pistachio,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: { ticks: { color: '#E0E1DD' }, grid: { color: '#415A77' } },
+                            y: { ticks: { color: '#E0E1DD' }, grid: { color: '#415A77' } }
+                        },
+                        ...tooltipCallback
+                    }
                 });
+            } catch (e) {
+                console.error("Error initializing attackDefenseChart:", e);
+            }
 
-                const result = await response.json();
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    outputElement.innerHTML = text;
+            try {
+                new Chart(document.getElementById('modelsChart'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['ResNet', 'VGG', 'Vision Transformer', 'DenseNet', 'MobileNet', 'EfficientNet', 'ConvNeXT'],
+                        datasets: [{
+                            label: 'Model Architectures',
+                            data: [1, 2, 1, 1, 1, 1, 1],
+                            backgroundColor: Object.values(chartColors),
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        ...tooltipCallback
+                    }
+                });
+            } catch (e) {
+                console.error("Error initializing modelsChart:", e);
+            }
+
+            try {
+                new Chart(document.getElementById('attackCategoriesChart'), {
+                    type: 'radar',
+                    data: {
+                        labels: ['Data Poisoning', 'Trojan', ['Frequency', 'Domain'], 'Input-Aware', 'Stealthy', 'Self-Supervised'],
+                        datasets: [{
+                            label: 'Attack Focus',
+                            data: [6, 2, 2, 2, 3, 1],
+                            fill: true,
+                            backgroundColor: 'rgba(249, 65, 68, 0.2)',
+                            borderColor: chartColors.red,
+                            pointBackgroundColor: chartColors.red,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: chartColors.red
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: { color: '#415A77' },
+                                grid: { color: '#415A77' },
+                                pointLabels: { color: '#E0E1DD', font: { size: 10 } },
+                                ticks: { color: '#E0E1DD', backdropColor: '#0D1B2A' }
+                            }
+                        },
+                        ...tooltipCallback
+                    }
+                });
+            } catch (e) {
+                console.error("Error initializing attackCategoriesChart:", e);
+            }
+
+            try {
+                new Chart(document.getElementById('defenseCategoriesChart'), {
+                    type: 'radar',
+                    data: {
+                        labels: ['Model Pruning', 'Unlearning', 'Data Sanitization', 'Detection', ['Robust', 'Training'], 'Distillation'],
+                        datasets: [{
+                            label: 'Defense Focus',
+                            data: [4, 3, 4, 7, 5, 1],
+                            fill: true,
+                            backgroundColor: 'rgba(144, 190, 109, 0.2)',
+                            borderColor: chartColors.pistachio,
+                            pointBackgroundColor: chartColors.pistachio,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: chartColors.pistachio
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: { color: '#415A77' },
+                                grid: { color: '#415A77' },
+                                pointLabels: { color: '#E0E1DD', font: { size: 10 } },
+                                ticks: { color: '#E0E1DD', backdropColor: '#0D1B2A' }
+                            }
+                        },
+                        ...tooltipCallback
+                    }
+                });
+            } catch (e) {
+                console.error("Error initializing defenseCategoriesChart:", e);
+            }
+
+            const availableAttacks = [
+                "BadNets", "Blended", "Blind", "BppAttack", "CTRL", "FTrojan", "Input-aware",
+                "LC", "LF", "LIRA", "PoisonInk", "ReFool", "SIG", "SSBA", "TrojanNN", "WaNet"
+            ];
+
+            const availableDefenses = [
+                "ABL", "AC", "ANP", "CLP", "D-BR", "D-ST", "DBD", "EP", "BNP", "FP", "FT",
+                "FT-SAM", "I-BAU", "MCR", "NAB", "NAD", "NC", "NPD", "RNP", "SAU", "SS",
+                "STRIP", "BEATRIX", "SCAN", "SPECTRE", "AGPD", "SentiNet", "TeCo"
+            ];
+
+            // Pre-loaded explanations for attacks
+            const preloadedAttackExplanations = {
+                "BadNets": "BadNets is one of the earliest and simplest backdoor attacks. It injects a small, often visible, trigger pattern (e.g., a white square) into a small percentage of training data. When the model is trained on this poisoned data, it learns to associate the trigger with a specific target class. During inference, if the trigger is present, the model misclassifies the input to the target class, regardless of its true content.",
+                "WaNet": "WaNet (Warping-Based Backdoor Attack) is a stealthy backdoor attack that uses imperceptible image warping to embed triggers. Instead of adding a visible pattern, it applies a subtle, non-linear transformation to a small region of the image. This transformation is learned during training and causes misclassification when a similarly warped input is presented at inference, making it difficult to detect visually.",
+                "SSBA": "SSBA (Sample-Specific Backdoor Attack) introduces a unique, imperceptible trigger for each poisoned sample. Unlike universal triggers, these triggers are not fixed patterns but are generated dynamically for individual images, making them highly stealthy and difficult to detect or remove. The model learns to react to these unique, sample-specific perturbations, leading to targeted misclassification."
+            };
+
+            // Pre-loaded suggestions for defenses
+            const preloadedDefenseSuggestions = {
+                "BadNets": "Against BadNets, defenses like **Neural Cleanse (NC)** are effective as they aim to detect and remove potential triggers by analyzing model behavior. **STRIP** can also work by detecting anomalous behavior when inputs are perturbed with the trigger. **Fine-Pruning (FP)** might help by removing neurons associated with the trigger.",
+                "WaNet": "For WaNet, which uses imperceptible warping, defenses focusing on feature space analysis like **ABL (Anti-Backdoor Learning)** or **NAD (Neural Attention Distillation)** could be beneficial. **STRIP** might also detect the subtle changes in model output when warped inputs are processed.",
+                "SSBA": "SSBA's sample-specific triggers make it challenging. Defenses that analyze neuron activations like **AC (Activation Clustering)** or **EP (Pre-activation Distributions Expose Backdoor Neurons)** could potentially identify anomalous neuron behavior. **ABL** might also be relevant by training a clean model on poisoned data."
+            };
+
+
+            async function callGeminiAPI(prompt, outputElement, loadingElement) {
+                outputElement.classList.add('hidden');
+                loadingElement.classList.remove('hidden');
+                outputElement.innerHTML = '';
+
+                try {
+                    let chatHistory = [];
+                    chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                    const payload = { contents: chatHistory };
+                    const apiKey = ""; 
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        outputElement.innerHTML = text;
+                        outputElement.classList.remove('hidden');
+                    } else {
+                        outputElement.innerHTML = 'Could not get a response. Please try again.';
+                        outputElement.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    outputElement.innerHTML = `Error: ${error.message}. Please try again.`;
                     outputElement.classList.remove('hidden');
-                } else {
-                    outputElement.innerHTML = 'Could not get a response. Please try again.';
-                    outputElement.classList.remove('hidden');
+                } finally {
+                    loadingElement.classList.add('hidden');
                 }
-            } catch (error) {
-                outputElement.innerHTML = `Error: ${error.message}. Please try again.`;
-                outputElement.classList.remove('hidden');
-            } finally {
-                loadingElement.classList.add('hidden');
-            }
-        }
-
-        document.getElementById('explainAttackBtn').addEventListener('click', () => {
-            const attackName = document.getElementById('attackInput').value.trim();
-            const attackExplanationDiv = document.getElementById('attackExplanation');
-            const attackLoadingDiv = document.getElementById('attackLoading');
-
-            if (!attackName) {
-                attackExplanationDiv.innerHTML = 'Please enter an attack method name.';
-                attackExplanationDiv.classList.remove('hidden');
-                return;
             }
 
-            if (!availableAttacks.includes(attackName)) {
-                attackExplanationDiv.innerHTML = `"${attackName}" is not a recognized attack method in BackdoorBench. Please check the spelling or refer to the supported attacks list.`;
-                attackExplanationDiv.classList.remove('hidden');
-                return;
-            }
+            document.getElementById('explainAttackBtn').addEventListener('click', () => {
+                const attackName = document.getElementById('attackInput').value.trim();
+                const attackExplanationDiv = document.getElementById('attackExplanation');
+                const attackLoadingDiv = document.getElementById('attackLoading');
 
-            const prompt = `Explain the backdoor attack method "${attackName}" in the context of deep learning. Focus on its core mechanism and how it poisons models. Keep the explanation concise, around 100-150 words.`;
-            callGeminiAPI(prompt, attackExplanationDiv, attackLoadingDiv);
-        });
+                if (!attackName) {
+                    attackExplanationDiv.innerHTML = 'Please enter an attack method name.';
+                    attackExplanationDiv.classList.remove('hidden');
+                    return;
+                }
 
-        document.getElementById('suggestDefenseBtn').addEventListener('click', () => {
-            const attackName = document.getElementById('defenseInput').value.trim();
-            const defenseSuggestionDiv = document.getElementById('defenseSuggestion');
-            const defenseLoadingDiv = document.getElementById('defenseLoading');
+                // Check pre-loaded explanations first
+                if (preloadedAttackExplanations[attackName]) {
+                    attackExplanationDiv.innerHTML = preloadedAttackExplanations[attackName];
+                    attackExplanationDiv.classList.remove('hidden');
+                    attackLoadingDiv.classList.add('hidden'); // Ensure loading spinner is hidden
+                    return;
+                }
 
-            if (!attackName) {
-                defenseSuggestionDiv.innerHTML = 'Please enter an attack method name to get defense suggestions.';
-                defenseSuggestionDiv.classList.remove('hidden');
-                return;
-            }
+                if (!availableAttacks.includes(attackName)) {
+                    attackExplanationDiv.innerHTML = `"${attackName}" is not a recognized attack method in BackdoorBench. Please check the spelling or refer to the supported attacks list.`;
+                    attackExplanationDiv.classList.remove('hidden');
+                    return;
+                }
 
-            if (!availableAttacks.includes(attackName)) {
-                defenseSuggestionDiv.innerHTML = `"${attackName}" is not a recognized attack method in BackdoorBench. Please check the spelling or refer to the supported attacks list.`;
-                defenseSuggestionDiv.classList.remove('hidden');
-                return;
-            }
+                const prompt = `Explain the backdoor attack method "${attackName}" in the context of deep learning. Focus on its core mechanism and how it poisons models. Keep the explanation concise, around 100-150 words.`;
+                callGeminiAPI(prompt, attackExplanationDiv, attackLoadingDiv);
+            });
 
-            const prompt = `Given the backdoor attack method "${attackName}", suggest 2-3 relevant defense strategies from the following list of BackdoorBench defenses: ${availableDefenses.join(', ')}. For each suggested defense, briefly explain why it might be suitable against this type of attack. Keep the response concise.`;
-            callGeminiAPI(prompt, defenseSuggestionDiv, defenseLoadingDiv);
+            document.getElementById('suggestDefenseBtn').addEventListener('click', () => {
+                const attackName = document.getElementById('defenseInput').value.trim();
+                const defenseSuggestionDiv = document.getElementById('defenseSuggestion');
+                const defenseLoadingDiv = document.getElementById('defenseLoading');
+
+                if (!attackName) {
+                    defenseSuggestionDiv.innerHTML = 'Please enter an attack method name to get defense suggestions.';
+                    defenseSuggestionDiv.classList.remove('hidden');
+                    return;
+                }
+
+                // Check pre-loaded suggestions first
+                if (preloadedDefenseSuggestions[attackName]) {
+                    defenseSuggestionDiv.innerHTML = preloadedDefenseSuggestions[attackName];
+                    defenseSuggestionDiv.classList.remove('hidden');
+                    defenseLoadingDiv.classList.add('hidden'); // Ensure loading spinner is hidden
+                    return;
+                }
+
+                if (!availableAttacks.includes(attackName)) {
+                    defenseSuggestionDiv.innerHTML = `"${attackName}" is not a recognized attack method in BackdoorBench. Please check the spelling or refer to the supported attacks list.`;
+                    defenseSuggestionDiv.classList.remove('hidden');
+                    return;
+                }
+
+                const prompt = `Given the backdoor attack method "${attackName}", suggest 2-3 relevant defense strategies from the following list of BackdoorBench defenses: ${availableDefenses.join(', ')}. For each suggested defense, briefly explain why it might be suitable against this type of attack. Keep the response concise.`;
+                callGeminiAPI(prompt, defenseSuggestionDiv, defenseLoadingDiv);
+            });
         });
     </script>
 </body>
