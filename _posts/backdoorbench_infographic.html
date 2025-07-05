@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackdoorBench: A Visual Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- 
+    Chosen Palette: Energetic & Playful
+    Primary: #0D1B2A (Gunmetal)
+    Secondary: #1B263B (Prussian Blue)
+    Accent 1: #415A77 (Shadow Blue)
+    Accent 2: #778DA9 (Slate Gray)
+    Highlight: #E0E1DD (Platinum)
+    Chart Color 1: #F94144 (Red)
+    Chart Color 2: #F3722C (Orange)
+    Chart Color 3: #F8961E (Yellow-Orange)
+    Chart Color 4: #F9C74F (Maize)
+    Chart Color 5: #90BE6D (Pistachio)
+    -->
+    <!-- 
+    Application Structure Plan: The infographic follows a narrative structure designed to guide the user from a high-level understanding to specific details. It starts with a "Hero" section to define BackdoorBench, followed by "Key Metrics" using large numbers for immediate impact. The core of the infographic is the "Ecosystem" section, which uses charts to compare attacks, defenses, and supported models. A "Workflow" section simplifies the user journey with a CSS-based flowchart. Finally, "In-Depth Analysis" provides a categorical breakdown of methods using radar charts, and "Tools" are presented in a clean grid. This structure is more engaging and intuitive than a linear README, facilitating quicker comprehension of the project's scope and functionality.
+    -->
+    <!-- 
+    Visualization & Content Choices: 
+    - Hero: Large text to grab attention. Goal: Inform. Method: HTML.
+    - Key Metrics (Attacks, Defenses, etc.): "Single Big Number" cards for quick, digestible stats. Goal: Inform. Method: HTML/Tailwind.
+    - Attack vs. Defense Count: A horizontal bar chart to visually contrast the number of methods in each category. Goal: Compare. Method: Chart.js Bar Chart. Justification: A bar chart is ideal for direct quantitative comparison between two categories.
+    - Supported Models: A donut chart to show the composition of the supported model architectures. Goal: Compare/Composition. Method: Chart.js Donut Chart. Justification: A donut chart effectively illustrates parts of a whole.
+    - Workflow Diagram: A flowchart built with styled HTML/CSS to guide users through the process. Goal: Organize. Method: HTML/Tailwind. Justification: A visual flow is more intuitive than a list of commands for understanding a process. NO SVG/Mermaid used.
+    - Method Categories (Attack/Defense): Radar charts to show the categorical focus of the available methods. Goal: Compare/Organize. Method: Chart.js Radar Chart. Justification: Radar charts are excellent for comparing multiple quantitative variables, showing strengths in different areas.
+    - Analysis Tools: A simple grid of cards with Unicode icons. Goal: Organize. Method: HTML/Tailwind. Justification: A grid provides a clean, scannable overview of the available tools.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1B2A;
+            color: #E0E1DD;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .card {
+            background-color: #1B263B;
+            border: 1px solid #415A77;
+        }
+        .flow-step {
+            border: 2px solid #415A77;
+            background-color: #1B263B;
+            min-height: 100px;
+        }
+        .flow-arrow {
+            color: #778DA9;
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .llm-response {
+            background-color: #1B263B;
+            border: 1px solid #415A77;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        }
+        .loading-spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid #F9C74F;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.5rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <header class="text-center mb-12 md:mb-20">
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-4">BackdoorBench</h1>
+            <p class="text-lg md:text-xl text-E0E1DD max-w-3xl mx-auto">A visual guide to the comprehensive benchmark for backdoor attacks and defenses in deep learning.</p>
+        </header>
+
+        <main>
+            <section id="key-metrics" class="mb-12 md:mb-20">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+                    <div class="card rounded-lg p-6">
+                        <p class="text-5xl md:text-6xl font-bold text-F94144">16</p>
+                        <p class="text-lg font-semibold mt-2 text-E0E1DD">Attack Methods</p>
+                    </div>
+                    <div class="card rounded-lg p-6">
+                        <p class="text-5xl md:text-6xl font-bold text-F3722C">28</p>
+                        <p class="text-lg font-semibold mt-2 text-E0E1DD">Defense Methods</p>
+                    </div>
+                    <div class="card rounded-lg p-6">
+                        <p class="text-5xl md:text-6xl font-bold text-F9C74F">8</p>
+                        <p class="text-lg font-semibold mt-2 text-E0E1DD">Model Architectures</p>
+                    </div>
+                    <div class="card rounded-lg p-6">
+                        <p class="text-5xl md:text-6xl font-bold text-90BE6D">4</p>
+                        <p class="text-lg font-semibold mt-2 text-E0E1DD">Supported Datasets</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ecosystem" class="mb-12 md:mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-white">The BackdoorBench Ecosystem</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="card rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-4 text-center text-E0E1DD">Attacks vs. Defenses</h3>
+                        <p class="text-center text-sm text-gray-400 mb-4">The benchmark places a strong emphasis on defenses, providing a robust suite of tools to counter emerging threats.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="attackDefenseChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-4 text-center text-E0E1DD">Supported Model Architectures</h3>
+                        <p class="text-center text-sm text-gray-400 mb-4">A diverse range of modern neural network architectures are supported for comprehensive evaluation.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="modelsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="workflow" class="mb-12 md:mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-white">Getting Started: A Simple Workflow</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flow-step rounded-lg p-4 flex-1 text-center flex flex-col justify-center items-center">
+                        <span class="text-3xl mb-2">①</span>
+                        <h3 class="font-bold text-lg text-E0E1DD">Install & Setup</h3>
+                        <p class="text-sm text-gray-400">Clone the repo and configure the environment.</p>
+                    </div>
+                    <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+                    <div class="flow-step rounded-lg p-4 flex-1 text-center flex flex-col justify-center items-center">
+                        <span class="text-3xl mb-2">②</span>
+                        <h3 class="font-bold text-lg text-E0E1DD">Launch Attack</h3>
+                        <p class="text-sm text-gray-400">Run an attack script to generate a backdoored model.</p>
+                    </div>
+                    <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+                    <div class="flow-step rounded-lg p-4 flex-1 text-center flex flex-col justify-center items-center">
+                        <span class="text-3xl mb-2">③</span>
+                        <h3 class="font-bold text-lg text-E0E1DD">Apply Defense</h3>
+                        <p class="text-sm text-gray-400">Use a defense method on the compromised model.</p>
+                    </div>
+                     <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+                    <div class="flow-step rounded-lg p-4 flex-1 text-center flex flex-col justify-center items-center">
+                        <span class="text-3xl mb-2">④</span>
+                        <h3 class="font-bold text-lg text-E0E1DD">Analyze Results</h3>
+                        <p class="text-sm text-gray-400">Evaluate performance with built-in analysis tools.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="analysis" class="mb-12 md:mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-white">In-Depth Method Analysis</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="card rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-4 text-center text-E0E1DD">Attack Method Categories</h3>
+                        <p class="text-center text-sm text-gray-400 mb-4">Attacks are categorized by their approach, from simple poisoning to complex, input-aware triggers.</p>
+                        <div class="chart-container">
+                            <canvas id="attackCategoriesChart"></canvas>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg font-bold mb-2 text-E0E1DD">✨ Explain an Attack</h3>
+                            <input type="text" id="attackInput" placeholder="e.g., BadNets" class="w-full p-2 rounded-md bg-gray-700 text-E0E1DD border border-gray-600 focus:outline-none focus:border-F9C74F">
+                            <button id="explainAttackBtn" class="mt-3 w-full bg-F3722C hover:bg-F8961E text-white font-bold py-2 px-4 rounded-md transition-colors">Explain Attack ✨</button>
+                            <div id="attackExplanation" class="llm-response hidden"></div>
+                            <div id="attackLoading" class="loading-spinner hidden mx-auto mt-4"></div>
+                        </div>
+                    </div>
+                    <div class="card rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-4 text-center text-E0E1DD">Defense Method Categories</h3>
+                        <p class="text-center text-sm text-gray-400 mb-4">Defenses range from model patching and pruning to runtime detection and data sanitization.</p>
+                        <div class="chart-container">
+                            <canvas id="defenseCategoriesChart"></canvas>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg font-bold mb-2 text-E0E1DD">✨ Suggest Defenses</h3>
+                            <input type="text" id="defenseInput" placeholder="e.g., BadNets" class="w-full p-2 rounded-md bg-gray-700 text-E0E1DD border border-gray-600 focus:outline-none focus:border-F9C74F">
+                            <button id="suggestDefenseBtn" class="mt-3 w-full bg-90BE6D hover:bg-pistachio-dark text-white font-bold py-2 px-4 rounded-md transition-colors">Suggest Defenses ✨</button>
+                            <div id="defenseSuggestion" class="llm-response hidden"></div>
+                            <div id="defenseLoading" class="loading-spinner hidden mx-auto mt-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tools">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-white">Powerful Analysis Toolkit</h2>
+                <p class="text-center text-lg text-E0E1DD max-w-3xl mx-auto mb-10">Beyond attacks and defenses, BackdoorBench provides a rich set of tools for model and data analysis to understand vulnerabilities deeply.</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-center">
+                    <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                        <span class="text-3xl mb-2">📊</span><p class="font-semibold text-sm">T-SNE / UMAP</p>
+                    </div>
+                    <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                        <span class="text-3xl mb-2">🧠</span><p class="font-semibold text-sm">Neuron Activation</p>
+                    </div>
+                    <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                        <span class="text-3xl mb-2">🔥</span><p class="font-semibold text-sm">Grad-CAM</p>
+                    </div>
+                    <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                        <span class="text-3xl mb-2">📉</span><p class="font-semibold text-sm">Loss Landscape</p>
+                    </div>
+                    <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                       <span class="text-3xl mb-2">🕸️</span><p class="font-semibold text-sm">Network Structure</p>
+                    </div>
+                     <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                       <span class="text-3xl mb-2">🔢</span><p class="font-semibold text-sm">Shapely Value</p>
+                    </div>
+                    <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                        <span class="text-3xl mb-2">🔬</span><p class="font-semibold text-sm">Feature Map</p>
+                    </div>
+                    <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                        <span class="text-3xl mb-2">📈</span><p class="font-semibold text-sm">Hessian Eigenvalues</p>
+                    </div>
+                    <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                        <span class="text-3xl mb-2">✅</span><p class="font-semibold text-sm">Metrics Evaluation</p>
+                    </div>
+                     <div class="card rounded-lg p-4 flex flex-col items-center justify-center h-32">
+                        <span class="text-3xl mb-2">🔀</span><p class="font-semibold text-sm">Confusion Matrix</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-20 pt-8 border-t border-gray-700">
+            <p class="text-E0E1DD">Created to visualize the work of the SCLBD team.</p>
+            <a href="https://github.com/SCLBD/BackdoorBench" class="text-F3722C hover:text-F9C74F transition-colors">View on GitHub</a>
+        </footer>
+    </div>
+
+    <script>
+        const tooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: '#E0E1DD'
+                    }
+                }
+            }
+        };
+        
+        const wrapLabel = (label, maxLength = 16) => {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const chartColors = {
+            red: '#F94144',
+            orange: '#F3722C',
+            yellowOrange: '#F8961E',
+            maize: '#F9C74F',
+            pistachio: '#90BE6D',
+            shadowBlue: '#415A77'
+        };
+
+        new Chart(document.getElementById('attackDefenseChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Methods'],
+                datasets: [{
+                    label: 'Attacks',
+                    data: [16],
+                    backgroundColor: chartColors.red,
+                    borderColor: chartColors.red,
+                    borderWidth: 1
+                }, {
+                    label: 'Defenses',
+                    data: [28],
+                    backgroundColor: chartColors.pistachio,
+                    borderColor: chartColors.pistachio,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: { ticks: { color: '#E0E1DD' }, grid: { color: '#415A77' } },
+                    y: { ticks: { color: '#E0E1DD' }, grid: { color: '#415A77' } }
+                },
+                ...tooltipCallback
+            }
+        });
+
+        new Chart(document.getElementById('modelsChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['ResNet', 'VGG', 'Vision Transformer', 'DenseNet', 'MobileNet', 'EfficientNet', 'ConvNeXT'],
+                datasets: [{
+                    label: 'Model Architectures',
+                    data: [1, 2, 1, 1, 1, 1, 1],
+                    backgroundColor: Object.values(chartColors),
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                ...tooltipCallback
+            }
+        });
+
+        new Chart(document.getElementById('attackCategoriesChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Data Poisoning', 'Trojan', ['Frequency', 'Domain'], 'Input-Aware', 'Stealthy', 'Self-Supervised'],
+                datasets: [{
+                    label: 'Attack Focus',
+                    data: [6, 2, 2, 2, 3, 1],
+                    fill: true,
+                    backgroundColor: 'rgba(249, 65, 68, 0.2)',
+                    borderColor: chartColors.red,
+                    pointBackgroundColor: chartColors.red,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: chartColors.red
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: '#415A77' },
+                        grid: { color: '#415A77' },
+                        pointLabels: { color: '#E0E1DD', font: { size: 10 } },
+                        ticks: { color: '#E0E1DD', backdropColor: '#0D1B2A' }
+                    }
+                },
+                ...tooltipCallback
+            }
+        });
+
+        new Chart(document.getElementById('defenseCategoriesChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Model Pruning', 'Unlearning', 'Data Sanitization', 'Detection', ['Robust', 'Training'], 'Distillation'],
+                datasets: [{
+                    label: 'Defense Focus',
+                    data: [4, 3, 4, 7, 5, 1],
+                    fill: true,
+                    backgroundColor: 'rgba(144, 190, 109, 0.2)',
+                    borderColor: chartColors.pistachio,
+                    pointBackgroundColor: chartColors.pistachio,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: chartColors.pistachio
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: '#415A77' },
+                        grid: { color: '#415A77' },
+                        pointLabels: { color: '#E0E1DD', font: { size: 10 } },
+                        ticks: { color: '#E0E1DD', backdropColor: '#0D1B2A' }
+                    }
+                },
+                ...tooltipCallback
+            }
+        });
+
+        const availableAttacks = [
+            "BadNets", "Blended", "Blind", "BppAttack", "CTRL", "FTrojan", "Input-aware",
+            "LC", "LF", "LIRA", "PoisonInk", "ReFool", "SIG", "SSBA", "TrojanNN", "WaNet"
+        ];
+
+        const availableDefenses = [
+            "ABL", "AC", "ANP", "CLP", "D-BR", "D-ST", "DBD", "EP", "BNP", "FP", "FT",
+            "FT-SAM", "I-BAU", "MCR", "NAB", "NAD", "NC", "NPD", "RNP", "SAU", "SS",
+            "STRIP", "BEATRIX", "SCAN", "SPECTRE", "AGPD", "SentiNet", "TeCo"
+        ];
+
+        async function callGeminiAPI(prompt, outputElement, loadingElement) {
+            outputElement.classList.add('hidden');
+            loadingElement.classList.remove('hidden');
+            outputElement.innerHTML = '';
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; 
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    outputElement.innerHTML = text;
+                    outputElement.classList.remove('hidden');
+                } else {
+                    outputElement.innerHTML = 'Could not get a response. Please try again.';
+                    outputElement.classList.remove('hidden');
+                }
+            } catch (error) {
+                outputElement.innerHTML = `Error: ${error.message}. Please try again.`;
+                outputElement.classList.remove('hidden');
+            } finally {
+                loadingElement.classList.add('hidden');
+            }
+        }
+
+        document.getElementById('explainAttackBtn').addEventListener('click', () => {
+            const attackName = document.getElementById('attackInput').value.trim();
+            const attackExplanationDiv = document.getElementById('attackExplanation');
+            const attackLoadingDiv = document.getElementById('attackLoading');
+
+            if (!attackName) {
+                attackExplanationDiv.innerHTML = 'Please enter an attack method name.';
+                attackExplanationDiv.classList.remove('hidden');
+                return;
+            }
+
+            if (!availableAttacks.includes(attackName)) {
+                attackExplanationDiv.innerHTML = `"${attackName}" is not a recognized attack method in BackdoorBench. Please check the spelling or refer to the supported attacks list.`;
+                attackExplanationDiv.classList.remove('hidden');
+                return;
+            }
+
+            const prompt = `Explain the backdoor attack method "${attackName}" in the context of deep learning. Focus on its core mechanism and how it poisons models. Keep the explanation concise, around 100-150 words.`;
+            callGeminiAPI(prompt, attackExplanationDiv, attackLoadingDiv);
+        });
+
+        document.getElementById('suggestDefenseBtn').addEventListener('click', () => {
+            const attackName = document.getElementById('defenseInput').value.trim();
+            const defenseSuggestionDiv = document.getElementById('defenseSuggestion');
+            const defenseLoadingDiv = document.getElementById('defenseLoading');
+
+            if (!attackName) {
+                defenseSuggestionDiv.innerHTML = 'Please enter an attack method name to get defense suggestions.';
+                defenseSuggestionDiv.classList.remove('hidden');
+                return;
+            }
+
+            if (!availableAttacks.includes(attackName)) {
+                defenseSuggestionDiv.innerHTML = `"${attackName}" is not a recognized attack method in BackdoorBench. Please check the spelling or refer to the supported attacks list.`;
+                defenseSuggestionDiv.classList.remove('hidden');
+                return;
+            }
+
+            const prompt = `Given the backdoor attack method "${attackName}", suggest 2-3 relevant defense strategies from the following list of BackdoorBench defenses: ${availableDefenses.join(', ')}. For each suggested defense, briefly explain why it might be suitable against this type of attack. Keep the response concise.`;
+            callGeminiAPI(prompt, defenseSuggestionDiv, defenseLoadingDiv);
+        });
+    </script>
+</body>
+</html>
