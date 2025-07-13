@@ -5,7 +5,6 @@ date: 2025-07-06 14:00:00 +0200
 categories: [AI-Security, Machine-Learning, Benchmarking]
 ---
 
-
 ## Unveiling BackdoorBench: A Critical Benchmark for AI Security
 
 As artificial intelligence (AI) continues to transform industries, ensuring the **security** and **trustworthiness** of AI models becomes ever more crucial. One of the most insidious threats to the reliability of these systems is the **backdoor attack**—where malicious vulnerabilities are subtly introduced during the model’s training. These hidden backdoors can later be exploited to manipulate model behavior in ways that are often nearly invisible under normal conditions, posing a significant security risk.
