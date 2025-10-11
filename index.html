@@ -1,4 +1,38 @@
 ---
-layout: home
-author_profile: true
+layout: splash
+permalink: /
+hidden: true
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/amirreza-vishteh_bio.jpg
+  actions:
+    - label: "Learn More"
+      url: "/blog/"
+excerpt: "I graduated with a Bachelor's degree from Iran University of Science and Technology (IUST). Currently, I am pursuing a Master's degree in Computer Engineering at Sharif University of Technology."
+feature_row:
+  - image_path: /assets/images/lambor1.jpg
+    alt: "Research"
+    title: "My Research"
+    excerpt: "My research focuses on the security of AI systems, with a special emphasis on backdoor attacks against Large Language Models (LLMs). I am passionate about developing robust and trustworthy AI."
+    url: "/blog/"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/book.jpg
+    alt: "Courses"
+    title: "Courses"
+    excerpt: "I have taken a variety of courses in computer science and engineering. Here are some of the most relevant ones."
+    url: "/courses/"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/friends.jpg
+    alt: "CV"
+    title: "My CV"
+    excerpt: "You can find my CV here."
+    url: "/cv/"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
 ---
+
+{% include feature_row %}
+

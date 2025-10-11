@@ -7,4 +7,58 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* Custom CSS */
+
+/* Feature row enhancements */
+.feature__item {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Button hover effect */
+.btn--inverse:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Link color */
+a {
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #1abc9c; /* A bright accent color */
+}
+
+/* Animate feature rows on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature__item {
+  animation: fadeInUp 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+.feature__item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.feature__item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.feature__item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
 
