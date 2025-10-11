@@ -6,38 +6,50 @@ title: Gallery
 tags: [gallery]
 modified: 9-14-2019
 comments: false
-gallery:
+gallery_personal:
   - url: /assets/images/littleamir.jpeg
     image_path: /assets/images/littleamir.jpeg
-    alt: "placeholder image 5"
-    title: "childhood"   
+    alt: "Childhood photo of Amirreza"
+    title: "Childhood"
   - url: /assets/images/rezagreen.jpeg
     image_path: /assets/images/rezagreen.jpeg
-    alt: "placeholder image 5"
-    title: "childhood"
+    alt: "Childhood photo of Amirreza in a green shirt"
+    title: "Childhood"
+
+gallery_places:
   - url: /assets/images/home.jpg
     image_path: /assets/images/home.jpg
-    alt: "placeholder image 2"
-    title: "home"
-  - url: /assets/images/nature.jpg 
-    image_path: /assets/images/nature.jpg
-    alt: "placeholder image 5"
-    title: "snow" 
+    alt: "A picture of home"
+    title: "Home"
   - url: /assets/images/home3.jpeg
     image_path: /assets/images/home3.jpeg
-    alt: "placeholder image 3"
-    title: "home"  
+    alt: "A picture of home"
+    title: "Home"
   - url: /assets/images/home2.jpeg
     image_path: /assets/images/home2.jpeg
-    alt: "home"
-    title: "home"
+    alt: "A picture of home"
+    title: "Home"
+  - url: /assets/images/nature.jpg
+    image_path: /assets/images/nature.jpg
+    alt: "A picture of a snowy landscape"
+    title: "Snow"
+
+gallery_interests:
   - url: /assets/images/oxford.jpg
     image_path: /assets/images/oxford.jpg
-    alt: "placeholder image 5"
-    title: "Favourite University"   
-  
-     
-    
+    alt: "A picture of Oxford University"
+    title: "Favourite University"
 ---
 
-{% include gallery caption="" %}
+## Personal
+
+{% include gallery id="gallery_personal" class="half" caption="A few photos from my personal life." %}
+
+## Places
+
+{% include gallery id="gallery_places" class="half" caption="Some places that are special to me." %}
+
+## Interests
+
+{% include gallery id="gallery_interests" class="half" caption="Things that I find interesting." %}
+

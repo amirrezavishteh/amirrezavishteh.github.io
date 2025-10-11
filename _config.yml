@@ -13,7 +13,7 @@
 #theme                  : "minimal-mistakes-jekyll"
 remote_theme: "mmistakes/minimal-mistakes@4.16.0"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" #"neon" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "mint" #"neon" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US" 
@@ -110,7 +110,7 @@ analytics:
 author:
   name             : "Amirreza Vishteh"
   avatar           : "/assets/images/personal.jpg"
-  bio              : I graduated with a Bachelor's degree from Iran University of Science and Technology (IUST). Currently, I am pursuing a Master's degree in Computer Engineering at Sharif University of Technology.
+  bio              : "I am a researcher focused on AI Safety, Trustworthy AI, and Large Language Models (LLMs). I graduated with a Bachelor's degree from Iran University of Science and Technology (IUST) and am currently pursuing a Master's degree in Computer Engineering at Sharif University of Technology."
   location         : "تهران"
   email            : amireza.vishteh@gmail.com
   twitter: AmirrezaVishteh
