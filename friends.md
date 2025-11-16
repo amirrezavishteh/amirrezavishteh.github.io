@@ -7,6 +7,10 @@ tags: [Friends]
 modified: 4-10-2019
 comments: true
 gallery:
+  - url: /assets/images/dml-lab-hamidreza-rabiee.jpg
+    image_path: /assets/images/dml-lab-hamidreza-rabiee.jpg
+    alt: "Hamidreza Rabiee"
+    title: "Hamidreza Rabiee & amirreza vishteh"
   - url: /assets/images/amirsina.jpeg
     image_path: /assets/images/amirsina.jpeg
     alt: "sina alinejad"
