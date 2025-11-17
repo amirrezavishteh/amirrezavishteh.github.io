@@ -3,7 +3,7 @@ main:
 #  - title: "Quick-Start Guide"
 #    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "CV"
-    url: "https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link"
+    url: /cv/
   - title: "Courses"
     url: /links/
   - title: "My Friends"
