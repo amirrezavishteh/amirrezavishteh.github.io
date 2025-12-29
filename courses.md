@@ -8,9 +8,19 @@ modified: 9-14-2019
 comments: false
 ---
 
+## 🎓 Courses & Learning Path Summary
+
+**Amirreza Vishteh's** educational development spans a carefully curated progression through foundational computer science, systems engineering, and advanced AI research. From mathematical fundamentals (calculus, linear algebra) through hardware design (VHDL), algorithm design, and computer vision, to specialized research in **Natural Language Processing**, **Neural Architecture Search**, and **AI Safety**, his coursework reflects a commitment to understanding AI systems at every level—from logic gates to transformer architectures. This multi-layered expertise enables both the design of trustworthy AI systems and the development of practical applications like Persian NLP pipelines and psychological health chatbots. Recent coursework and certifications in machine learning, deep neural networks, and NLP demonstrate ongoing engagement with cutting-edge methodologies.
+
+---
+
 ## Academic Development
 
 My coursework at IUST and Sharif University reflects a deliberate progression from foundational computer science to specialized research in AI Safety, Natural Language Processing, and Trustworthy AI. This journey encompasses theoretical depth—from discrete mathematics and algorithm design to stochastic processes—combined with practical applications in neural architecture search, Persian NLP, and affective computing.
+
+### 💡 Learning Philosophy
+
+I believe in **simultaneous teaching and learning**—solidifying knowledge through pedagogical engagement while maintaining intellectual humility. My selection as a Teaching Assistant for Stochastic Processes embodies this principle. Each course represents not merely content consumption but strategic skill-building: algorithms for problem-solving rigor, VHDL for low-level optimization insights, NLP for real-world impact, and machine learning certifications for staying current with industry best practices. I prioritize **algorithmic primacy** over transient frameworks—understanding the mathematical foundations ensures that learning compounds across decades of technological change. Beyond formal coursework, I engage with seminars (HBC2024), Coursera specializations, and self-directed research projects that extend academic boundaries and address pressing challenges in AI safety and multilingual NLP.
 
 ## Current Courses & Research
 
