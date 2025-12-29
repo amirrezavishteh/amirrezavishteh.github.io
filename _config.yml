@@ -25,7 +25,7 @@ url                      : "https://amirrezavishteh.github.io"
 baseurl                  : ""
 repository               : "amirrezavishteh/amirrezavishteh.github.io"
 teaser                   : "/assets/images/amirkhan.jpg"
-logo                     : "/assets/images/amirkhan.jpg"
+logo                     :
 masthead_title           : "Amirreza Vishteh | AI Researcher"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
