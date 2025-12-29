@@ -1,0 +1,99 @@
+<style>
+  .research-stats {
+    background: linear-gradient(135deg, #00796b 0%, #004d40 100%);
+    color: white;
+    padding: 2.5em 1.5em;
+    border-radius: 6px;
+    margin: 2em 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5em;
+    border-radius: 6px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .stat-number {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 0 0 0.3em 0;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.9em;
+    opacity: 0.9;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .stat-note {
+    font-size: 0.8em;
+    opacity: 0.75;
+    margin-top: 0.3em;
+  }
+
+  .scholar-link {
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 0.8em 1.5em;
+    background-color: #009688;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .scholar-link:hover {
+    background-color: #00695c;
+  }
+
+  @media screen and (max-width: 600px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<div class="research-stats">
+  <h3 style="margin: 0 0 1.5em 0; text-align: center; font-size: 1.3em;">Research Impact & Metrics</h3>
+  
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-number">3+</span>
+      <p class="stat-label">Publications</p>
+      <p class="stat-note">2023–2025</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">30+</span>
+      <p class="stat-label">Citations</p>
+      <p class="stat-note">Google Scholar</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">2</span>
+      <p class="stat-label">Major Venues</p>
+      <p class="stat-note">Conferences & Journals</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">5</span>
+      <p class="stat-label">GitHub Repos</p>
+      <p class="stat-note">Open Source Code</p>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <p style="margin: 0 0 1em 0; font-size: 0.95em;">Track detailed metrics and citations on Google Scholar</p>
+    <a href="https://scholar.google.com/citations?user=ukjmhFwAAAAJ" class="scholar-link" target="_blank">🎓 View Google Scholar Profile</a>
+  </div>
+</div>

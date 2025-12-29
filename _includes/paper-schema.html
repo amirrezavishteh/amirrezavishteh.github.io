@@ -1,0 +1,31 @@
+<!-- Article/Research Paper Schema - Add this to blog post front matter as example:
+---
+paper_title: "BAIT: Backdoor Scanning by Inverting Attack Target"
+paper_doi: "10.1234/example"
+paper_url: "https://arxiv.org/abs/2024.xxxxx"
+paper_year: 2024
+paper_venue: "NeurIPS 2024"
+paper_authors: ["Amirreza Vishteh", "Co-author Name"]
+---
+-->
+
+{% if page.paper_doi or page.paper_url or page.paper_venue %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  {% if page.paper_title %}"headline": "{{ page.paper_title }}",{% endif %}
+  {% if page.title %}"name": "{{ page.title }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "Amirreza Vishteh"
+  },
+  {% if page.paper_year %}"datePublished": "{{ page.paper_year }}",{% endif %}
+  {% if page.paper_venue %}"publisher": "{{ page.paper_venue }}",{% endif %}
+  {% if page.paper_doi %}"identifier": "{{ page.paper_doi }}",{% endif %}
+  {% if page.paper_url %}"url": "{{ page.paper_url }}",{% endif %}
+  {% if page.excerpt %}"description": "{{ page.excerpt | strip_html | truncatewords: 50 }}",{% endif %}
+  "isAccessibleForFree": true
+}
+</script>
+{% endif %}

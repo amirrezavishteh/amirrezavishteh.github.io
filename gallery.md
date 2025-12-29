@@ -3,7 +3,12 @@ layout: single
 author_profile: true
 permalink: /gallery/
 title: "Gallery - Amirreza Vishteh"
-tags: [gallery]
+og_title: "Amirreza Vishteh's Photo Gallery"
+og_description: "Personal photography collection - travel, hobbies, and moments that inspire research and life."
+og_image: "/assets/images/rezagreen.jpeg"
+twitter_card: "summary_large_image"
+twitter_image: "/assets/images/rezagreen.jpeg"
+tags: [gallery, photography, personal]
 modified: 12-30-2025
 comments: false
 gallery:

@@ -3,6 +3,11 @@ layout: splash
 permalink: /
 hidden: true
 title: "Amirreza Vishteh - AI Researcher & Computer Engineer"
+og_title: "Amirreza Vishteh - AI Safety & LLM Security Researcher"
+og_description: "Defending Large Language Models Against Backdoor Attacks. Advancing AI Safety and Trustworthy AI Systems. Research-forward computer engineer at Sharif University."
+og_image: "/assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-Inverting-Attack-Target.png"
+twitter_card: "summary_large_image"
+twitter_image: "/assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-Inverting-Attack-Target.png"
 header:
   overlay_color: "#000"
   overlay_filter: "0.85"
@@ -38,23 +43,23 @@ feature_row_papers:
   - image_path: /assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-Inverting-Attack-Target.png
     alt: "BAIT Paper"
     title: "🏆 BAIT: Backdoor Scanning by Inverting"
-    excerpt: "Novel backdoor detection mechanism for LLMs using attack target inversion. Published research advancing model security and defense mechanisms."
+    excerpt: "<strong>Novel backdoor detection for LLMs (2023-2024)</strong><br/>Introduces attack target inversion technique for identifying hidden backdoors in large language models. Published research advancing practical defense mechanisms and model security.<br/><em>Focus: Model Security, Adversarial Robustness</em>"
     url: "/blog/"
-    btn_label: "Paper Details"
+    btn_label: "Read Full Paper"
     btn_class: "btn--info"
   - image_path: /assets/images/ftt-nass.png
     alt: "FTT-NAS"
     title: "🔍 FTT-NAS: Neural Architecture Search"
-    excerpt: "Advancing neural architecture search for trustworthy AI systems. Focuses on efficient design of robust and interpretable models."
+    excerpt: "<strong>Trustworthy AI Systems (2024)</strong><br/>Advances neural architecture search for efficient and robust deep learning models. Focuses on designing interpretable and trustworthy AI systems with reduced computational overhead.<br/><em>Focus: Model Efficiency, Interpretability, Robustness</em>"
     url: "/blog/"
-    btn_label: "Learn More"
+    btn_label: "Research Details"
     btn_class: "btn--info"
-  - image_path: /assets/images/model-security.png
-    alt: "Model Security"
-    title: "🛡️ LLM Adversarial Robustness"
-    excerpt: "Comprehensive research on adversarial attacks and defenses for large language models, bridging theory and practical implementation."
+  - image_path: /assets/images/Model.png
+    alt: "LLM Security"
+    title: "🛡️ Adversarial Robustness of LLMs"
+    excerpt: "<strong>Defense Mechanisms (2024-2025)</strong><br/>Comprehensive investigation of adversarial attacks and defenses for large language models. Bridges theoretical vulnerabilities with practical mitigation strategies and defense protocols.<br/><em>Focus: Adversarial Attacks, Defense Mechanisms, Model Hardening</em>"
     url: "/blog/"
-    btn_label: "Read More"
+    btn_label: "View Research"
     btn_class: "btn--info"
 
 feature_row_code:
@@ -150,19 +155,32 @@ feature_row_personal:
 {% include feature_row %}
 </div>
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;">Research Journey Timeline</h2>
+<!-- Quick Navigation Anchors -->
+<div style="background-color: #f5f5f5; padding: 1.5em; border-radius: 6px; margin-bottom: 3em; text-align: center;">
+  <p style="margin: 0 0 1em 0; font-weight: 600; color: #333;">Jump to Section:</p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1em;">
+    <a href="#publications-section" style="display: inline-block; padding: 0.5em 1.2em; background-color: #009688; color: white; text-decoration: none; border-radius: 4px; font-weight: 500;">📝 Publications</a>
+    <a href="#code-section" style="display: inline-block; padding: 0.5em 1.2em; background-color: #009688; color: white; text-decoration: none; border-radius: 4px; font-weight: 500;">💻 Code & Data</a>
+    <a href="#collaboration-section" style="display: inline-block; padding: 0.5em 1.2em; background-color: #009688; color: white; text-decoration: none; border-radius: 4px; font-weight: 500;">🤝 Collaborations</a>
+    <a href="#timeline-section" style="display: inline-block; padding: 0.5em 1.2em; background-color: #009688; color: white; text-decoration: none; border-radius: 4px; font-weight: 500;">📅 Timeline</a>
+  </div>
+</div>
+
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;" id="timeline-section">Research Journey Timeline</h2>
 
 {% include research-timeline.html %}
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;">Featured Publications & Research</h2>
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;" id="publications-section">Featured Publications & Research</h2>
 
 {% include feature_row id="feature_row_papers" %}
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;">💻 Code & Datasets</h2>
+{% include research-stats.html %}
+
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;" id="code-section">💻 Code & Datasets</h2>
 
 {% include feature_row id="feature_row_code" %}
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;">🤝 Collaborations & Research Chat</h2>
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;" id="collaboration-section">🤝 Collaborations & Research Chat</h2>
 
 {% include feature_row id="feature_row_collab" %}
 
