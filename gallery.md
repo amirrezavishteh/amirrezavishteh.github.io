@@ -44,19 +44,7 @@ gallery:
 
 ---
 
-## �️ Gallery Summary
+{% include gallery class="third" caption="Amirreza at Bagh Ferdos - Personal moments from my life." %}
 
 **Personal photographs from Bagh Ferdos and beyond** — Capturing moments that balance my research in AI Safety and Trustworthy AI with the human experiences that ground meaningful work.
-
-
-
-
----
-
-<div style="background-color: #f5f5f5; padding: 20px; border-radius: 6px; margin-top: 2em;">
-  <h3>Beyond the Research</h3>
-  <p>My career trajectory—from a national university entrance rank of #475 to my current role as a Master's student at Sharif University—is fundamentally shaped by the relationships, mentors, and personal experiences documented in these images. I subscribe to a philosophy of simultaneous teaching and learning, rigorous algorithmic thinking, and competence-driven achievement. Yet behind every publication on backdoor attacks, Persian NLP pipelines, and psychological health chatbots is a human who values connection, growth, and the preservation of meaningful moments.</p>
-  <p><strong>Research Themes:</strong> AI Safety & Backdoor Attacks • Trustworthy Large Language Models • Persian Natural Language Processing (DadmaTools) • Multimodal Sentiment Analysis • Psychological Health Chatbots</p>
-  <p><strong>👉 Ready to discuss research or collaborate?</strong> <a href="https://calendly.com/amireza-vishteh">Book a time on my calendar</a></p>
-</div>
 
