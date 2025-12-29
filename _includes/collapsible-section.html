@@ -1,0 +1,102 @@
+<style>
+  .collapsible-section {
+    margin: 2em 0;
+  }
+
+  .collapsible-header {
+    background-color: #009688;
+    color: white;
+    padding: 1.2em 1.5em;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+
+  .collapsible-header:hover {
+    background-color: #00796b;
+    box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3);
+    transform: translateX(4px);
+  }
+
+  .collapsible-toggle {
+    font-size: 1.3em;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .collapsible-toggle.active {
+    transform: rotate(180deg);
+  }
+
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: #f5f5f5;
+    border-radius: 0 0 6px 6px;
+  }
+
+  .collapsible-content.active {
+    max-height: 1000px;
+    padding: 1.5em;
+  }
+
+  .collapsible-content p {
+    margin: 0.5em 0;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .collapsible-content ul {
+    margin: 0.5em 0 0.5em 1.5em;
+    padding: 0;
+  }
+
+  .collapsible-content li {
+    margin: 0.3em 0;
+    color: #333;
+  }
+</style>
+
+<div class="collapsible-section" id="section-featured-research">
+  <div class="collapsible-header" onclick="toggleCollapse('featured-research')">
+    <span>🔬 Featured Research & Overview</span>
+    <span class="collapsible-toggle">▼</span>
+  </div>
+  <div class="collapsible-content" id="featured-research">
+    <p><strong>My Research Focus:</strong></p>
+    <p>I specialize in AI Safety and Trustworthy AI Systems with an emphasis on defending Large Language Models against adversarial attacks.</p>
+    
+    <p><strong>Key Areas:</strong></p>
+    <ul>
+      <li><strong>Backdoor Detection:</strong> Novel techniques for identifying hidden backdoors in LLMs using attack target inversion</li>
+      <li><strong>Model Security:</strong> Understanding vulnerabilities and developing defense mechanisms</li>
+      <li><strong>Adversarial Robustness:</strong> Making AI systems resistant to adversarial inputs</li>
+      <li><strong>Trustworthy AI:</strong> Building interpretable and reliable AI systems</li>
+    </ul>
+
+    <p><strong>Recent Work:</strong> BAIT (Backdoor Scanning by Inverting Attack Target) - a breakthrough approach to detecting backdoor attacks in large language models. Published and presented at major venues.</p>
+  </div>
+</div>
+
+<script>
+function toggleCollapse(id) {
+  const content = document.getElementById(id);
+  const header = document.querySelector(`[onclick="toggleCollapse('${id}')"]`);
+  const toggle = header.querySelector('.collapsible-toggle');
+  
+  if (content.classList.contains('active')) {
+    content.classList.remove('active');
+    toggle.classList.remove('active');
+  } else {
+    content.classList.add('active');
+    toggle.classList.add('active');
+  }
+}
+</script>

@@ -4,8 +4,7 @@ main:
     url: /
   - title: "📚 Research"
     url: /blog/
-  - title: "� Publications"
-    url: /blog/
+
   - title: "💻 Code & Data"
     url: "https://github.com/amirrezavishteh"
   - title: "�📄 CV"
