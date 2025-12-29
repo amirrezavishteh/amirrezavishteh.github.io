@@ -118,51 +118,6 @@ feature_row_personal:
     btn_class: "btn--success"
 ---
 
-<!-- Time Display with Hover Swap -->
-<div style="text-align: center; padding: 1.5em 0; background-color: #f5f5f5; margin-bottom: 2em; border-radius: 6px;">
-  <div style="font-size: 1.1em; font-weight: 600; color: #333; cursor: default; user-select: none;">
-    <span id="current-time" style="display: inline-block; min-width: 150px;">Current Time</span>
-    <span id="status-text" style="display: inline-block; margin-left: 1em; color: #009688; font-weight: 700;">Loading...</span>
-  </div>
-  <p style="margin: 0.5em 0 0 0; font-size: 0.9em; color: #666;">Hover to swap | Based on Tehran timezone</p>
-</div>
-
-<script>
-function updateTime() {
-  const now = new Date();
-  const tehranTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tehran' }));
-  const timeStr = tehranTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
-  const dateStr = tehranTime.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' });
-  
-  const timeEl = document.getElementById('current-time');
-  const statusEl = document.getElementById('status-text');
-  
-  if (timeEl && statusEl) {
-    timeEl.textContent = timeStr;
-    statusEl.textContent = dateStr;
-    
-    timeEl.style.transition = 'all 0.3s ease';
-    statusEl.style.transition = 'all 0.3s ease';
-    
-    // Hover swap effect
-    timeEl.addEventListener('mouseenter', function() {
-      timeEl.style.opacity = '0.5';
-      statusEl.style.opacity = '1';
-      statusEl.style.transform = 'scale(1.1)';
-    });
-    
-    timeEl.addEventListener('mouseleave', function() {
-      timeEl.style.opacity = '1';
-      statusEl.style.opacity = '0.7';
-      statusEl.style.transform = 'scale(1)';
-    });
-  }
-}
-
-updateTime();
-setInterval(updateTime, 1000);
-</script>
-
 <div style="margin-bottom: 3em;">
 {% include feature_row %}
 </div>
@@ -199,7 +154,7 @@ document.getElementById('timeline-section').addEventListener('click', function()
 });
 </script>
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer;" id="publications-section">Featured Publications & Research</h2>
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer;" id="publications-section" style="display: none;">Featured Publications & Research</h2>
 
 <div id="publications-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
 {% include feature_row id="feature_row_papers" %}
@@ -218,7 +173,7 @@ document.getElementById('publications-section').addEventListener('click', functi
 });
 </script>
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer;" id="code-section">💻 Code & Datasets</h2>
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer; display: none;" id="code-section">💻 Code & Datasets</h2>
 
 <div id="code-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
 {% include feature_row id="feature_row_code" %}
@@ -235,7 +190,7 @@ document.getElementById('code-section').addEventListener('click', function() {
 });
 </script>
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer;" id="collaboration-section">🤝 Collaborations & Research Chat</h2>
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer; display: none;" id="collaboration-section">🤝 Collaborations & Research Chat</h2>
 
 <div id="collaboration-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
 {% include feature_row id="feature_row_collab" %}
