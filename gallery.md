@@ -24,10 +24,7 @@ gallery:
     image_path: /assets/images/2.jpg
     alt: "Featured Photo 2"
     title: "Featured 2"
-  - url: /assets/images/3.jpg
-    image_path: /assets/images/3.jpg
-    alt: "Featured Photo 3"
-    title: "Featured 3"
+ 
   - url: /assets/images/4.jpg
     image_path: /assets/images/4.jpg
     alt: "Featured Photo 4"
@@ -40,6 +37,10 @@ gallery:
     image_path: /assets/images/5848190623616273499.jpg
     alt: "Personal Moment"
     title: "Personal Memory"
+  - url: /assets/images/3.jpg
+    image_path: /assets/images/3.jpg
+    alt: "Featured Photo 3"
+    title: "Featured 3"
 
 ---
 
