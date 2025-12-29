@@ -68,21 +68,17 @@ $accent-color: #00796b;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Feature row enhancements with vibration effects */
+/* Feature row enhancements with smooth lift effects */
 .feature__item {
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
+  opacity: 1;
 }
 
 .feature__item:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  animation: vibrate 0.3s ease-in-out;
-}
-
-.feature__item:active {
-  animation: pulse-scale 0.4s ease-in-out;
 }
 
 /* Research stats card hover effect */
@@ -102,7 +98,6 @@ $accent-color: #00796b;
 .stat-card:hover {
   transform: scale(1.08) translateY(-4px);
   background: rgba(255, 255, 255, 0.15);
-  animation: vibrate 0.3s ease-in-out;
 }
 
 /* Button styling */
@@ -138,7 +133,6 @@ $accent-color: #00796b;
   background-color: $accent-color;
   transform: translateX(3px) translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 150, 136, 0.5);
-  animation: vibrate 0.2s ease-in-out;
 }
 
 .btn--info {
@@ -178,10 +172,6 @@ a[href*="#"] {
   transition: all 0.3s ease;
 }
 
-a[href*="#"]:hover {
-  animation: vibrate 0.2s ease-in-out;
-}
-
 /* Footer enhancements */
 .page__footer {
   background-color: #fafafa;
@@ -195,7 +185,6 @@ a[href*="#"]:hover {
 
 a:hover .footer__icon {
   color: $accent-color;
-  animation: vibrate 0.3s ease-in-out;
   transform: scale(1.15);
 }
 
@@ -208,7 +197,6 @@ a:hover .footer__icon {
 .social-icons a:hover {
   color: $accent-color;
   transform: scale(1.15) rotate(5deg);
-  animation: vibrate 0.3s ease-in-out;
 }
 
 /* Improve readability on feature rows */
@@ -224,7 +212,6 @@ a:hover .footer__icon {
 .timeline .content:hover {
   border-left: 6px solid $primary-color;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  animation: vibrate 0.2s ease-in-out;
   transform: translateX(4px);
 }
 
