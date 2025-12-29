@@ -1,6 +1,6 @@
 ---
 layout: single
-author_profile: false
+author_profile: true
 permalink: /cv/
 title: My Education
 tags: [resume, cv]
