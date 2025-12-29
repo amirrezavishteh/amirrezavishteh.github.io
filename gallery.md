@@ -36,6 +36,10 @@ gallery:
     image_path: /assets/images/5.jpg
     alt: "Featured Photo 5"
     title: "Featured 5"
+  - url: /assets/images/5848190623616273499.jpg
+    image_path: /assets/images/5848190623616273499.jpg
+    alt: "Personal Moment"
+    title: "Personal Memory"
 
 ---
 
