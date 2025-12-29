@@ -2,9 +2,9 @@
 layout: single
 author_profile: true
 permalink: /gallery/
-title: Gallery
+title: "Gallery - Amirreza Vishteh"
 tags: [gallery]
-modified: 9-14-2019
+modified: 12-30-2025
 comments: false
 gallery_personal:
   - url: /assets/images/littleamir.jpeg
@@ -16,40 +16,37 @@ gallery_personal:
     alt: "Childhood photo of Amirreza in a green shirt"
     title: "Childhood"
 
-gallery_places:
-  - url: /assets/images/home.jpg
-    image_path: /assets/images/home.jpg
-    alt: "A picture of home"
-    title: "Home"
-  - url: /assets/images/home3.jpeg
-    image_path: /assets/images/home3.jpeg
-    alt: "A picture of home"
-    title: "Home"
-  - url: /assets/images/home2.jpeg
-    image_path: /assets/images/home2.jpeg
-    alt: "A picture of home"
-    title: "Home"
-  - url: /assets/images/nature.jpg
-    image_path: /assets/images/nature.jpg
-    alt: "A picture of a snowy landscape"
-    title: "Snow"
+gallery_featured:
+  - url: /assets/images/1.jpg
+    image_path: /assets/images/1.jpg
+    alt: "Featured Photo 1"
+    title: "Featured 1"
+  - url: /assets/images/2.jpg
+    image_path: /assets/images/2.jpg
+    alt: "Featured Photo 2"
+    title: "Featured 2"
+  - url: /assets/images/3.jpg
+    image_path: /assets/images/3.jpg
+    alt: "Featured Photo 3"
+    title: "Featured 3"
+  - url: /assets/images/4.jpg
+    image_path: /assets/images/4.jpg
+    alt: "Featured Photo 4"
+    title: "Featured 4"
+  - url: /assets/images/5.jpg
+    image_path: /assets/images/5.jpg
+    alt: "Featured Photo 5"
+    title: "Featured 5"
 
-gallery_interests:
-  - url: /assets/images/oxford.jpg
-    image_path: /assets/images/oxford.jpg
-    alt: "A picture of Oxford University"
-    title: "Favourite University"
 ---
 
-## Personal
+## Personal Collections
 
-{% include gallery id="gallery_personal" class="half" caption="A few photos from my personal life." %}
+{% include gallery id="gallery_personal" class="half" caption="A glimpse into my personal life - cherished moments and memories." %}
 
-## Places
+## Featured Gallery
 
-{% include gallery id="gallery_places" class="half" caption="Some places that are special to me." %}
+A curated selection of my favorite photography moments capturing diverse subjects and experiences.
 
-## Interests
-
-{% include gallery id="gallery_interests" class="half" caption="Things that I find interesting." %}
+{% include gallery id="gallery_featured" class="third" caption="Explore a diverse collection of featured photographs." %}
 
