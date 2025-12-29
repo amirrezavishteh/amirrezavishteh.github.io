@@ -10,7 +10,7 @@ comments: false
 
 ## 🎓 Courses & Learning Path Summary
 
-**Amirreza Vishteh's** educational development spans a carefully curated progression through foundational computer science, systems engineering, and advanced AI research. From mathematical fundamentals (calculus, linear algebra) through hardware design (VHDL), algorithm design, and computer vision, to specialized research in **Natural Language Processing**, **Neural Architecture Search**, and **AI Safety**, his coursework reflects a commitment to understanding AI systems at every level—from logic gates to transformer architectures. This multi-layered expertise enables both the design of trustworthy AI systems and the development of practical applications like Persian NLP pipelines and psychological health chatbots. Recent coursework and certifications in machine learning, deep neural networks, and NLP demonstrate ongoing engagement with cutting-edge methodologies.
+**From foundational CS to AI Safety and NLP** — A deliberate progression through mathematics, hardware design, algorithms, and machine learning, reflecting commitment to understanding AI systems from logic gates to transformer architectures.
 
 ---
 

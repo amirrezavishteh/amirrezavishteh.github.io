@@ -46,7 +46,7 @@ gallery:
 
 ## �️ Gallery Summary
 
-**Amirreza Vishteh's Personal Photo Collection** — A visual narrative documenting the personal journey of an AI researcher focused on **Trustworthy AI, AI Safety, and Computational Linguistics**. These photographs capture formative moments from childhood in Iran through academic years at IUST and Sharif University, with particular emphasis on cherished memories at **Bagh Ferdos**. While his professional work centers on defending large language models against backdoor attacks, building Persian NLP infrastructure (DadmaTools), and developing emotion-aware AI systems, this gallery reveals the human dimension—the relationships, places, and experiences that anchor rigorous research in real-world meaning and social impact. Each image represents a chapter in the ongoing journey of a scholar bridging technical excellence with human-centric values.
+**Personal photographs from Bagh Ferdos and beyond** — Capturing moments that balance my research in AI Safety and Trustworthy AI with the human experiences that ground meaningful work.
 
 ---
 
