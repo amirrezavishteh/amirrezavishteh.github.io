@@ -1,18 +1,15 @@
 # main links
 main:
-  - title: "🏠 Home"
-    url: /
-  - title: "📚 Research"
-    url: /blog/
-
-  - title: "💻 Code & Data"
-    url: "https://github.com/amirrezavishteh"
   - title: "📄 CV"
     url: "/cv/"
+  - title: "📚 Research"
+    url: /blog/
   - title: "🎓 Courses"
     url: /links/
   - title: "📸 Gallery"
     url: /gallery/
+  - title: "💻 Code & Data"
+    url: "https://github.com/amirrezavishteh"
   - title: "🤝 Friends"
     url: /friends/
   - title: "✨ Hobbies"
