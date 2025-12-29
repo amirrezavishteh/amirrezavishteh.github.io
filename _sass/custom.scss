@@ -1,1 +1,96 @@
-$link-color: #8A2BE2; // Blue-Violet
+$link-color: #009688; // Teal - Research focused
+$primary-color: #009688;
+$accent-color: #00796b;
+
+/* Enhanced header and navigation */
+.masthead {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.masthead__menu-label {
+  color: $primary-color;
+}
+
+/* Improved splash page hero text */
+.page__hero--overlay .page__title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.page__hero--overlay .page__lead {
+  font-size: 1.1em;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Feature row enhancements */
+.feature__item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styling */
+.btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background-color: $primary-color;
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: $accent-color;
+  transform: translateX(2px);
+}
+
+.btn--info:hover {
+  transform: translateX(2px);
+}
+
+.btn--success:hover {
+  transform: translateX(2px);
+}
+
+/* Section heading style */
+h2 {
+  position: relative;
+}
+
+h2::first-line {
+  font-weight: 700;
+}
+
+/* Footer enhancements */
+.page__footer {
+  background-color: #fafafa;
+  border-top: 2px solid $primary-color;
+}
+
+.footer__icon {
+  color: $primary-color;
+}
+
+a:hover .footer__icon {
+  color: $accent-color;
+}
+
+/* Social media links styling */
+.social-icons a {
+  color: $primary-color;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: $accent-color;
+  transform: scale(1.1);
+}
+
+/* Improve readability on feature rows */
+.feature__item__description {
+  line-height: 1.8;
+}

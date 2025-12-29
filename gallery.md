@@ -6,17 +6,11 @@ title: "Gallery - Amirreza Vishteh"
 tags: [gallery]
 modified: 12-30-2025
 comments: false
-gallery_personal:
+gallery:
   - url: /assets/images/littleamir.jpeg
     image_path: /assets/images/littleamir.jpeg
     alt: "Childhood photo of Amirreza"
     title: "Childhood"
-  - url: /assets/images/rezagreen.jpeg
-    image_path: /assets/images/rezagreen.jpeg
-    alt: "Childhood photo of Amirreza in a green shirt"
-    title: "Childhood"
-
-gallery_featured:
   - url: /assets/images/1.jpg
     image_path: /assets/images/1.jpg
     alt: "Featured Photo 1"
@@ -40,13 +34,21 @@ gallery_featured:
 
 ---
 
-## Personal Collections
+## 📸 My Photo Gallery
 
-{% include gallery id="gallery_personal" class="half" caption="A glimpse into my personal life - cherished moments and memories." %}
+A curated collection of personal moments, memories, and experiences that have shaped my journey.
 
-## Featured Gallery
+### Gallery Overview
 
-A curated selection of my favorite photography moments capturing diverse subjects and experiences.
+This collection represents key moments from my personal life, including childhood memories, meaningful experiences, and special moments. Each photo tells a story of growth, connection, and exploration.
 
-{% include gallery id="gallery_featured" class="third" caption="Explore a diverse collection of featured photographs." %}
+{% include gallery class="third" caption="Personal photography collection - a visual narrative of my life." %}
+
+---
+
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 6px; margin-top: 2em;">
+  <h3>About This Gallery</h3>
+  <p>Beyond my research and academic pursuits, I believe in capturing and preserving meaningful moments. This gallery showcases the personal side of my journey - the experiences, places, and memories that complement my professional work in AI Safety and research.</p>
+  <p><strong>👉 Ready to schedule a chat?</strong> <a href="https://calendly.com/amireza-vishteh">Book a time on my calendar</a></p>
+</div>
 
