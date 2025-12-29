@@ -48,21 +48,8 @@ gallery:
 
 **Personal photographs from Bagh Ferdos and beyond** — Capturing moments that balance my research in AI Safety and Trustworthy AI with the human experiences that ground meaningful work.
 
----
 
-## �📸 My Photo Gallery
 
-As an AI researcher immersed in the theoretical and technical dimensions of model safety and computational linguistics, I believe in the importance of capturing and preserving the human moments that complement rigorous academic work. This gallery showcases the personal side of my journey—the experiences, relationships, and memories that ground my research in real-world impact and meaning.
-
-### Gallery Overview
-
-These photographs document formative chapters of my life—from childhood in Iran, through my years at IUST (Iran University of Science and Technology) and Sharif University, to the present. While my professional focus centers on **Trustworthy AI and Security**, **Natural Language Processing**, and **Affective Computing**, these images remind me of the human-centric purpose behind the work: building AI systems that are not only technically sound but also socially beneficial and ethically grounded.
-
-### 📍 Bagh Ferdos — A Place of Reflection
-
-Many of these photographs were captured at **Bagh Ferdos**, a cherished location that holds deep personal significance. I am passionate about photography as a means of preserving moments—the subtle interplay of light, shadow, and human emotion. Photography teaches me the same principles I apply to AI research: the importance of careful observation, precise calibration, and the recognition that meaning emerges from the intersection of data (pixels) and human interpretation. Each photograph from Bagh Ferdos represents both a personal memory and a meditation on the beauty of the present moment.
-
-{% include gallery class="third" caption="Personal photography collection - a visual narrative of my life." %}
 
 ---
 
