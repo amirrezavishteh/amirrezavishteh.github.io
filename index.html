@@ -183,23 +183,90 @@ setInterval(updateTime, 1000);
 
 <h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;" id="timeline-section">Research Journey Timeline</h2>
 
+<div id="timeline-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; cursor: pointer;">
 {% include research-timeline.html %}
+</div>
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;" id="publications-section">Featured Publications & Research</h2>
+<script>
+document.getElementById('timeline-section').style.cursor = 'pointer';
+document.getElementById('timeline-section').addEventListener('click', function() {
+  const content = document.getElementById('timeline-content');
+  if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+    content.style.maxHeight = '5000px';
+  } else {
+    content.style.maxHeight = '0px';
+  }
+});
+</script>
 
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer;" id="publications-section">Featured Publications & Research</h2>
+
+<div id="publications-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
 {% include feature_row id="feature_row_papers" %}
 
 {% include research-stats.html %}
+</div>
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;" id="code-section">💻 Code & Datasets</h2>
+<script>
+document.getElementById('publications-section').addEventListener('click', function() {
+  const content = document.getElementById('publications-content');
+  if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+    content.style.maxHeight = '5000px';
+  } else {
+    content.style.maxHeight = '0px';
+  }
+});
+</script>
 
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer;" id="code-section">💻 Code & Datasets</h2>
+
+<div id="code-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
 {% include feature_row id="feature_row_code" %}
+</div>
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;" id="collaboration-section">🤝 Collaborations & Research Chat</h2>
+<script>
+document.getElementById('code-section').addEventListener('click', function() {
+  const content = document.getElementById('code-content');
+  if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+    content.style.maxHeight = '5000px';
+  } else {
+    content.style.maxHeight = '0px';
+  }
+});
+</script>
 
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer;" id="collaboration-section">🤝 Collaborations & Research Chat</h2>
+
+<div id="collaboration-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
 {% include feature_row id="feature_row_collab" %}
+</div>
 
-<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em;">✨ Personal & Beyond</h2>
+<script>
+document.getElementById('collaboration-section').addEventListener('click', function() {
+  const content = document.getElementById('collaboration-content');
+  if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+    content.style.maxHeight = '5000px';
+  } else {
+    content.style.maxHeight = '0px';
+  }
+});
+</script>
 
+<h2 style="text-align: center; font-size: 1.8em; margin: 3em 0 1.5em; border-bottom: 2px solid #009688; padding-bottom: 0.5em; cursor: pointer;">✨ Personal & Beyond</h2>
+
+<div id="personal-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
 {% include feature_row id="feature_row_personal" %}
+</div>
+
+<script>
+// Personal section click handler
+document.querySelectorAll('h2')[document.querySelectorAll('h2').length - 1].addEventListener('click', function() {
+  const content = document.getElementById('personal-content');
+  if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+    content.style.maxHeight = '5000px';
+  } else {
+    content.style.maxHeight = '0px';
+  }
+});
+</script>
 
