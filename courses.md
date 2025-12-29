@@ -2,13 +2,17 @@
 layout: single
 author_profile: true
 permalink: /links/
-title: Courses
+title: Courses & Academic Journey
 tags: [Studying, course]
 modified: 9-14-2019
 comments: false
 ---
 
-## Current Courses
+## Academic Development
+
+My coursework at IUST and Sharif University reflects a deliberate progression from foundational computer science to specialized research in AI Safety, Natural Language Processing, and Trustworthy AI. This journey encompasses theoretical depth—from discrete mathematics and algorithm design to stochastic processes—combined with practical applications in neural architecture search, Persian NLP, and affective computing.
+
+## Current Courses & Research
 
 | Year | Semester | Course | Image |
 | ---- | -------- | ------ | ----- |

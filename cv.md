@@ -25,9 +25,9 @@ comments: false
 
 | Year  | Details                                                                 |
 |-------|-------------------------------------------------------------------------|
-| 2020  | Started **Bachelor's in Computer Engineering**, IUST, Tehran, Iran       |
-| 2024  | Completed **Bachelor's in Computer Engineering**, IUST, Tehran, Iran     |
-| 2024  | Currently pursuing **Master's in Computer Engineering**, Sharif University, Tehran, Iran   |
+| 2020  | Started **Bachelor's in Computer Engineering**, IUST, Tehran, Iran - Ranked **#475** nationally in the Mathematics Concours, placing in the top 0.3% of over 150,000 applicants       |
+| 2024  | Completed **Bachelor's in Computer Engineering**, IUST, Tehran, Iran - Developed full-stack engineering expertise from hardware description languages (VHDL) to transformer architectures     |
+| 2024  | Currently pursuing **Master's in Computer Engineering**, Sharif University, Tehran, Iran - Member of Data Science and Machine Learning research group; Teaching Assistant for Stochastic Processes (Fall 2025)
 
 <!-- Add images side by side -->
 <div style="display: flex; justify-content: space-around;">
