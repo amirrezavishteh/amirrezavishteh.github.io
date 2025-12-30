@@ -2,9 +2,12 @@
 layout: single
 author_profile: true
 permalink: /cv/
-title: My Education
-tags: [resume, cv]
-modified: 4-14-2019
+title: "CV & Academic Journey - Amirreza Vishteh"
+og_title: "Academic Journey - AI Safety Researcher at Sharif University"
+og_description: "Master's student at Sharif University researching AI Safety and NLP. Ranked #475 nationally (top 0.3%). Teaching Assistant for Stochastic Processes. Full-stack engineer from VHDL to transformers."
+og_image: "/assets/images/logo.jpg"
+tags: [resume, cv, education, academic journey]
+modified: 12-30-2025
 comments: false
 ---
 

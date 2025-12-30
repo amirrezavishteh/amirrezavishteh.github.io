@@ -2,9 +2,12 @@
 layout: single
 author_profile: true
 permalink: /links/
-title: Courses & Academic Journey
-tags: [Studying, course]
-modified: 9-14-2019
+title: "Courses & Learning Path - Amirreza Vishteh"
+og_title: "Academic Coursework - From CS Foundations to AI Safety & NLP"
+og_description: "Deliberate progression from foundational CS to AI Safety and NLP. Teaching Assistant for Stochastic Processes at Sharif. Coursera certifications in ML, DL, and AI workflows. Research seminars in healthcare and computational biology."
+og_image: "/assets/images/book.jpg"
+tags: [courses, education, learning, certifications, seminars]
+modified: 12-30-2025
 comments: false
 ---
 
