@@ -67,7 +67,7 @@ I am driven by a commitment to build AI systems that are not only technically ro
 ## 🧪 Teaching & Assistantships
 
 - **Sharif University of Technology** — Teaching Assistant for **NLP**, **Artificial Intelligence**, and **Theory of Languages** courses, supporting lectures, labs, and grading while mentoring student projects in applied AI safety contexts.
-- **Iran University of Science and Technology** — Assistant for **Computer Architecture**, guiding hardware design labs, coordinating student presentations, and reinforcing principles of VHDL and system optimization.
+- **Iran University of Science and Technology (University of Science and Technology)** — Assistant for **Computer Architecture**, guiding hardware design labs, coordinating student presentations, and reinforcing principles of VHDL and system optimization.
 
 ---
 

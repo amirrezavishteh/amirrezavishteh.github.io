@@ -4,9 +4,9 @@ author_profile: true
 permalink: /links/
 title: "Courses & Learning Path - Amirreza Vishteh"
 og_title: "Academic Coursework - From CS Foundations to AI Safety & NLP"
-og_description: "Deliberate progression from foundational CS to AI Safety and NLP. Teaching Assistant for Stochastic Processes at Sharif. Coursera certifications in ML, DL, and AI workflows. Research seminars in healthcare and computational biology."
+og_description: "Deliberate progression from foundational CS to AI Safety and NLP with dedicated TA work, Coursera certifications, and research workshops."
 og_image: "/assets/images/book.jpg"
-tags: [courses, education, learning, certifications, seminars]
+tags: [courses, education, learning]
 modified: 12-30-2025
 comments: false
 ---
@@ -16,13 +16,6 @@ comments: false
 **From foundational CS to AI Safety and NLP** — A deliberate progression through mathematics, hardware design, algorithms, and machine learning, reflecting commitment to understanding AI systems from logic gates to transformer architectures.
 
 ---
-
-## 📥 Resumes & CVs
-
-- [📄 Academic CV — Courses & University Experience](https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link)
-- [💼 Work Experience CV — Dadmatech & Industry](https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing)
-
-These downloadable PDFs summarize my lecture assistance, coursework, and industrial contributions in one place.
 
 ## Academic Development
 
@@ -72,4 +65,11 @@ I believe in **simultaneous teaching and learning**—solidifying knowledge thro
 | 2020 | Fall     | English Course |
 | 2020 | Fall     | Math |
 | 2020 | Fall     | Andisheh Eslamic |
+
+## 📥 Resumes & CVs
+
+- [📄 Academic CV — Courses & University Experience](https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link)
+- [💼 Work Experience CV — Dadmatech & Industry](https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing)
+
+Links confirmed to work; download whichever is most relevant to your needs.
 
