@@ -85,4 +85,33 @@
     padding-right: 2em;
     font-weight: 700;
   }
+
+  a {
+    position: relative;
+    display: inline-block;
+
+    .nav-label,
+    .nav-label-hover {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-label-hover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &:hover,
+    &:focus {
+      .nav-label {
+        opacity: 0;
+      }
+
+      .nav-label-hover {
+        opacity: 1;
+      }
+    }
+  }
 }
