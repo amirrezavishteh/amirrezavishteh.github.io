@@ -64,6 +64,12 @@ comments: false
 I am driven by a commitment to build AI systems that are not only technically robust but also socially beneficial—addressing real-world challenges in mental health support, linguistic diversity, and AI safety. My trajectory from IUST to Sharif reflects an intentional progression toward independent research leadership and international collaboration in advancing the frontiers of trustworthy AI.
 
 ---
+## 🧪 Teaching & Assistantships
+
+- **Sharif University of Technology** — Teaching Assistant for **NLP**, **Artificial Intelligence**, and **Theory of Languages** courses, supporting lectures, labs, and grading while mentoring student projects in applied AI safety contexts.
+- **Iran University of Science and Technology** — Assistant for **Computer Architecture**, guiding hardware design labs, coordinating student presentations, and reinforcing principles of VHDL and system optimization.
+
+---
 
 ## 🏫 Educational Institutions
 
@@ -73,6 +79,7 @@ I am driven by a commitment to build AI systems that are not only technically ro
 - **Duration:** 2020 - 2024
 - **Achievement:** Ranked #475 nationally in the Mathematics Concours (top 0.3% of 150,000+ applicants)
 - **Focus:** Full-stack engineering from hardware description languages (VHDL) to transformer architectures
+
 
 <img src="{{ site.url }}/assets/images/iust2.jpg" alt="IUST" style="width: 100%; max-width: 500px; margin: 15px 0;"/>
 
