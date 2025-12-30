@@ -12,25 +12,7 @@ modified: 12-30-2025
 comments: true
 ---
 
-title: "Paper Title"
-og_title: "Paper Title - AI Research"
-og_description: "Brief summary of the paper contribution and findings."
-og_image: "/assets/images/paper-image.png"
-paper_title: "Full Paper Title"
-paper_url: "https://arxiv.org/abs/..."
-paper_doi: "10.xxxx/xxxxx"
-paper_year: 2024
-paper_venue: "Conference/Journal Name"
-paper_authors: ["Author 1", "Author 2"]
-```
 ## Research & Publications
 
 Latest AI Safety, LLM security, and trustworthy AI work (papers, preprints, and technical notes) live here.
-
-## 📥 Resumes & CVs
-
-- [📄 Academic CV — Courses & University Experience](https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link)
-- [💼 Work Experience CV — Dadmatech & Industry](https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing)
-
-Verified links so you can download the appropriate document from anywhere on the site.
 
