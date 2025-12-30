@@ -1,10 +1,10 @@
 ---
 layout: single
 author_profile: true
-permalink: /links/
-title: Courses & Academic Journey
-tags: [Studying, course]
-modified: 9-14-2019
+permalink: /courses/
+title: "Courses, Seminars, and Certifications"
+tags: [courses, academics]
+modified: 2025-12-30
 comments: false
 ---
 

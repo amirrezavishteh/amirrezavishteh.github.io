@@ -2,88 +2,56 @@
 layout: single
 author_profile: true
 permalink: /cv/
-title: My Education
-tags: [resume, cv]
-modified: 4-14-2019
+title: "Curriculum Vitae & Research Dossier"
+tags: [cv, resume, research]
+modified: 2025-12-30
 comments: false
 ---
 
-## 📖 Academic Journey Summary
+## Dossier: Amirreza Vishteh
 
-**Master's student at Sharif University** researching AI Safety and Natural Language Processing. Ranked **#475 nationally** in Iran's Mathematics Concours, combining theoretical rigor with practical innovation in trustworthy AI systems.
-
----
-
-<!-- 
-|    |    | **Experience**                                                             |
-|----|----|-------------------------------------------------------------------------------|
-|2018| now| **computer student**, study computer Computer, IUST, Tehran, Iran |
-|----|----|-------------------------------------------------------------------------------|
-|2005|2018| **Bachelor in Computer** |
-|----|------|-------------------------------------------------------------------------------|
--->
-
-<!-- 
-|2005|      | **Research Intern**, Microsoft Research, Redmond WA |
-|----|------|-------------------------------------------------------------------------------|
-|2004|      | **Research Intern**, Microsoft Research, Redmond WA |
--->
-
-| Year  | Details                                                                 |
-|-------|-------------------------------------------------------------------------|
-| 2020  | Started **Bachelor's in Computer Engineering**, IUST, Tehran, Iran - Ranked **#475** nationally in the Mathematics Concours, placing in the top 0.3% of over 150,000 applicants       |
-| 2024  | Completed **Bachelor's in Computer Engineering**, IUST, Tehran, Iran - Developed full-stack engineering expertise from hardware description languages (VHDL) to transformer architectures     |
-| 2024  | Currently pursuing **Master's in Computer Engineering**, Sharif University, Tehran, Iran - Member of Data Science and Machine Learning research group; Teaching Assistant for Stochastic Processes (Fall 2025) |
+Amirreza Vishteh is a new-generation AI researcher shaped by Iran’s elite engineering pipeline. He ranked **#475** in the national Mathematics Concours (top **0.3%** of ~150,000 applicants), earned his **BSc in Computer Engineering at IUST (2020–2024)**, and is now an **MSc student in Computer Engineering at Sharif University of Technology** (Data Science & Machine Learning group). His trajectory spans full-stack engineering—from VHDL and algorithms to transformer architectures—and now centers on AI safety, trustworthy NLP, and affective computing.
 
 ---
 
-### 🎯 Career Focus Areas
+## 1. Executive Summary
+- **Research focus:** Defending Large Language Models against backdoor attacks and advancing Persian NLP with affective computing applications.
+- **Academic identity:** A synthesis of **Trustworthy AI** (The Sentinel’s Dilemma, backdoor defense, NAS robustness) and **Computational Linguistics & Mental Health** (DadmaTools v2, sentiment analysis, psychological health chatbots).
+- **Current role:** Member of Sharif University’s Data Science & ML group; **Teaching Assistant for Stochastic Processes (Fall 2025)**—reflecting strong command of probability and generative-model foundations.
 
-**My research identity** is anchored in two complementary domains: 
+## 2. Research Identity
+1. **Trustworthy AI & Safety** — Investigates vulnerabilities in LLMs, benchmarks backdoor attacks (BackdoorBench), and studies Neural Architecture Search (FTT-NAS) to harden model design.
+2. **Computational Linguistics & Affective Computing** — Builds infrastructure for low-resource Persian NLP (DadmaTools v2) and designs multimodal sentiment systems to connect linguistic cues with psychological insight.
 
-1. **AI Safety and Trustworthy AI** — Focusing on defending Large Language Models against backdoor attacks and securing neural architectures through comprehensive benchmarking (BackdoorBench, FTT-NAS)
+## 3. Academic Context
+- **Sharif University of Technology (2024–Present):** MSc in Computer Engineering; TA for Stochastic Processes; positioned within Iran’s most selective engineering program.
+- **Iran University of Science and Technology (2020–2024):** BSc in Computer Engineering; curriculum progression from foundational math/physics to AI, CV, and NLP; developed hardware-software fluency essential for secure neural architectures.
+- **Salam Schools → Mathematics Concours (2020):** Early acceleration through Olympiad-style training; three-digit rank enabling admission to Iran’s top-tier public universities.
 
-2. **Natural Language Processing for Low-Resource Languages** — Emphasis on Persian NLP infrastructure development (DadmaTools v2) and affective computing applications
+## 4. Portfolio Highlights
+- **DadmaTools v2 (Persian NLP):** Contributed token-classification models (Trankit on Bijankhan) to improve normalization, POS tagging, and dependency parsing for low-resource Persian text.
+- **Psychological Health Chatbot (2025):** Transformer-based conversational agent combining DadmaTools parsing with emotion recognition to support mental-health triage; co-authored with collaborators from Microsoft Research and University of Ghent.
+- **Affective Computing Projects:**
+  - **Wav2Vec2 Sentiment Analysis (Shemo):** Fine-tuned speech emotion model achieving ~94% accuracy by leveraging audio tone and transcripts.
+  - **Multimodal Sentiment (Persian-3classes):** Fuses VGG-16 image features with BiLSTM text embeddings to capture sarcasm and context beyond unimodal signals.
+- **The Sentinel’s Dilemma (AI Safety):** Survey and experimental work on backdoor attacks in LLMs, exploring detection and defense strategies for hidden triggers.
 
-I am driven by a commitment to build AI systems that are not only technically robust but also socially beneficial—addressing real-world challenges in mental health support, linguistic diversity, and AI safety. My trajectory from IUST to Sharif reflects an intentional progression toward independent research leadership and international collaboration in advancing the frontiers of trustworthy AI.
+## 5. Pedagogy, Philosophy, and Aspirations
+- **Teaching while learning:** Embraces dual roles as student and instructor; TA in probability-heavy coursework mirrors his focus on stochastic foundations of generative AI.
+- **Future-proofing skills:** Prioritizes algorithms, mathematical rigor, and reproducible research over transient tech trends.
+- **Global outlook:** Active collaborations with Sharif, IUST, Microsoft Research, and University of Ghent; aspires to doctoral studies in leading international programs (e.g., Oxford) to advance the AI safety community.
 
----
-
-## 🏫 Educational Institutions
-
-### Iran University of Science and Technology (IUST)
-- **Location:** Tehran, Iran
-- **Degree:** Bachelor of Science in Computer Engineering
-- **Duration:** 2020 - 2024
-- **Achievement:** Ranked #475 nationally in the Mathematics Concours (top 0.3% of 150,000+ applicants)
-- **Focus:** Full-stack engineering from hardware description languages (VHDL) to transformer architectures
-
-<img src="{{ site.url }}/assets/images/iust2.jpg" alt="IUST" style="width: 100%; max-width: 500px; margin: 15px 0;"/>
-
-### Sharif University of Technology
-- **Location:** Tehran, Iran  
-- **Program:** Master of Science in Computer Engineering
-- **Status:** Currently Enrolled (2024 - Present)
-- **Research Group:** Data Science and Machine Learning
-- **Teaching Role:** Teaching Assistant for Stochastic Processes (Fall 2025)
-- **Focus:** AI Safety, Trustworthy AI, Natural Language Processing
-
-<img src="{{ site.url }}/assets/images/logo.jpg" alt="Sharif University" style="width: 100%; max-width: 500px; margin: 15px 0;"/>
-
----
-
-## 📚 Key Achievements & Milestones
-
+## 6. Quick Facts
 | Year | Milestone | Significance |
 |------|-----------|--------------|
-| 2020 | National Entrance Exam Rank: #475 | Top 0.3% of all applicants nationally |
-| 2020-2024 | IUST Bachelor's Program | Comprehensive CS foundation to AI specialization |
-| 2024 | Bachelor's Completion | Full-stack engineering expertise acquired |
-| 2024-Present | Sharif Master's Program | Advanced research in AI Safety & NLP |
-| 2025 | TA: Stochastic Processes | Demonstrating mastery of mathematical foundations |
+| 2020 | Mathematics Concours Rank: **#475** | Top 0.3% nationally; gateway to Tier-1 universities |
+| 2020–2024 | BSc, Computer Engineering, **IUST** | Full-stack engineering foundation from VHDL to transformers |
+| 2024–Present | MSc, Computer Engineering, **Sharif University** | Data Science & ML group; AI Safety & NLP research |
+| 2025 | **TA, Stochastic Processes** | Demonstrates depth in probability, Markov chains, and SDEs |
 
 ---
-<div style="display: flex; justify-content: space-around;">
-  <img src="{{ site.url }}/assets/images/uni.jpg" alt="university" style="width: 100%;"/>
-</div>
-<!-- ![alt text](../assets/images/Amirrezauni.jpg "university") -->
+
+### Contact & Links
+- 📧 Email: amirrezavishteh@gmail.com
+- 🔗 [Google Scholar](https://scholar.google.com/citations?user=ukjmhFwAAAAJ) | [GitHub](https://github.com/amirrezavishteh) | [LinkedIn](https://www.linkedin.com/in/amirrezavishteh/) | [Calendly](https://calendly.com/amireza-vishteh)
+

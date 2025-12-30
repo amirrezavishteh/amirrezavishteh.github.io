@@ -3,9 +3,9 @@ main:
   - title: "📄 CV"
     url: "/cv/"
   - title: "📚 Research"
-    url: /blog/
+    url: /research/
   - title: "🎓 Courses"
-    url: /links/
+    url: /courses/
   - title: "📸 Gallery"
     url: /gallery/
   - title: "💻 Code & Data"
