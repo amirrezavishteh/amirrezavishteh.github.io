@@ -66,8 +66,8 @@ I am driven by a commitment to build AI systems that are not only technically ro
 ---
 ## 🧪 Teaching & Assistantships
 
-- **Sharif University of Technology** — Teaching Assistant for **NLP**, **Artificial Intelligence**, **Machine Learning**, **Stochastic Processes**, and **Theory of Languages** courses; supporting lectures, labs, grading, and mentoring student research in applied AI safety contexts.
-- **Iran University of Science and Technology (University of Science and Technology)** — Assistant for **Computer Architecture**, guiding hardware design labs, coordinating student presentations, and reinforcing principles of VHDL and system optimization.
+- **University of Science and Technology** — Assistant Professor teaching **NLP**, **Artificial Intelligence**, **Theory of Languages**, and **Computer Architecture** courses; designing curricula, leading lectures, conducting practical labs, and mentoring student research in advanced computing topics.
+- **Sharif University of Technology** — Assistant Professor teaching **Stochastic Processes** and **Machine Learning** courses; delivering comprehensive instruction, grading assessments, and guiding student research projects in machine learning applications.
 
 ---
 
