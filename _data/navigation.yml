@@ -1,10 +1,10 @@
 # main links
 main:
-  - title: "📄 CV"
+  - title: "📄 CV & Academic Journey"
     url: "/cv/"
-  - title: "📚 Research"
+  - title: "📚 Research & Publications"
     url: /blog/
-  - title: "🎓 Courses"
+  - title: "🎓 Courses & Learning Path"
     url: /links/
   - title: "📸 Gallery"
     url: /gallery/
