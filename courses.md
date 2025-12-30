@@ -17,6 +17,13 @@ comments: false
 
 ---
 
+## 📥 Resumes & CVs
+
+- [📄 Academic CV — Courses & University Experience](https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link)
+- [💼 Work Experience CV — Dadmatech & Industry](https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing)
+
+These downloadable PDFs summarize my lecture assistance, coursework, and industrial contributions in one place.
+
 ## Academic Development
 
 My coursework at IUST and Sharif University reflects a deliberate progression from foundational computer science to specialized research in AI Safety, Natural Language Processing, and Trustworthy AI. This journey encompasses theoretical depth—from discrete mathematics and algorithm design to stochastic processes—combined with practical applications in neural architecture search, Persian NLP, and affective computing.
