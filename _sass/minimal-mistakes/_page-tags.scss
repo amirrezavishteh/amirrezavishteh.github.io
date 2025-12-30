@@ -2,14 +2,14 @@
 .page-tags {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid $border-color;
-  font-size: $type-size-7;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.75rem;
 }
 
 .page-tags__header {
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: $text-color;
+  color: #333;
 }
 
 .page-tags__list {
@@ -29,16 +29,17 @@
 .page-tags__link {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background-color: $footer-background-color;
-  color: $link-color;
+  background-color: #f5f5f5;
+  color: #0066cc;
   text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  font-size: inherit;
 
   &:hover,
   &:focus {
-    background-color: $primary-color;
-    color: $white;
+    background-color: #0066cc;
+    color: #fff;
     text-decoration: none;
   }
 }
