@@ -19,11 +19,11 @@ comments: false
 
 ## Academic Development
 
-My coursework at IUST and Sharif University reflects a deliberate progression from foundational computer science to specialized research in AI Safety, Natural Language Processing, and Trustworthy AI. This journey encompasses theoretical depth—from discrete mathematics and algorithm design to stochastic processes—combined with practical applications in neural architecture search, Persian NLP, and affective computing.
+Builds on IUST and Sharif coursework spanning core CS, hardware, probability, and NLP so I can contribute to AI safety, Persian NLP, and neural architecture work.
 
 ### 💡 Learning Philosophy
 
-I believe in **simultaneous teaching and learning**—solidifying knowledge through pedagogical engagement while maintaining intellectual humility. My selection as a Teaching Assistant for Stochastic Processes embodies this principle. Each course represents not merely content consumption but strategic skill-building: algorithms for problem-solving rigor, VHDL for low-level optimization insights, NLP for real-world impact, and machine learning certifications for staying current with industry best practices. I prioritize **algorithmic primacy** over transient frameworks—understanding the mathematical foundations ensures that learning compounds across decades of technological change. Beyond formal coursework, I engage with seminars (HBC2024), Coursera specializations, and self-directed research projects that extend academic boundaries and address pressing challenges in AI safety and multilingual NLP.
+Learning happens in tandem with teaching: every course, TA experience, or certification cements a conceptual foundation that fuels ongoing research. I balance formal seminars (e.g., HBC2024) and Coursera tracks with self-directed projects to keep both theory and practice fresh.
 
 ## Current Courses & Research
 

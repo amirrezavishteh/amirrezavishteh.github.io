@@ -12,16 +12,6 @@ modified: 12-30-2025
 comments: true
 ---
 
-## Research Publications & Blog
-
-This section contains my latest research, peer-reviewed papers, and technical blog posts focused on AI Safety, Large Language Model Security, and Trustworthy AI Systems.
-
-### How to add papers to this section:
-
-Each research post should include metadata in the front matter:
-
-```yaml
----
 title: "Paper Title"
 og_title: "Paper Title - AI Research"
 og_description: "Brief summary of the paper contribution and findings."
@@ -32,10 +22,10 @@ paper_doi: "10.xxxx/xxxxx"
 paper_year: 2024
 paper_venue: "Conference/Journal Name"
 paper_authors: ["Author 1", "Author 2"]
----
 ```
+## Research & Publications
 
-This enables rich previews on social media and proper schema markup for search engines.
+Latest AI Safety, LLM security, and trustworthy AI work (papers, preprints, and technical notes) live here.
 
 ## 📥 Resumes & CVs
 
