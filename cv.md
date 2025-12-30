@@ -17,6 +17,19 @@ comments: false
 
 ---
 
+## 📥 Download CV
+
+<div style="margin: 20px 0;">
+  <a href="https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link" class="btn btn--primary" style="margin: 10px 10px 10px 0;">
+    📄 Academic CV (Courses & University)
+  </a>
+  <a href="https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing" class="btn btn--info" style="margin: 10px;">
+    💼 Work Experience CV (Dadmatech & Industry)
+  </a>
+</div>
+
+---
+
 <!-- 
 |    |    | **Experience**                                                             |
 |----|----|-------------------------------------------------------------------------------|
