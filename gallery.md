@@ -15,10 +15,10 @@ gallery:
   - url: /assets/images/littleamir.jpeg
     image_path: /assets/images/littleamir.jpeg
     alt: "Amirreza Vishteh - Childhood memories in Bagh Ferdos"
-    title: "Amirreza at Bagh Ferdos - Childhood"
+    title: "Amirreza - Bagh Ferdos - Childhood"
   - url: /assets/images/1.jpg
     image_path: /assets/images/1.jpg
-    alt: "Amirreza Vishteh at Bagh Ferdos"
+    alt: "Amirreza Vishteh - Bagh Ferdos"
     title: "Amirreza - Bagh Ferdos Moment"
   
   - url: /assets/images/3.jpg
@@ -31,8 +31,8 @@ gallery:
     title: "Amirreza - Bagh Ferdos Reflection"
   - url: /assets/images/5.jpg
     image_path: /assets/images/5.jpg
-    alt: "Amirreza Vishteh capturing moments at Bagh Ferdos"
-    title: "Amirreza at Bagh Ferdos"
+    alt: "Amirreza Vishteh - Bagh Ferdos"
+    title: "Amirreza - Bagh Ferdos"
   - url: /assets/images/5848190623616273499.jpg
     image_path: /assets/images/5848190623616273499.jpg
     alt: "Amirreza Vishteh - Memories at Bagh Ferdos"
