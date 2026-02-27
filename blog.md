@@ -14,5 +14,5 @@ comments: true
 
 ## Research & Publications
 
-Latest AI Safety, LLM security, and trustworthy AI work (papers, preprints, and technical notes) live here.
+Latest AI Safety, LLM security, and trustworthy AI work (papers, preprints, and technical notes) 
 
