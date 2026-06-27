@@ -48,11 +48,11 @@ gallery:
     alt: "placeholder image 3"
     title: "sina alinejad & amirreza vishteh "
     image_size: large
-  - url: /assets/images/elyna ataee - elina ataee - elyna ataei - elyna etaee- elina etaee - elina etaei.jpg
-    image_path: /assets/images/elyna ataee - elina ataee - elyna ataei - elyna etaee- elina etaee - elina etaei.jpg
-    alt: "placeholder image 3"
-    title: "elyna ataee - elina ataee - elyna ataei - elyna etaee- elina etaee - elina etaei "
-    image_size: large
+  # - url: /assets/images/elyna ataee - elina ataee - elyna ataei - elyna etaee- elina etaee - elina etaei.jpg
+  #   image_path: /assets/images/elyna ataee - elina ataee - elyna ataei - elyna etaee- elina etaee - elina etaei.jpg
+  #   alt: "placeholder image 3"
+  #   title: "elyna ataee - elina ataee - elyna ataei - elyna etaee- elina etaee - elina etaei "
+  #   image_size: large
   - url: /assets/images/friendsb.jpeg
     image_path: /assets/images/friendsb.jpeg
     alt: "placeholder image 3"
