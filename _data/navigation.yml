@@ -4,6 +4,8 @@ main:
     url: "/cv/"
   - title: "📚 Research & Publications"
     url: /blog/
+  - title: "🦷 DentalMind"
+    url: "https://github.com/amirrezavishteh/DentalMind"
   - title: "🎓 Courses & Learning Path"
     url: /links/
   - title: "📸 Gallery"
