@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "The Sentinel's Dilemma: Guarding AI from Hidden Threats"
 date: 2025-10-14 10:00:00 +0200
 categories: [AI-Security, Large-Language-Models, Research]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Understanding BackdoorBench: A Comprehensive Benchmark for AI Security"
 ---
 
