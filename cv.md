@@ -1,112 +1,101 @@
 ---
-layout: single
-author_profile: true
+layout: redesign
 permalink: /cv/
 title: "CV & Academic Journey - Amirreza Vishteh"
 og_title: "Academic Journey - AI Safety Researcher at Sharif University"
 og_description: "Master's student at Sharif University researching AI Safety and NLP. Ranked 475 nationally (top 0.3%). Teaching Assistant for Stochastic Processes. Full-stack engineer from VHDL to transformers."
 og_image: "/assets/images/logo.jpg"
 tags: [resume, cv, education, academic journey]
-modified: 12-30-2025
-comments: false
+modified: 08-09-2026
 ---
 
-## 📖 Academic Journey Summary
+<section class="rd-hero rd-hero--text-only">
+  <div>
+    <div class="rd-eyebrow">CV &amp; Academic Journey</div>
+    <h1 class="rd-hero__title" style="font-size: 44px;">Amirreza Vishteh</h1>
+    <p class="rd-hero__lead">Master's student at Sharif University researching AI Safety and Natural Language Processing. Ranked #475 nationally in Iran's Mathematics Concours, combining theoretical rigor with practical innovation in trustworthy AI systems.</p>
+    <div class="rd-hero__actions">
+      <a href="https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link" class="rd-pill" target="_blank" rel="noopener">📄 Academic CV</a>
+      <a href="https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing" class="rd-pill rd-pill--outline" target="_blank" rel="noopener">💼 Work Experience CV</a>
+    </div>
+  </div>
+</section>
 
-**Master's student at Sharif University** researching AI Safety and Natural Language Processing. Ranked **#475 nationally** in Iran's Mathematics Concours, combining theoretical rigor with practical innovation in trustworthy AI systems.
+<section class="rd-section">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 28px;">Experience</h2>
+    <div class="rd-timeline">
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2024 &mdash; Now</div>
+        <div>
+          <span class="rd-timeline__title">Graduate Researcher &amp; Teaching Assistant</span>
+          <div class="rd-timeline__org">Sharif University of Technology</div>
+          <p class="rd-timeline__excerpt">Member of the Data Science and Machine Learning research group. Teaching Assistant for Stochastic Processes (Fall 2025) and Machine Learning &mdash; instruction, grading, and guiding student research projects.</p>
+        </div>
+      </div>
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2020 &mdash; 2024</div>
+        <div>
+          <span class="rd-timeline__title">Teaching Assistant</span>
+          <div class="rd-timeline__org">Iran University of Science and Technology (IUST)</div>
+          <p class="rd-timeline__excerpt">Taught NLP, Artificial Intelligence, Theory of Languages, and Computer Architecture &mdash; designing curricula, leading lectures and labs, and mentoring student research.</p>
+        </div>
+      </div>
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2024 &mdash; Now</div>
+        <div>
+          <span class="rd-timeline__title">Founder</span>
+          <div class="rd-timeline__org">DentalMind</div>
+          <p class="rd-timeline__excerpt">Built an AI-assisted dental diagnostics tool applying trustworthy-AI principles to per-tooth radiograph analysis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
----
+<section class="rd-section rd-section--alt">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 28px;">Education</h2>
+    <div class="rd-timeline">
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2024 &mdash; Now</div>
+        <div>
+          <span class="rd-timeline__title">MSc, Computer Engineering</span>
+          <div class="rd-timeline__org">Sharif University of Technology &middot; Tehran, Iran &middot; AI Safety, Trustworthy AI, NLP</div>
+          <img class="rd-timeline__thumb" src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Sharif University of Technology">
+        </div>
+      </div>
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2020 &mdash; 2024</div>
+        <div>
+          <span class="rd-timeline__title">BSc, Computer Engineering</span>
+          <div class="rd-timeline__org">Iran University of Science and Technology (IUST) &middot; Tehran, Iran &middot; Ranked #475 nationally (top 0.3% of 150,000+ applicants)</div>
+          <img class="rd-timeline__thumb" src="{{ '/assets/images/iust2.jpg' | relative_url }}" alt="Iran University of Science and Technology">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-## 📥 Download CV
-
-<div style="margin: 20px 0;">
-  <a href="https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link" class="btn btn--primary" style="margin: 10px 10px 10px 0;">
-    📄 Academic CV (Courses & University)
-  </a>
-  <a href="https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing" class="btn btn--info" style="margin: 10px;">
-    💼 Work Experience CV (Dadmatech & Industry)
-  </a>
-</div>
-
----
-
-<!-- 
-|    |    | **Experience**                                                             |
-|----|----|-------------------------------------------------------------------------------|
-|2018| now| **computer student**, study computer Computer, IUST, Tehran, Iran |
-|----|----|-------------------------------------------------------------------------------|
-|2005|2018| **Bachelor in Computer** |
-|----|------|-------------------------------------------------------------------------------|
--->
-
-<!-- 
-|2005|      | **Research Intern**, Microsoft Research, Redmond WA |
-|----|------|-------------------------------------------------------------------------------|
-|2004|      | **Research Intern**, Microsoft Research, Redmond WA |
--->
-
-| Year  | Details                                                                 |
-|-------|-------------------------------------------------------------------------|
-| 2020  | Started **Bachelor's in Computer Engineering**, IUST, Tehran, Iran - Ranked **#475** nationally in the Mathematics Concours, placing in the top 0.3% of over 150,000 applicants       |
-| 2024  | Completed **Bachelor's in Computer Engineering**, IUST, Tehran, Iran - Developed full-stack engineering expertise from hardware description languages (VHDL) to transformer architectures     |
-| 2024  | Currently pursuing **Master's in Computer Engineering**, Sharif University, Tehran, Iran - Member of Data Science and Machine Learning research group; Teaching Assistant for Stochastic Processes (Fall 2025) |
-
----
-
-### 🎯 Career Focus Areas
-
-**My research identity** is anchored in two complementary domains: 
-
-1. **AI Safety and Trustworthy AI** — Focusing on defending Large Language Models against backdoor attacks and securing neural architectures through comprehensive benchmarking (BackdoorBench, FTT-NAS)
-
-2. **Natural Language Processing for Low-Resource Languages** — Emphasis on Persian NLP infrastructure development (DadmaTools v2) and affective computing applications
-
-I am driven by a commitment to build AI systems that are not only technically robust but also socially beneficial—addressing real-world challenges in mental health support, linguistic diversity, and AI safety. My trajectory from IUST to Sharif reflects an intentional progression toward independent research leadership and international collaboration in advancing the frontiers of trustworthy AI.
-
----
-## 🧪 Teaching & Assistantships
-
-- **University of Science and Technology** — Assistant Professor teaching **NLP**, **Artificial Intelligence**, **Theory of Languages**, and **Computer Architecture** courses; designing curricula, leading lectures, conducting practical labs, and mentoring student research in advanced computing topics.
-- **Sharif University of Technology** — Assistant Professor teaching **Stochastic Processes** and **Machine Learning** courses; delivering comprehensive instruction, grading assessments, and guiding student research projects in machine learning applications.
-
----
-
-## 🏫 Educational Institutions
-
-### Iran University of Science and Technology (IUST)
-- **Location:** Tehran, Iran
-- **Degree:** Bachelor of Science in Computer Engineering
-- **Duration:** 2020 - 2024
-- **Achievement:** Ranked #475 nationally in the Mathematics Concours (top 0.3% of 150,000+ applicants)
-- **Focus:** Full-stack engineering from hardware description languages (VHDL) to transformer architectures
-
-
-<img src="{{ site.url }}/assets/images/iust2.jpg" alt="IUST" style="width: 100%; max-width: 500px; margin: 15px 0;"/>
-
-### Sharif University of Technology
-- **Location:** Tehran, Iran  
-- **Program:** Master of Science in Computer Engineering
-- **Status:** Currently Enrolled (2024 - Present)
-- **Research Group:** Data Science and Machine Learning
-- **Teaching Role:** Teaching Assistant for Stochastic Processes (Fall 2025)
-- **Focus:** AI Safety, Trustworthy AI, Natural Language Processing
-
-<img src="{{ site.url }}/assets/images/logo.jpg" alt="Sharif University" style="width: 100%; max-width: 500px; margin: 15px 0;"/>
-
----
-
-## 📚 Key Achievements & Milestones
-
-| Year | Milestone | Significance |
-|------|-----------|--------------|
-| 2020 | National Entrance Exam Rank: #475 | Top 0.3% of all applicants nationally |
-| 2020-2024 | IUST Bachelor's Program | Comprehensive CS foundation to AI specialization |
-| 2024 | Bachelor's Completion | Full-stack engineering expertise acquired |
-| 2024-Present | Sharif Master's Program | Advanced research in AI Safety & NLP |
-| 2025 | TA: Stochastic Processes | Demonstrating mastery of mathematical foundations |
-
----
-<div style="display: flex; justify-content: space-around;">
-  <img src="{{ site.url }}/assets/images/uni.jpg" alt="university" style="width: 100%;"/>
-</div>
-<!-- ![alt text](../assets/images/Amirrezauni.jpg "university") -->
+<section class="rd-section">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 24px;">Skills</h2>
+    <div class="rd-tag-row">
+      <div class="rd-tag">Python</div>
+      <div class="rd-tag">PyTorch</div>
+      <div class="rd-tag">NLP</div>
+      <div class="rd-tag">Persian NLP</div>
+      <div class="rd-tag">AI Safety</div>
+      <div class="rd-tag">Backdoor Detection</div>
+      <div class="rd-tag">LLM Fine-tuning</div>
+      <div class="rd-tag">Wav2Vec2</div>
+      <div class="rd-tag">Computer Vision</div>
+      <div class="rd-tag">Docker</div>
+      <div class="rd-tag">VHDL</div>
+      <div class="rd-tag">SQL</div>
+      <div class="rd-tag">React</div>
+      <div class="rd-tag">FastAPI</div>
+    </div>
+    <img src="{{ '/assets/images/uni.jpg' | relative_url }}" alt="University" style="width: 100%; border-radius: 16px; margin-top: 48px;">
+  </div>
+</section>

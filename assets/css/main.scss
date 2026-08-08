@@ -6,4 +6,5 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "custom"; // custom styles
+@import "rdesign"; // new page-redesign design system, scoped under .rd-page
 @import "minimal-mistakes"; // main partials

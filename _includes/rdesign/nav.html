@@ -1,0 +1,20 @@
+<nav class="rd-nav">
+  <a href="{{ '/' | relative_url }}" class="rd-nav__logo">{{ site.author.name }}</a>
+  <div class="rd-nav__links">
+    <a href="{{ '/' | relative_url }}" class="rd-nav__link{% if page.url == '/' %} is-active{% endif %}">Home</a>
+    <a href="{{ '/cv/' | relative_url }}" class="rd-nav__link{% if page.url == '/cv/' %} is-active{% endif %}">CV</a>
+    <a href="{{ '/blog/' | relative_url }}" class="rd-nav__link{% if page.url == '/blog/' %} is-active{% endif %}">Research</a>
+    <details class="rd-nav__more">
+      <summary class="rd-nav__more-summary{% if page.url == '/dentalmind/' or page.url == '/links/' or page.url == '/gallery/' or page.url == '/code-data/' or page.url == '/friends/' or page.url == '/hobbies/' %} is-active{% endif %}">More <span class="rd-nav__caret">&#9662;</span></summary>
+      <div class="rd-nav__dropdown">
+        <a href="{{ '/dentalmind/' | relative_url }}" class="rd-nav__dropdown-link{% if page.url == '/dentalmind/' %} is-active{% endif %}">DentalMind</a>
+        <a href="{{ '/links/' | relative_url }}" class="rd-nav__dropdown-link{% if page.url == '/links/' %} is-active{% endif %}">Courses &amp; Learning Path</a>
+        <a href="{{ '/gallery/' | relative_url }}" class="rd-nav__dropdown-link{% if page.url == '/gallery/' %} is-active{% endif %}">Gallery</a>
+        <a href="{{ '/code-data/' | relative_url }}" class="rd-nav__dropdown-link{% if page.url == '/code-data/' %} is-active{% endif %}">Code &amp; Data</a>
+        <a href="{{ '/friends/' | relative_url }}" class="rd-nav__dropdown-link{% if page.url == '/friends/' %} is-active{% endif %}">Friends</a>
+        <a href="{{ '/hobbies/' | relative_url }}" class="rd-nav__dropdown-link{% if page.url == '/hobbies/' %} is-active{% endif %}">Hobbies</a>
+      </div>
+    </details>
+    <a href="{{ '/cv/' | relative_url }}" class="rd-nav__resume-btn">R&eacute;sum&eacute;</a>
+  </div>
+</nav>

@@ -1,0 +1,34 @@
+---
+---
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="rd-page">
+
+    {% include rdesign/nav.html %}
+
+    <main class="rd-main">
+      {{ content }}
+    </main>
+
+    {% include rdesign/footer.html %}
+
+    {% include scripts.html %}
+
+    <script>
+      document.addEventListener('click', function (event) {
+        document.querySelectorAll('.rd-nav__more[open]').forEach(function (details) {
+          if (!details.contains(event.target)) {
+            details.removeAttribute('open');
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: oklch(0.985 0.003 95); }
+    a { color: oklch(0.5 0.11 235); text-decoration: none; }
+    a:hover { color: oklch(0.4 0.13 235); }
+  </style>
+  <script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family: 'Public Sans', sans-serif; color: oklch(0.22 0.005 95); max-width: 100%; overflow-x: hidden;">
+
+  <!-- NAV -->
+  <nav style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 24px 64px; max-width: 1280px; margin: 0 auto; box-sizing: border-box;">
+    <a href="Home.dc.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 20px; color: oklch(0.22 0.005 95); white-space: nowrap;">Amrreza Vishteh</a>
+    <div style="display: flex; align-items: center; gap: 20px; white-space: nowrap;">
+      <a href="Home.dc.html" style="font-size: 15px; font-weight: 600; color: oklch(0.22 0.005 95);">Home</a>
+      <a href="CV.dc.html" style="font-size: 15px; font-weight: 500; color: oklch(0.35 0.005 95);">CV</a>
+      <a href="Research.dc.html" style="font-size: 15px; font-weight: 500; color: oklch(0.35 0.005 95);">Research</a>
+      <div style="position: relative;">
+        <div onClick="{{ toggleMenu }}" style="cursor: pointer; display: flex; align-items: center; gap: 4px; font-size: 15px; font-weight: 500; color: oklch(0.35 0.005 95); user-select: none;">More <span style="font-size: 10px;">▾</span></div>
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <div onClick="{{ toggleMenu }}" style="position: fixed; inset: 0; z-index: 15;"></div>
+          <div style="position: absolute; top: 32px; right: 0; background: white; border: 1px solid oklch(0.9 0.004 95); border-radius: 14px; box-shadow: 0 16px 40px rgba(0,0,0,0.12); padding: 8px; min-width: 240px; z-index: 20;">
+            <a href="DentalMind.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">DentalMind</a>
+            <a href="Courses.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Courses &amp; Learning Path</a>
+            <a href="Gallery.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Gallery</a>
+            <a href="CodeData.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Code &amp; Data</a>
+            <a href="Friends.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Friends</a>
+            <a href="Hobbies.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Hobbies</a>
+          </div>
+        </sc-if>
+      </div>
+      <a href="CV.dc.html" style="font-size: 14px; font-weight: 600; padding: 10px 20px; border-radius: 999px; background: oklch(0.22 0.005 95); color: white;">Résumé</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: 72px 64px 96px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; box-sizing: border-box;">
+    <div>
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.5 0.11 235); margin-bottom: 20px;">Sharif University</div>
+      <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 56px; line-height: 1.08; font-weight: 700; margin: 0 0 24px; letter-spacing: -0.02em;">Studying AI Safety, one rigorous step at a time.</h1>
+      <p style="font-size: 18px; line-height: 1.6; color: oklch(0.4 0.005 95); max-width: 520px; margin: 0 0 36px;">I'm a Computer Science student at Sharif University researching AI Safety and natural language processing. Ranked #475 nationally in Iran's university entrance exam, I combine theoretical rigor with hands-on engineering.</p>
+      <div style="display: flex; gap: 16px; margin-bottom: 40px;">
+        <a href="DentalMind.dc.html" style="font-size: 15px; font-weight: 600; padding: 14px 28px; border-radius: 999px; background: oklch(0.22 0.005 95); color: white;">See my work</a>
+        <a href="mailto:hello@example.com" style="font-size: 15px; font-weight: 600; padding: 14px 28px; border-radius: 999px; border: 1.5px solid oklch(0.85 0.005 95); color: oklch(0.22 0.005 95);">Get in touch</a>
+      </div>
+      <div style="display: flex; gap: 24px;">
+        <a href="mailto:hello@example.com" style="font-size: 14px; font-weight: 500; color: oklch(0.45 0.005 95);">Email</a>
+        <a href="#" style="font-size: 14px; font-weight: 500; color: oklch(0.45 0.005 95);">GitHub</a>
+        <a href="#" style="font-size: 14px; font-weight: 500; color: oklch(0.45 0.005 95);">LinkedIn</a>
+        <a href="#" style="font-size: 14px; font-weight: 500; color: oklch(0.45 0.005 95);">Google Scholar</a>
+      </div>
+    </div>
+    <div style="width: 100%; aspect-ratio: 4/5; border-radius: 24px; overflow: hidden;">
+      <image-slot id="avatar" shape="rounded" radius="24" placeholder="portrait"></image-slot>
+    </div>
+  </section>
+
+  <!-- FOCUS AREAS -->
+  <section id="focus" style="background: oklch(0.97 0.004 95); padding: 88px 64px;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.5 0.11 235); margin-bottom: 12px;">Focus Areas</div>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 34px; font-weight: 700; margin: 0 0 48px; letter-spacing: -0.01em;">Where I spend my time</h2>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+        <sc-for list="{{ focusAreas }}" as="area" hint-placeholder-count="4">
+          <div style="background: white; border-radius: 16px; padding: 32px 28px; border: 1px solid oklch(0.92 0.004 95);">
+            <div style="width: 40px; height: 40px; border-radius: 10px; background: oklch(0.93 0.03 235); margin-bottom: 20px;"></div>
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin: 0 0 10px;">{{ area.title }}</h3>
+            <p style="font-size: 14.5px; line-height: 1.55; color: oklch(0.45 0.005 95); margin: 0;">{{ area.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section id="work" style="padding: 96px 64px;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.5 0.11 235); margin-bottom: 12px;">Featured Project</div>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 34px; font-weight: 700; margin: 0 0 44px; letter-spacing: -0.01em;">DentalMind</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; background: oklch(0.97 0.004 95); border-radius: 24px; padding: 48px;">
+        <div style="width: 100%; aspect-ratio: 4/3; border-radius: 16px; overflow: hidden;">
+          <image-slot id="dentalmind-teaser" shape="rounded" radius="16" placeholder="DentalMind screenshot"></image-slot>
+        </div>
+        <div>
+          <p style="font-size: 16.5px; line-height: 1.6; color: oklch(0.4 0.005 95); margin: 0 0 24px;">An AI-assisted dental diagnostics tool that analyzes imaging and patient data to help clinicians catch issues earlier.</p>
+          <a href="DentalMind.dc.html" style="font-size: 15px; font-weight: 600;">View project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="background: oklch(0.97 0.004 95); padding: 88px 64px;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.5 0.11 235); margin-bottom: 12px;">Academic Journey</div>
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 44px;">
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 34px; font-weight: 700; margin: 0; letter-spacing: -0.01em;">Milestones so far</h2>
+        <a href="CV.dc.html" style="font-size: 15px; font-weight: 600;">Full CV →</a>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ experience }}" as="job" hint-placeholder-count="3">
+          <div style="display: grid; grid-template-columns: 140px 1fr auto; gap: 24px; align-items: baseline; padding: 22px 0; border-top: 1px solid oklch(0.89 0.004 95);">
+            <div style="font-size: 14px; font-weight: 600; color: oklch(0.5 0.005 95);">{{ job.years }}</div>
+            <div>
+              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600;">{{ job.role }}</div>
+              <div style="font-size: 14.5px; color: oklch(0.45 0.005 95); margin-top: 2px;">{{ job.org }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding: 110px 64px; text-align: center;">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 38px; font-weight: 700; margin: 0 0 20px; letter-spacing: -0.01em;">Let's build something together.</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: oklch(0.45 0.005 95); margin: 0 0 36px;">Open to research collaborations and interesting problems. Reach out anytime.</p>
+      <a href="mailto:hello@example.com" style="display: inline-block; font-size: 15px; font-weight: 600; padding: 16px 36px; border-radius: 999px; background: oklch(0.22 0.005 95); color: white;">hello@example.com</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top: 1px solid oklch(0.9 0.004 95); padding: 32px 64px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; max-width: 1280px; margin: 0 auto; box-sizing: border-box;">
+    <div style="font-size: 13.5px; color: oklch(0.55 0.005 95);">© 2026 Amrreza Vishteh</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 18px;">
+      <a href="CV.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">CV</a>
+      <a href="Research.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Research</a>
+      <a href="DentalMind.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">DentalMind</a>
+      <a href="Courses.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Courses</a>
+      <a href="Gallery.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Gallery</a>
+      <a href="CodeData.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Code &amp; Data</a>
+      <a href="Friends.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Friends</a>
+      <a href="Hobbies.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Hobbies</a>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  renderVals() {
+    return {
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      focusAreas: [
+        { title: "AI Safety", desc: "Researching alignment and robustness questions in modern ML systems." },
+        { title: "Natural Language Processing", desc: "Building and fine-tuning language models for real-world applications." },
+        { title: "Applied Research", desc: "Turning research prototypes into reliable, tested systems." },
+        { title: "Software Engineering", desc: "Clean, well-tested code that makes good research possible." }
+      ],
+      experience: [
+        { years: "2024 — Now", role: "Undergraduate Researcher", org: "AI Safety Lab, Sharif University" },
+        { years: "2023", role: "Ranked #475 nationally", org: "Iran University Entrance Exam (Konkur)" },
+        { years: "2023 — Now", role: "BSc, Computer Science", org: "Sharif University of Technology" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

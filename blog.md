@@ -1,6 +1,5 @@
 ---
-layout: posts
-author_profile: true
+layout: redesign
 permalink: /blog/
 title: "Research & Publications - Amirreza Vishteh"
 og_title: "Research Publications & Blog - AI Safety & LLM Security"
@@ -8,11 +7,32 @@ og_description: "Explore peer-reviewed research, papers, and technical blog post
 og_image: "/assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-Inverting-Attack-Target.png"
 twitter_card: "summary_large_image"
 tags: [research, publications]
-modified: 12-30-2025
-comments: true
+modified: 08-09-2026
 ---
 
-## Research & Publications
+<section class="rd-hero rd-hero--text-only">
+  <div>
+    <div class="rd-eyebrow">Research &amp; Publications</div>
+    <h1 class="rd-hero__title" style="font-size: 44px;">Research</h1>
+    <p class="rd-hero__lead">Work from the Data Science and Machine Learning research group at Sharif University, centered on AI Safety, LLM security, and NLP for low-resource languages.</p>
+  </div>
+</section>
 
-Latest AI Safety, LLM security, and trustworthy AI work (papers, preprints, and technical notes) 
-
+<section class="rd-section">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <div class="rd-timeline">
+      {% for post in site.posts %}
+        {% assign post_year = post.date | date: "%Y" %}
+        {% if post_year >= "2023" %}
+          <div class="rd-timeline__row">
+            <div class="rd-timeline__meta">{{ post_year }}</div>
+            <div>
+              <a href="{{ post.url | relative_url }}" class="rd-timeline__title">{{ post.title }}</a>
+              <p class="rd-timeline__excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

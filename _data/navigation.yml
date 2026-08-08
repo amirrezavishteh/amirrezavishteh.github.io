@@ -5,13 +5,13 @@ main:
   - title: "📚 Research & Publications"
     url: /blog/
   - title: "🦷 DentalMind"
-    url: "https://dentalmind-806iv7laq-dental4.vercel.app/"
+    url: /dentalmind/
   - title: "🎓 Courses & Learning Path"
     url: /links/
   - title: "📸 Gallery"
     url: /gallery/
   - title: "💻 Code & Data"
-    url: "https://github.com/amirrezavishteh"
+    url: /code-data/
   - title: "🤝 Friends"
     url: /friends/
   - title: "✨ Hobbies"

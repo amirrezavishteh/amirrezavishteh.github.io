@@ -1,6 +1,5 @@
 ---
-layout: single
-author_profile: true
+layout: redesign
 permalink: /hobbies/
 title: Hobbies
 tags: [Hoby]
@@ -49,9 +48,38 @@ gallery2:
     title: "Jaky"  
     
 ---
-<!-- * [football](https://ro.pinterest.com/ivladoi/fotball/)
-<br><br> -->
-### Nature Tourism
-{% include gallery id="gallery" caption="" %}
-### My Dogs
-{% include gallery id="gallery2" caption="" %}
+
+<section class="rd-hero rd-hero--text-only">
+  <div>
+    <div class="rd-eyebrow">Hobbies</div>
+    <h1 class="rd-hero__title" style="font-size: 44px;">Outside of work</h1>
+    <p class="rd-hero__lead">Nature, mountains, and two very good dogs.</p>
+  </div>
+</section>
+
+<section class="rd-section">
+  <div class="rd-section__inner">
+    <div class="rd-bento-group">
+      <h2 class="rd-bento-group__title">Nature Tourism</h2>
+      <div class="rd-bento">
+        {% for photo in page.gallery %}
+          <div class="rd-bento__item">
+            <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}">
+            <div class="rd-bento__caption"><span>{{ photo.title }}</span></div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="rd-bento-group">
+      <h2 class="rd-bento-group__title">My Dogs</h2>
+      <div class="rd-bento">
+        {% for photo in page.gallery2 %}
+          <div class="rd-bento__item">
+            <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}">
+            <div class="rd-bento__caption"><span>{{ photo.title }}</span></div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

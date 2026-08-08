@@ -1,6 +1,5 @@
 ---
-layout: single
-author_profile: true
+layout: redesign
 permalink: /gallery/
 title: "Gallery - Amirreza Vishteh"
 og_title: "Amirreza Vishteh's Photo Gallery"
@@ -44,7 +43,24 @@ gallery:
 
 ---
 
-{% include gallery class="third" caption="Amirreza at Bagh Ferdos - Personal moments from my life." %}
+<section class="rd-hero rd-hero--text-only">
+  <div>
+    <div class="rd-eyebrow">Gallery</div>
+    <h1 class="rd-hero__title" style="font-size: 44px;">Moments along the way</h1>
+    <p class="rd-hero__lead">Personal photographs from Bagh Ferdos and beyond &mdash; capturing moments that balance my research in AI Safety and Trustworthy AI with the human experiences that ground meaningful work.</p>
+  </div>
+</section>
 
-**Personal photographs from Bagh Ferdos and beyond** — Capturing moments that balance my research in AI Safety and Trustworthy AI with the human experiences that ground meaningful work.
+<section class="rd-section">
+  <div class="rd-section__inner">
+    <div class="rd-bento">
+      {% for photo in page.gallery %}
+        <div class="rd-bento__item">
+          <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}">
+          <div class="rd-bento__caption"><span>{{ photo.title }}</span></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 

@@ -1,75 +1,100 @@
 ---
-layout: single
-author_profile: true
+layout: redesign
 permalink: /links/
 title: "Courses & Learning Path - Amirreza Vishteh"
 og_title: "Academic Coursework - From CS Foundations to AI Safety & NLP"
 og_description: "Deliberate progression from foundational CS to AI Safety and NLP with dedicated TA work, Coursera certifications, and research workshops."
 og_image: "/assets/images/book.jpg"
 tags: [courses, education, learning]
-modified: 12-30-2025
-comments: false
+modified: 08-09-2026
 ---
 
-## 🎓 Courses & Learning Path Summary
+<section class="rd-hero rd-hero--text-only">
+  <div>
+    <div class="rd-eyebrow">Courses &amp; Learning Path</div>
+    <h1 class="rd-hero__title" style="font-size: 44px;">What I've been studying</h1>
+    <p class="rd-hero__lead">From foundational CS to AI Safety and NLP &mdash; a deliberate progression through mathematics, hardware design, algorithms, and machine learning, reflecting a commitment to understanding AI systems from logic gates to transformer architectures. Learning happens in tandem with teaching: every course, TA experience, or certification cements a conceptual foundation that fuels ongoing research.</p>
+  </div>
+</section>
 
-**From foundational CS to AI Safety and NLP** — A deliberate progression through mathematics, hardware design, algorithms, and machine learning, reflecting commitment to understanding AI systems from logic gates to transformer architectures.
+<section class="rd-section">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 28px;">Current Courses &amp; Research</h2>
+    <div class="rd-timeline">
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2023 Fall</div>
+        <div><span class="rd-timeline__title">Natural Language Processing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
----
+<section class="rd-section rd-section--alt">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 28px;">Seminars</h2>
+    <div class="rd-timeline">
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2024 Spring</div>
+        <div>
+          <span class="rd-timeline__title">Healthcare, Bioinformatics, and Computational Biology (HBC2024)</span>
+          <img class="rd-timeline__thumb" src="{{ '/assets/images/amirreza-vishteh_bio.jpg' | relative_url }}" alt="HBC2024">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-## Academic Development
+<section class="rd-section">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 28px;">Coursera Certificates</h2>
+    <div class="rd-timeline">
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2023 Fall</div>
+        <div><a class="rd-timeline__title" href="https://www.coursera.org/account/accomplishments/verify/BQABHRBCJBL7" target="_blank" rel="noopener">Advanced Learning Algorithm</a></div>
+      </div>
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2023 Fall</div>
+        <div><a class="rd-timeline__title" href="https://www.coursera.org/account/accomplishments/verify/Y7Q6Z4BBK9AT" target="_blank" rel="noopener">Supervised Machine Learning</a></div>
+      </div>
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2023 Fall</div>
+        <div><a class="rd-timeline__title" href="https://www.coursera.org/account/accomplishments/verify/5884LQ6BY6ZL" target="_blank" rel="noopener">Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</a></div>
+      </div>
+      <div class="rd-timeline__row">
+        <div class="rd-timeline__meta">2024 Fall</div>
+        <div><a class="rd-timeline__title" href="https://www.coursera.org/account/accomplishments/verify/QSCAEJK5QEJU" target="_blank" rel="noopener">AI Workflow: Machine Learning, Visual Recognition and NLP</a></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-Builds on IUST and Sharif coursework spanning core CS, hardware, probability, and NLP so I can contribute to AI safety, Persian NLP, and neural architecture work.
+<section class="rd-section rd-section--alt">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 28px;">Past Courses</h2>
+    <div class="rd-tag-row">
+      <div class="rd-tag">Artificial Intelligence &middot; 2022</div>
+      <div class="rd-tag">Computer Aided Design (VHDL) &middot; 2022</div>
+      <div class="rd-tag">Computer Vision &middot; 2022</div>
+      <div class="rd-tag">Algoritm &middot; 2021</div>
+      <div class="rd-tag">Computer Advanced Programming &middot; 2020</div>
+      <div class="rd-tag">History Lesson &middot; 2020</div>
+      <div class="rd-tag">Web Design &middot; 2020</div>
+      <div class="rd-tag">Math 2 &middot; 2020</div>
+      <div class="rd-tag">Andisheh Eslamic2 &middot; 2020</div>
+      <div class="rd-tag">Computer Programming Fundamentals &middot; 2020</div>
+      <div class="rd-tag">English Course &middot; 2020</div>
+      <div class="rd-tag">Math &middot; 2020</div>
+      <div class="rd-tag">Andisheh Eslamic &middot; 2020</div>
+    </div>
+  </div>
+</section>
 
-### 💡 Learning Philosophy
-
-Learning happens in tandem with teaching: every course, TA experience, or certification cements a conceptual foundation that fuels ongoing research. I balance formal seminars (e.g., HBC2024) and Coursera tracks with self-directed projects to keep both theory and practice fresh.
-
-## Current Courses & Research
-
-| Year | Semester | Course | Image |
-| ---- | -------- | ------ | ----- |
-| 2023 | Fall     | Natural Language Processing |  |
-
-## Seminars
-
-| Year | Semester | Course | Image |
-| ---- | -------- | ------ | ----- |
-| 2024 | spring     | Healthcare, Bioinformatics, and Computational Biology(HBC2024) | ![name](../assets/images/amirreza-vishteh_bio.jpg) |
-
-## Coursera Certificates
-
-| Year | Semester | Course | Image |
-| ---- | -------- | ------ | ----- |
-| 2023 | Fall     | Advanced Learning Algorithm | [![name](../assets/images/Coursera_Advanced.jpg)](https://www.coursera.org/account/accomplishments/verify/BQABHRBCJBL7) |
-| 2023 | Fall     | Supervised Machine Learning | [![name](../assets/images/Coursera_Supervised.jpg)](https://www.coursera.org/account/accomplishments/verify/Y7Q6Z4BBK9AT) |
-| 2023 | Fall     | Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization | [![name](../assets/images/coursera_improvingmodels.jpg)](https://www.coursera.org/account/accomplishments/verify/5884LQ6BY6ZL) |
-| 2024 | Fall     | AI Workflow: Machine Learning, Visual Recognition and NLP | [![name](../assets/images/coursera.png)](https://www.coursera.org/account/accomplishments/verify/QSCAEJK5QEJU) |
-
-
-
-## Past Courses
-
-| Year | Semester | Course |
-| ---- | -------- | ------ |
-| 2022 | Fall     | Artificial Intelligence |
-| 2022 | winter   | Computer Aided Design(VHDL) |
-| 2022 | winter   | Computer Vision |
-| 2021 | winter   | Algoritm |
-| 2020 | Fall     | Computer Advanced Programming |
-| 2020 | Fall     | History Lesson |
-| 2020 | Fall     | Web Design |
-| 2020 | Fall     | Math2 |
-| 2020 | Fall     | Andisheh Eslamic2 |
-| 2020 | Fall     | Computer Programming Fundamentals |
-| 2020 | Fall     | English Course |
-| 2020 | Fall     | Math |
-| 2020 | Fall     | Andisheh Eslamic |
-
-## 📥 Resumes & CVs
-
-- [📄 Academic CV — Courses & University Experience](https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link)
-- [💼 Work Experience CV — Dadmatech & Industry](https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing)
-
-Links confirmed to work; download whichever is most relevant to your needs.
-
+<section class="rd-section">
+  <div class="rd-section__inner rd-section__inner--narrow">
+    <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 24px;">Resumes &amp; CVs</h2>
+    <div class="rd-hero__actions">
+      <a href="https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link" class="rd-pill" target="_blank" rel="noopener">📄 Academic CV</a>
+      <a href="https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing" class="rd-pill rd-pill--outline" target="_blank" rel="noopener">💼 Work Experience CV</a>
+    </div>
+  </div>
+</section>

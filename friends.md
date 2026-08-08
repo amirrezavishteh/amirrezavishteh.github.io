@@ -1,6 +1,5 @@
 ---
-layout: single
-author_profile: true
+layout: redesign
 permalink: /friends/
 title: Friends
 tags: [Friends]
@@ -80,7 +79,23 @@ gallery:
     image_size: large
 ---
 
-### Memories
+<section class="rd-hero rd-hero--text-only">
+  <div>
+    <div class="rd-eyebrow">Friends</div>
+    <h1 class="rd-hero__title" style="font-size: 44px;">People who make it better</h1>
+    <p class="rd-hero__lead">A few of the people I've studied and built things with.</p>
+  </div>
+</section>
 
-
-{% include gallery caption="" %}
+<section class="rd-section">
+  <div class="rd-section__inner">
+    <div class="rd-bento">
+      {% for photo in page.gallery %}
+        <div class="rd-bento__item">
+          <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}">
+          <div class="rd-bento__caption"><span>{{ photo.title }}</span></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

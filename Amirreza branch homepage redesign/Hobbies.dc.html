@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: oklch(0.985 0.003 95); }
+    a { color: oklch(0.5 0.11 235); text-decoration: none; }
+    a:hover { color: oklch(0.4 0.13 235); }
+  </style>
+  <script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family: 'Public Sans', sans-serif; color: oklch(0.22 0.005 95); max-width: 100%; overflow-x: hidden;">
+
+  <nav style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 24px 64px; max-width: 1280px; margin: 0 auto; box-sizing: border-box;">
+    <a href="Home.dc.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 20px; color: oklch(0.22 0.005 95); white-space: nowrap;">Amrreza Vishteh</a>
+    <div style="display: flex; align-items: center; gap: 20px; white-space: nowrap;">
+      <a href="Home.dc.html" style="font-size: 15px; font-weight: 500; color: oklch(0.35 0.005 95);">Home</a>
+      <a href="CV.dc.html" style="font-size: 15px; font-weight: 500; color: oklch(0.35 0.005 95);">CV</a>
+      <a href="Research.dc.html" style="font-size: 15px; font-weight: 500; color: oklch(0.35 0.005 95);">Research</a>
+      <div style="position: relative;">
+        <div onClick="{{ toggleMenu }}" style="cursor: pointer; display: flex; align-items: center; gap: 4px; font-size: 15px; font-weight: 600; color: oklch(0.22 0.005 95); user-select: none;">More <span style="font-size: 10px;">▾</span></div>
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <div onClick="{{ toggleMenu }}" style="position: fixed; inset: 0; z-index: 15;"></div>
+          <div style="position: absolute; top: 32px; right: 0; background: white; border: 1px solid oklch(0.9 0.004 95); border-radius: 14px; box-shadow: 0 16px 40px rgba(0,0,0,0.12); padding: 8px; min-width: 240px; z-index: 20;">
+            <a href="DentalMind.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">DentalMind</a>
+            <a href="Courses.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Courses &amp; Learning Path</a>
+            <a href="Gallery.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Gallery</a>
+            <a href="CodeData.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Code &amp; Data</a>
+            <a href="Friends.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 500; color: oklch(0.3 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Friends</a>
+            <a href="Hobbies.dc.html" style="display: block; padding: 12px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 600; color: oklch(0.22 0.005 95);" style-hover="background: oklch(0.96 0.004 95);">Hobbies</a>
+          </div>
+        </sc-if>
+      </div>
+      <a href="CV.dc.html" style="font-size: 14px; font-weight: 600; padding: 10px 20px; border-radius: 999px; background: oklch(0.22 0.005 95); color: white;">Résumé</a>
+    </div>
+  </nav>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 72px 64px 40px; box-sizing: border-box;">
+    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.5 0.11 235); margin-bottom: 16px;">Hobbies</div>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 44px; font-weight: 700; margin: 0 0 16px; letter-spacing: -0.01em;">Outside of work</h1>
+    <p style="font-size: 17px; line-height: 1.6; color: oklch(0.4 0.005 95); max-width: 620px; margin: 0;">A few things that keep me balanced.</p>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 24px 64px 110px; box-sizing: border-box;">
+    <div style="display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 170px; gap: 14px;">
+      <sc-for list="{{ hobbies }}" as="hobby" hint-placeholder-count="7">
+        <div style="position: relative; grid-column: span {{ hobby.colSpan }}; grid-row: span {{ hobby.rowSpan }}; border-radius: 14px; overflow: hidden;">
+          <image-slot id="{{ hobby.slotId }}" shape="rect" placeholder="{{ hobby.placeholder }}"></image-slot>
+          <div style="position: absolute; inset: 0; pointer-events: none; display: flex; align-items: flex-end; padding: 16px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%); opacity: 0; transition: opacity 0.2s ease;" style-hover="opacity: 1;">
+            <span style="color: white; font-size: 14px; font-weight: 600;">{{ hobby.caption }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid oklch(0.9 0.004 95); padding: 32px 64px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; max-width: 1280px; margin: 0 auto; box-sizing: border-box;">
+    <div style="font-size: 13.5px; color: oklch(0.55 0.005 95);">© 2026 Amrreza Vishteh</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 18px;">
+      <a href="Home.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Home</a>
+      <a href="Gallery.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Gallery</a>
+      <a href="Friends.dc.html" style="font-size: 13.5px; color: oklch(0.5 0.005 95);">Friends</a>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  renderVals() {
+    return {
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      hobbies: [
+        { slotId: "h1", placeholder: "photo", caption: "Chess", colSpan: 3, rowSpan: 2 },
+        { slotId: "h2", placeholder: "photo", caption: "Hiking", colSpan: 3, rowSpan: 1 },
+        { slotId: "h3", placeholder: "photo", caption: "Photography", colSpan: 2, rowSpan: 1 },
+        { slotId: "h4", placeholder: "photo", caption: "Gaming", colSpan: 2, rowSpan: 1 },
+        { slotId: "h5", placeholder: "photo", caption: "Reading", colSpan: 2, rowSpan: 1 },
+        { slotId: "h6", placeholder: "photo", caption: "Guitar", colSpan: 3, rowSpan: 1 },
+        { slotId: "h7", placeholder: "photo", caption: "Running", colSpan: 3, rowSpan: 1 }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
