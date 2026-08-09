@@ -55,7 +55,7 @@ $rd-max-narrow: 900px;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
-    padding: 24px 64px;
+    padding: clamp(16px, 4vw, 24px) clamp(20px, 6vw, 64px);
     max-width: $rd-max;
     margin: 0 auto;
     box-sizing: border-box;
@@ -149,7 +149,7 @@ $rd-max-narrow: 900px;
 
   // ---- Sections ------------------------------------------------------------
   .rd-section {
-    padding: 88px 64px;
+    padding: clamp(40px, 10vw, 88px) clamp(20px, 6vw, 64px);
     box-sizing: border-box;
   }
   .rd-section--alt {
@@ -181,10 +181,10 @@ $rd-max-narrow: 900px;
   .rd-hero {
     max-width: $rd-max;
     margin: 0 auto;
-    padding: 72px 64px 96px;
+    padding: clamp(40px, 8vw, 72px) clamp(20px, 6vw, 64px) clamp(56px, 10vw, 96px);
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 64px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(32px, 6vw, 64px);
     align-items: center;
     box-sizing: border-box;
   }
@@ -194,13 +194,13 @@ $rd-max-narrow: 900px;
     padding-bottom: 40px;
   }
   .rd-hero__title {
-    font-size: 52px;
+    font-size: clamp(30px, 6vw, 52px);
     line-height: 1.08;
     font-weight: 700;
     margin: 0 0 24px;
   }
   .rd-hero__lead {
-    font-size: 18px;
+    font-size: clamp(15px, 2.4vw, 18px);
     line-height: 1.6;
     color: $rd-gray-40;
     max-width: 560px;
@@ -224,6 +224,8 @@ $rd-max-narrow: 900px;
   }
   .rd-hero__portrait {
     width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
     aspect-ratio: 4/5;
     border-radius: 24px;
     overflow: hidden;
@@ -277,12 +279,12 @@ $rd-max-narrow: 900px;
   // ---- Focus / card grids ------------------------------------------------
   .rd-focus-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 24px;
   }
   .rd-card-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
   }
   .rd-card {
@@ -313,12 +315,12 @@ $rd-max-narrow: 900px;
   // ---- Featured panel -----------------------------------------------------
   .rd-featured-panel {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(24px, 5vw, 48px);
     align-items: center;
     background: $rd-bg-alt;
     border-radius: 24px;
-    padding: 48px;
+    padding: clamp(24px, 6vw, 48px);
   }
   .rd-featured-panel--text-only {
     grid-template-columns: 1fr;
@@ -451,7 +453,7 @@ $rd-max-narrow: 900px;
 
   // ---- Contact / CTA -----------------------------------------------------
   .rd-cta {
-    padding: 110px 64px;
+    padding: clamp(56px, 12vw, 110px) clamp(20px, 6vw, 64px);
     text-align: center;
   }
   .rd-cta__inner {
@@ -473,7 +475,7 @@ $rd-max-narrow: 900px;
   // ---- Footer -----------------------------------------------------------
   .rd-footer {
     border-top: 1px solid $rd-border;
-    padding: 32px 64px;
+    padding: clamp(20px, 5vw, 32px) clamp(20px, 6vw, 64px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -497,32 +499,12 @@ $rd-max-narrow: 900px;
     color: $rd-gray-50;
   }
 
-  // ---- Responsive ---------------------------------------------------------
-  @media (max-width: 860px) {
-    .rd-nav {
-      padding: 20px 24px;
-    }
-    .rd-section {
-      padding: 56px 24px;
-    }
-    .rd-hero {
-      padding: 48px 24px 56px;
-      grid-template-columns: 1fr;
-    }
-    .rd-hero__portrait {
-      max-width: 320px;
-      margin: 0 auto;
-    }
-    .rd-featured-panel {
-      grid-template-columns: 1fr;
-      padding: 28px;
-    }
-    .rd-focus-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .rd-card-grid {
-      grid-template-columns: 1fr;
-    }
+  // ---- Responsive -----------------------------------------------------
+  // Layout width/spacing above is already fluid via clamp()/auto-fit grids;
+  // these two components still need a hard breakpoint since their fixed
+  // column counts (timeline's sidebar column, bento's 6-track span math)
+  // don't degrade gracefully on their own.
+  @media (max-width: 640px) {
     .rd-timeline__row {
       grid-template-columns: 1fr;
       gap: 6px;
@@ -534,12 +516,6 @@ $rd-max-narrow: 900px;
     .rd-bento__item:nth-child(5n + 3) {
       grid-column: span 2;
       grid-row: span 1;
-    }
-    .rd-cta {
-      padding: 64px 24px;
-    }
-    .rd-footer {
-      padding: 24px 24px;
     }
   }
 }
