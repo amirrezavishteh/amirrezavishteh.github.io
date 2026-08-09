@@ -12,7 +12,7 @@ modified: 12-30-2025
 comments: false
 gallery:
   - url: /assets/images/littleamir.jpeg
-    image_path: /assets/images/littleamir.jpeg
+    image_path: /assets/images/littleamir.png
     alt: "Amirreza Vishteh - Childhood memories in Bagh Ferdos"
     title: "Amirreza - Bagh Ferdos - Childhood"
   - url: /assets/images/1.jpg
