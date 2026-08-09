@@ -37,7 +37,7 @@ modified: 08-09-2026
         <div class="rd-timeline__meta">2024 Spring</div>
         <div>
           <span class="rd-timeline__title">Healthcare, Bioinformatics, and Computational Biology (HBC2024)</span>
-          <img class="rd-timeline__thumb" src="{{ '/assets/images/amirreza-vishteh_bio.jpg' | relative_url }}" alt="HBC2024">
+          <img class="rd-timeline__thumb" src="{{ '/assets/images/amirreza-vishteh_bio.jpg' | relative_url }}" alt="HBC2024" loading="lazy" decoding="async">
         </div>
       </div>
     </div>

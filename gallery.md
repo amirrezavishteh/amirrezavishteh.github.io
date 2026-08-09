@@ -56,7 +56,7 @@ gallery:
     <div class="rd-bento">
       {% for photo in page.gallery %}
         <div class="rd-bento__item">
-          <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}">
+          <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
           <div class="rd-bento__caption"><span>{{ photo.title }}</span></div>
         </div>
       {% endfor %}

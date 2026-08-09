@@ -62,7 +62,7 @@ modified: 08-09-2026
         <div>
           <span class="rd-timeline__title">MSc, Computer Engineering</span>
           <div class="rd-timeline__org">Sharif University of Technology &middot; Tehran, Iran &middot; AI Safety, Trustworthy AI, NLP</div>
-          <img class="rd-timeline__thumb" src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Sharif University of Technology">
+          <img class="rd-timeline__thumb" src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Sharif University of Technology" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="rd-timeline__row">
@@ -70,7 +70,7 @@ modified: 08-09-2026
         <div>
           <span class="rd-timeline__title">BSc, Computer Engineering</span>
           <div class="rd-timeline__org">Iran University of Science and Technology (IUST) &middot; Tehran, Iran &middot; Ranked #475 nationally (top 0.3% of 150,000+ applicants)</div>
-          <img class="rd-timeline__thumb" src="{{ '/assets/images/iust2.jpg' | relative_url }}" alt="Iran University of Science and Technology">
+          <img class="rd-timeline__thumb" src="{{ '/assets/images/iust2.jpg' | relative_url }}" alt="Iran University of Science and Technology" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -96,6 +96,6 @@ modified: 08-09-2026
       <div class="rd-tag">React</div>
       <div class="rd-tag">FastAPI</div>
     </div>
-    <img src="{{ '/assets/images/uni.jpg' | relative_url }}" alt="University" style="width: 100%; border-radius: 16px; margin-top: 48px;">
+    <img src="{{ '/assets/images/uni.jpg' | relative_url }}" alt="University" loading="lazy" decoding="async" style="width: 100%; border-radius: 16px; margin-top: 48px;">
   </div>
 </section>
