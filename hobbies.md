@@ -63,7 +63,7 @@ gallery2:
       <h2 class="rd-bento-group__title">Nature Tourism</h2>
       <div class="rd-bento">
         {% for photo in page.gallery %}
-          <div class="rd-bento__item">
+          <div class="rd-bento__item" data-lightbox-src="{{ photo.image_path | relative_url }}" data-lightbox-alt="{{ photo.alt }}" data-lightbox-caption="{{ photo.title }}">
             <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
             <div class="rd-bento__caption"><span>{{ photo.title }}</span></div>
           </div>
@@ -74,7 +74,7 @@ gallery2:
       <h2 class="rd-bento-group__title">My Dogs</h2>
       <div class="rd-bento">
         {% for photo in page.gallery2 %}
-          <div class="rd-bento__item">
+          <div class="rd-bento__item" data-lightbox-src="{{ photo.image_path | relative_url }}" data-lightbox-alt="{{ photo.alt }}" data-lightbox-caption="{{ photo.title }}">
             <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
             <div class="rd-bento__caption"><span>{{ photo.title }}</span></div>
           </div>

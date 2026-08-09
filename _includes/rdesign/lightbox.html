@@ -1,0 +1,68 @@
+<div class="rd-lightbox" id="rd-lightbox">
+  <button type="button" class="rd-lightbox__close" aria-label="Close">&times;</button>
+  <button type="button" class="rd-lightbox__nav rd-lightbox__prev" aria-label="Previous image">&#8249;</button>
+  <button type="button" class="rd-lightbox__nav rd-lightbox__next" aria-label="Next image">&#8250;</button>
+  <figure class="rd-lightbox__figure">
+    <img class="rd-lightbox__img" src="" alt="">
+    <figcaption class="rd-lightbox__caption"></figcaption>
+  </figure>
+</div>
+
+<script>
+(function () {
+  var overlay = document.getElementById('rd-lightbox');
+  if (!overlay) return;
+
+  var imgEl = overlay.querySelector('.rd-lightbox__img');
+  var captionEl = overlay.querySelector('.rd-lightbox__caption');
+  var closeBtn = overlay.querySelector('.rd-lightbox__close');
+  var prevBtn = overlay.querySelector('.rd-lightbox__prev');
+  var nextBtn = overlay.querySelector('.rd-lightbox__next');
+
+  var items = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox-src]'));
+  if (!items.length) return;
+
+  var currentIndex = -1;
+
+  function show(index) {
+    currentIndex = (index + items.length) % items.length;
+    var el = items[currentIndex];
+    imgEl.src = el.getAttribute('data-lightbox-src');
+    imgEl.alt = el.getAttribute('data-lightbox-alt') || '';
+    captionEl.textContent = el.getAttribute('data-lightbox-caption') || '';
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    overlay.classList.remove('is-open');
+    imgEl.src = '';
+    document.body.style.overflow = '';
+  }
+
+  items.forEach(function (el, index) {
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('click', function () { show(index); });
+    el.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        show(index);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', function () { show(currentIndex - 1); });
+  nextBtn.addEventListener('click', function () { show(currentIndex + 1); });
+  overlay.addEventListener('click', function (event) {
+    if (event.target === overlay) close();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (!overlay.classList.contains('is-open')) return;
+    if (event.key === 'Escape') close();
+    if (event.key === 'ArrowLeft') show(currentIndex - 1);
+    if (event.key === 'ArrowRight') show(currentIndex + 1);
+  });
+})();
+</script>

@@ -55,7 +55,7 @@ gallery:
   <div class="rd-section__inner">
     <div class="rd-bento">
       {% for photo in page.gallery %}
-        <div class="rd-bento__item">
+        <div class="rd-bento__item" data-lightbox-src="{{ photo.image_path | relative_url }}" data-lightbox-alt="{{ photo.alt }}" data-lightbox-caption="{{ photo.title }}">
           <img src="{{ photo.image_path | relative_url }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
           <div class="rd-bento__caption"><span>{{ photo.title }}</span></div>
         </div>
