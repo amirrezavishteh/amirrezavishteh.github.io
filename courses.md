@@ -93,7 +93,7 @@ modified: 08-09-2026
   <div class="rd-section__inner rd-section__inner--narrow">
     <h2 class="rd-h2" style="font-size: 22px; margin-bottom: 24px;">Resumes &amp; CVs</h2>
     <div class="rd-hero__actions">
-      <a href="https://drive.google.com/file/d/1MO14D7H1DC5TDQjgjne91ph5HMwr_USa/view?usp=drive_link" class="rd-pill" target="_blank" rel="noopener">📄 Academic CV</a>
+      <a href="https://drive.google.com/file/d/1vi0JG6xi0mc17y_-keFPMJG1IE3fjTwA/view?usp=sharing" class="rd-pill" target="_blank" rel="noopener">📄 Academic CV</a>
       <a href="https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing" class="rd-pill rd-pill--outline" target="_blank" rel="noopener">💼 Work Experience CV</a>
     </div>
   </div>
