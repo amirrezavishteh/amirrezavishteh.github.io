@@ -1,14 +1,12 @@
 ---
 layout: redesign
 permalink: /gallery/
-title: "Gallery - Amirreza Vishteh"
+title: "Gallery"
 og_title: "Amirreza Vishteh's Photo Gallery"
+description: "A personal photo gallery from Amirreza Vishteh — travel, university life, and the moments away from research."
 og_description: "Personal photography collection - travel, hobbies, and moments that inspire research and life."
-og_image: "/assets/images/rezagreen.jpeg"
-twitter_card: "summary_large_image"
-twitter_image: "/assets/images/rezagreen.jpeg"
 tags: [gallery, photography, personal]
-modified: 12-30-2025
+last_modified_at: 2025-12-30
 comments: false
 gallery:
   - url: /assets/images/littleamir.jpeg

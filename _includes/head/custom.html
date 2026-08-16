@@ -1,89 +1,21 @@
 <!-- start custom head snippets -->
+{%- comment -%}
+  Meta, Open Graph, Twitter cards and JSON-LD all live in _includes/seo.html.
+  This file used to emit its own copies of all of them, which meant every page
+  shipped two conflicting og:title / og:image / twitter:card tags. Keep this
+  file to fonts and icons only.
+{%- endcomment -%}
+
 <!-- Fonts for the page-redesign design system (.rd-page) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic" rel="stylesheet" type="text/css">
-
-<!-- Favicon Links -->
-<link rel="icon" href="{{ '/assets/images/personal1.jpg' | relative_url }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/personal1.jpg' | relative_url }}">
-
-<!-- Per-Page Open Graph & Twitter Metadata -->
-{% if page.og_title %}
-  <meta property="og:title" content="{{ page.og_title }}">
-{% elsif page.title %}
-  <meta property="og:title" content="{{ page.title | default: site.title }}">
-{% endif %}
-
-{% if page.og_description %}
-  <meta property="og:description" content="{{ page.og_description }}">
-{% elsif page.excerpt %}
-  <meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
-{% else %}
-  <meta property="og:description" content="{{ site.description }}">
-{% endif %}
-
-{% if page.og_image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.og_image }}">
-{% else %}
-  <meta property="og:image" content="{{ site.url }}{{ site.og_image }}">
-{% endif %}
-
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
-
-<!-- Twitter Card Per-Page -->
-<meta name="twitter:card" content="{% if page.twitter_card %}{{ page.twitter_card }}{% else %}summary_large_image{% endif %}">
-<meta name="twitter:site" content="@Amirrezav1">
-{% if page.title %}
-  <meta name="twitter:title" content="{{ page.title }}">
-{% endif %}
-{% if page.excerpt %}
-  <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncatewords: 25 }}">
-{% endif %}
-<meta name="twitter:image" content="{% if page.twitter_image %}{{ site.url }}{{ page.twitter_image }}{% else %}{{ site.url }}{{ site.og_image }}{% endif %}">
-
-<!-- Structured Data: Person Schema for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Amirreza Vishteh",
-  "url": "{{ site.url }}",
-  "image": "{{ site.url }}/assets/images/amirrezaG.png",
-  "jobTitle": "AI Safety Researcher",
-  "affiliation": [
-    {
-      "@type": "Organization",
-      "name": "Sharif University of Technology"
-    },
-    {
-      "@type": "Organization",
-      "name": "Iran University of Science and Technology"
-    }
-  ],
-  "email": "amireza.vishteh@gmail.com",
-  "sameAs": [
-    "https://scholar.google.com/citations?user=ukjmhFwAAAAJ",
-    "https://github.com/amirrezavishteh",
-    "https://twitter.com/Amirrezav1",
-    "https://linkedin.com/in/amirreza-vishteh"
-  ],
-  "knowsAbout": ["AI Safety", "Large Language Models", "Backdoor Detection", "Trustworthy AI", "Model Security", "Adversarial Robustness"],
-  "workLocation": {
-    "@type": "Place",
-    "name": "Tehran, Iran"
-  }
-}
-</script>
-
-<!-- Research Paper Schema (for research posts) -->
-{% include paper-schema.html %}
-
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:creator" content="@Amirrezav1">
-
+<!-- Icons -->
+<link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+<meta name="theme-color" content="#0f172a">
 <!-- end custom head snippets -->

@@ -1,6 +1,7 @@
 ---
 layout: posts
 title: "FTT-NAS: Implementation and Review"
+description: "An implementation and review of FTT-NAS (Fault-Tolerant Neural Architecture Search), covering the MiBB feature-fault and adSAF weight-fault models for neural networks on unreliable hardware."
 ---
 
 ![FTT-NAS](../assets/images/workflow.png)

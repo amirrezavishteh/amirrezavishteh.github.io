@@ -1,6 +1,19 @@
 ---
 layout: posts
 title: "Psychological Health Chatbot: Enhancing Mental Well-being with AI"
+description: "A Persian-language mental-health chatbot built with transformer-based NLP, published at the AbjadNLP workshop — data collection, model training, and evaluation."
+paper_title: "Psychological Health Chatbot"
+paper_url: "https://aclanthology.org/2025.abjadnlp-1.8/"
+paper_venue: "AbjadNLP Workshop"
+paper_year: 2025
+paper_authors:
+  - "Sadegh Jafari"
+  - "Mohammad Erfan Zare"
+  - "Amirreza Vishteh"
+  - "Mirzae Melike"
+  - "Zahra Amiri"
+  - "Sima Mohammadparast"
+  - "Sauleh Eetemadi"
 ---
 
 ![Model](../assets/images/chatbot.png)

@@ -1,6 +1,7 @@
 ---
 layout: posts
 title: "Wav2Vec2 Sentiment Analysis Using Shemo Dataset"
+description: "Fine-tuning Wav2Vec2 for Persian speech emotion recognition on the ShEMO dataset, combining audio features with text transcripts for robust sentiment classification."
 ---
 ![Model](../assets/images/modelshape.png)
 ## Overview

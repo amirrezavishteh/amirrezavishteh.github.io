@@ -1,0 +1,143 @@
+{%- comment -%}
+  Single schema.org @graph for the whole site.
+
+  Replaces three overlapping ld+json blocks that used to ship on every page:
+  a bogus Organization node, an invalid Person node built from the empty
+  `social:` config key, and a second Person node in head/custom.html.
+
+  Nodes:
+    Person        - always; the entity the whole site is about
+    WebSite       - homepage only
+    ProfilePage   - homepage only, mainEntity -> Person
+    BreadcrumbList- interior pages
+    Article       - posts (ScholarlyArticle when paper_* front matter is set)
+{%- endcomment -%}
+
+{%- assign site_url = site.url | append: site.baseurl -%}
+{%- assign person_id = site_url | append: "/#person" -%}
+{%- assign website_id = site_url | append: "/#website" -%}
+
+{%- capture same_as_raw -%}
+{%- if site.author.google_scholar %}https://scholar.google.com/citations?user={{ site.author.google_scholar }}|{% endif -%}
+{%- if site.author.orcid %}https://orcid.org/{{ site.author.orcid }}|{% endif -%}
+{%- if site.author.github %}https://github.com/{{ site.author.github }}|{% endif -%}
+{%- if site.author.linkedin %}https://www.linkedin.com/in/{{ site.author.linkedin }}|{% endif -%}
+{%- if site.twitter.username %}https://twitter.com/{{ site.twitter.username }}|{% endif -%}
+{%- if site.facebook.username %}https://www.facebook.com/{{ site.facebook.username }}|{% endif -%}
+{%- if site.author.instagram %}https://www.instagram.com/{{ site.author.instagram }}|{% endif -%}
+{%- endcapture -%}
+{%- assign same_as = same_as_raw | strip | split: "|" -%}
+
+{%- assign knows_about = "AI Safety,Trustworthy AI,Large Language Models,Backdoor Attacks and Defenses,Model Security,Adversarial Robustness,Natural Language Processing,Persian NLP,Neural Architecture Search,Healthcare AI,Affective Computing" | split: "," -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      {% if site.author.alternate_name %}"alternateName": {{ site.author.alternate_name | jsonify }},{% endif %}
+      "url": {{ site_url | append: "/" | jsonify }},
+      "image": {{ "/assets/images/og-card.png" | absolute_url | jsonify }},
+      "jobTitle": {{ site.author.job_title | default: "AI Safety Researcher" | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "email": {{ site.author.email | prepend: "mailto:" | jsonify }},
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Sharif University of Technology",
+        "department": {
+          "@type": "Organization",
+          "name": "Data Science and Machine Learning (DML) research group"
+        },
+        "url": "https://en.sharif.edu/"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Iran University of Science and Technology",
+        "url": "https://www.iust.ac.ir/en"
+      },
+      "knowsAbout": {{ knows_about | jsonify }},
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tehran",
+          "addressCountry": "IR"
+        }
+      },
+      "sameAs": {{ same_as | jsonify }}
+    }{% if page.url == "/" %},
+    {
+      "@type": "WebSite",
+      "@id": {{ website_id | jsonify }},
+      "url": {{ site_url | append: "/" | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ site.locale | default: "en-US" | jsonify }},
+      "publisher": { "@id": {{ person_id | jsonify }} },
+      "about": { "@id": {{ person_id | jsonify }} }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": {{ site_url | append: "/#profilepage" | jsonify }},
+      "url": {{ site_url | append: "/" | jsonify }},
+      "name": {{ seo_title | default: site.title | jsonify }},
+      "isPartOf": { "@id": {{ website_id | jsonify }} },
+      "mainEntity": { "@id": {{ person_id | jsonify }} },
+      "inLanguage": {{ site.locale | default: "en-US" | jsonify }}
+    }{% else %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ canonical_url | append: "#breadcrumb" | jsonify }},
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {{ site_url | append: "/" | jsonify }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | default: site.title | jsonify }},
+          "item": {{ canonical_url | jsonify }}
+        }
+      ]
+    }{% endif %}{% if page.date %},
+    {%- comment -%}
+      Posts are BlogPosting, not ScholarlyArticle: the page is a write-up, and
+      the paper's canonical home is the publisher (ACL Anthology, IEEE). Where
+      a post covers a real paper, `citation` links the two without either
+      claiming the post *is* the article or asserting authorship.
+    {%- endcomment -%}
+    {
+      "@type": "BlogPosting",
+      "@id": {{ canonical_url | append: "#article" | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+      "author": { "@id": {{ person_id | jsonify }} },
+      "publisher": { "@id": {{ person_id | jsonify }} },
+      "mainEntityOfPage": { "@id": {{ canonical_url | jsonify }} },
+      "image": {{ seo_image | jsonify }},
+      "description": {{ seo_description | jsonify }},
+      "inLanguage": {{ site.locale | default: "en-US" | jsonify }}{% if page.paper_url or page.paper_doi %},
+      "citation": {
+        "@type": "ScholarlyArticle",
+        "name": {{ page.paper_title | default: page.title | jsonify }}{% if page.paper_url %},
+        "url": {{ page.paper_url | jsonify }}{% endif %}{% if page.paper_doi %},
+        "identifier": {{ page.paper_doi | prepend: "https://doi.org/" | jsonify }}{% endif %}{% if page.paper_year %},
+        "datePublished": {{ page.paper_year | jsonify }}{% endif %}{% if page.paper_venue %},
+        "publication": {
+          "@type": "PublicationEvent",
+          "name": {{ page.paper_venue | jsonify }}
+        }{% endif %}{% if page.paper_authors %},
+        "author": [{% for a in page.paper_authors %}{ "@type": "Person", "name": {{ a | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}
+      }{% endif %}
+    }{% endif %}
+  ]
+}
+</script>

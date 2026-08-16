@@ -1,6 +1,7 @@
 ---
 layout: posts
 title: "Understanding BackdoorBench: A Comprehensive Benchmark for AI Security"
+description: "A walkthrough of BackdoorBench, the standardized benchmark for evaluating backdoor attacks and defenses in deep learning — what it measures, why it matters, and how to use it."
 ---
 
 ## Unveiling BackdoorBench: A Critical Benchmark for AI Security

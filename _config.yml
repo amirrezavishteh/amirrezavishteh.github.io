@@ -16,17 +16,17 @@ remote_theme: "mmistakes/minimal-mistakes@4.16.0"
 minimal_mistakes_skin    : "default" # base skin; full navy/gold palette is applied in _sass/custom.scss
 
 # Site Settings
-locale                   : "en-US" 
-title                    : "امیررضا ویشته"
-title_separator          : "-"
-name                     : "amirreza" 
-description              : "Welcome to my web site."
+locale                   : "en-US"
+title                    : "Amirreza Vishteh"
+title_separator          : "|"
+name                     : "Amirreza Vishteh"
+description              : "Amirreza Vishteh is an AI safety researcher at Sharif University of Technology working on backdoor attacks and defenses for large language models, Persian NLP, and trustworthy AI."
 url                      : "https://www.amirrezavishteh.ir"
 baseurl                  : ""
 repository               : "amirrezavishteh/amirrezavishteh.github.io"
 teaser                   : "/assets/images/amirrezaG.png"
 logo                     :
-favicon                  : "/assets/images/personal1.jpg"
+favicon                  : "/assets/images/favicon.ico"
 masthead_title           : "Amirreza Vishteh | AI Researcher"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -79,10 +79,12 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification : "YOUR_GOOGLE_VERIFICATION_ID_HERE"
-bing_site_verification   : "YOUR_BING_VERIFICATION_ID_HERE"
-yandex_site_verification : "YOUR_YANDEX_VERIFICATION_ID_HERE"
-naver_site_verification  : "YOUR_NAVER_VERIFICATION_ID_HERE"
+# Leave blank until you hold the real token — a placeholder value ships a bogus
+# meta tag to production. Get one at https://search.google.com/search-console
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  :
 
 # Social Sharing
 twitter:
@@ -91,31 +93,36 @@ facebook:
   username               : amirreza.vishteh
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-Inverting-Attack-Target.png"
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+og_image                 : "/assets/images/og-card.png"   # 1200x630 social card
+og_image_alt             : "Amirreza Vishteh — AI Safety & LLM Security Researcher, Sharif University of Technology"
+# Social profiles are declared in _includes/structured-data.html, built from the
+# `author:` block below. The old empty `social:` key was removed: its mere
+# presence made seo.html emit an invalid Person block ("sameAs": null).
 
 # Analytics
 analytics:
-  provider               : google # false (default), "google", "google-universal", "custom"
+  # TODO: Universal Analytics (UA-139110197-2) stopped collecting data in July
+  # 2023. Create a GA4 property at https://analytics.google.com, then set:
+  #   provider: google
+  #   google: { tracking_id: G-XXXXXXXXXX }
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : UA-139110197-2
+    tracking_id          :
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
   name             : "Amirreza Vishteh"
+  alternate_name   : "امیررضا ویشته"   # surfaced as schema.org alternateName
+  job_title        : "AI Safety Researcher"
   avatar           : "/assets/images/amirrezaG.png"
   bio              : "I am a researcher focused on AI Safety, Trustworthy AI, and Large Language Models (LLMs). I graduated with a Bachelor's degree from Iran University of Science and Technology (IUST) and am currently pursuing a Master's degree in Computer Engineering at Sharif University of Technology."
-  location         : "تهران"
+  location         : "Tehran, Iran"
   email            : amireza.vishteh@gmail.com
-  twitter: AmirrezaVishteh
-  linkedin: Amirreza Vishteh
+  twitter: Amirrezav1          # must match site.twitter.username above
+  linkedin: amirreza-vishteh   # URL slug, not the display name
+  orcid:                       # TODO: add your ORCID iD (e.g. 0000-0002-1825-0097)
   google_scholar: ukjmhFwAAAAJ
   github: amirrezavishteh
   instagram: amirreza_v1 
@@ -162,20 +169,13 @@ footer:
       url: "https://facebook.com/amirreza.vishteh/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
+      url: "https://github.com/amirrezavishteh"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=ukjmhFwAAAAJ"
-
-      # url:
-    # - label: "GitLab"
-    #   icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://instagram.com/amirreza_v1"
     - label: "Calendly"
       icon: "fas fa-calendar-alt"
       url: "https://calendly.com/amireza-vishteh"
@@ -184,11 +184,16 @@ footer:
 # Reading Files
 include:
   - .htaccess
-  - _pages
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
+  # Kept out of the build (and therefore out of sitemap.xml):
+  - "Amirreza branch homepage redesign" # design-tool scratch dir
+  - SEO-IMPROVEMENTS.md                 # internal changelog, was indexed
+  - package-lock.json
+  - staticman.yml
+  - .travis.yml
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
@@ -246,14 +251,14 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# jekyll-paginate removed: /blog/ builds its own list with a Liquid loop and
+# never touches `paginator`. The plugin generated no /page:num/ pages but did
+# leak "- Page 3" into the homepage <title> and a dead rel="prev" link.
 timezone: Asia/Tehran # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -263,7 +268,6 @@ plugins:
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -321,3 +325,15 @@ defaults:
       comments: # true
       share: true
       related: true
+  # pages — guarantees every page has a usable share image even if it sets none
+  - scope:
+      path: ""
+      type: pages
+    values:
+      og_image: "/assets/images/og-card.png"
+  # Keep raw asset files (unlinked PDFs, images) out of sitemap.xml — it should
+  # list pages, not binaries.
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false

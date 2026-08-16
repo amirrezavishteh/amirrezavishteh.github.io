@@ -1,11 +1,12 @@
 ---
 layout: redesign
 permalink: /code-data/
-title: "Code & Data - Amirreza Vishteh"
-og_title: "Code & Data - Amirreza Vishteh"
+title: "Code & Data"
+og_title: "Code & Data — Open-Source AI Safety Research"
+description: "Open-source code, reproducible experiments, and datasets from Amirreza Vishteh's research on backdoor detection and large language model security."
 og_description: "Open-source implementations, reproducible research, and datasets for backdoor detection and LLM security."
-og_image: "/assets/images/data.png"
 tags: [code, data, github]
+last_modified_at: 2026-08-09
 ---
 
 <section class="rd-hero rd-hero--text-only">

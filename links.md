@@ -2,10 +2,20 @@
 layout: single
 author_profile: true
 permalink: /courses/
-title: Courses
+title: "Courses"
+description: "An older listing of coursework. The maintained version lives at /links/."
 tags: [Studying, courses]
-modified: 9-14-2019
+last_modified_at: 2019-09-14
 comments: false
+# Orphaned near-duplicate of courses.md (which publishes at /links/) — the two
+# permalinks are swapped. Unlinked from the nav but still crawlable, so point
+# search engines at the maintained page instead of letting it compete.
+# Permalinks are deliberately left as-is: swapping them would break any
+# already-indexed URLs. A proper swap + 301 via jekyll-redirect-from is a
+# follow-up.
+noindex: true
+sitemap: false
+canonical_url: "https://www.amirrezavishteh.ir/links/"
 ---
 
 

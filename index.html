@@ -1,18 +1,19 @@
 ---
 layout: redesign
 permalink: /
-hidden: true
-title: "Amirreza Vishteh - AI Researcher & Computer Engineer"
-og_title: "Amirreza Vishteh - AI Safety & LLM Security Researcher"
-og_description: "Defending Large Language Models Against Backdoor Attacks. Advancing AI Safety and Trustworthy AI Systems. Research-forward computer engineer at Sharif University."
-og_image: "/assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-Inverting-Attack-Target.png"
-twitter_card: "summary_large_image"
-twitter_image: "/assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-Inverting-Attack-Target.png"
+title: "Amirreza Vishteh"
+# seo_title wins outright, so site.title is not appended and the name is not
+# repeated. 54 characters — inside Google's ~60-char SERP truncation point.
+seo_title: "Amirreza Vishteh — AI Safety & LLM Security Researcher"
+og_title: "Amirreza Vishteh — AI Safety & LLM Security Researcher"
+description: "AI safety researcher at Sharif University of Technology. I work on backdoor attacks and defenses for large language models, Persian NLP, and trustworthy AI."
+og_image: "/assets/images/og-card.png"
+last_modified_at: 2026-08-16
 ---
 
 <section class="rd-hero">
   <div>
-    <div class="rd-eyebrow">Sharif University &middot; DML Lab</div>
+    <div class="rd-eyebrow">Amirreza Vishteh &middot; Sharif University &middot; DML Lab</div>
     <h1 class="rd-hero__title">Researching AI Safety, one rigorous step at a time.</h1>
     <p class="rd-hero__lead">{{ site.author.bio }}</p>
     <div class="rd-hero__actions">
@@ -27,7 +28,9 @@ twitter_image: "/assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-In
     </div>
   </div>
   <div class="rd-hero__portrait">
-    <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+    <img src="{{ site.author.avatar | relative_url }}"
+         alt="Portrait of Amirreza Vishteh, AI safety researcher at Sharif University of Technology"
+         width="522" height="650" fetchpriority="high" decoding="async">
   </div>
 </section>
 

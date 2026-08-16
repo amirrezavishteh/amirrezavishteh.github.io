@@ -1,11 +1,12 @@
 ---
 layout: redesign
 permalink: /dentalmind/
-title: "DentalMind - Amirreza Vishteh"
+title: "DentalMind"
 og_title: "DentalMind — Trustworthy AI for Dental Diagnostics"
+description: "DentalMind applies trustworthy-AI principles to per-tooth dental radiograph analysis — a clinical decision-support tool built to assist, not replace, the clinician."
 og_description: "Applying trustworthy-AI principles to a real clinical workflow — per-tooth dental radiograph analysis designed to support, not replace, a clinician's judgment."
-og_image: "/assets/images/config.png"
 tags: [dentalmind, healthcare ai, trustworthy ai]
+last_modified_at: 2026-08-09
 ---
 
 <section class="rd-hero rd-hero--text-only">

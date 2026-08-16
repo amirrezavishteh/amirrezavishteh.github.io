@@ -1,9 +1,11 @@
 ---
 layout: redesign
 permalink: /hobbies/
-title: Hobbies
+title: "Hobbies"
+og_title: "Hobbies — Hiking, Travel & Life Outside Research"
+description: "Life outside the lab: hiking around Tehran, travel through northern Iran and Natanz, and the dogs that keep Amirreza Vishteh company."
 tags: [Hoby]
-modified: 9-14-2019
+last_modified_at: 2019-09-14
 comments: false
 gallery:
   - url: /assets/images/amirshomal.jpeg

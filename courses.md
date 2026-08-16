@@ -1,12 +1,12 @@
 ---
 layout: redesign
 permalink: /links/
-title: "Courses & Learning Path - Amirreza Vishteh"
-og_title: "Academic Coursework - From CS Foundations to AI Safety & NLP"
+title: "Courses & Learning Path"
+og_title: "Academic Coursework — From CS Foundations to AI Safety & NLP"
+description: "The coursework behind the research: a progression from computer-science foundations to AI safety and NLP, with teaching assistantships, certifications, and workshops."
 og_description: "Deliberate progression from foundational CS to AI Safety and NLP with dedicated TA work, Coursera certifications, and research workshops."
-og_image: "/assets/images/book.jpg"
 tags: [courses, education, learning]
-modified: 08-09-2026
+last_modified_at: 2026-08-09
 ---
 
 <section class="rd-hero rd-hero--text-only">

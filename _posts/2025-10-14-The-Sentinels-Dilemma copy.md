@@ -1,6 +1,7 @@
 ---
 layout: posts
 title: "The Sentinel's Dilemma: Guarding AI from Hidden Threats"
+description: "A survey of backdoor attacks on large language models — how hidden triggers are implanted during training, and the detection and defense strategies emerging against them."
 date: 2025-10-14 10:00:00 +0200
 categories: [AI-Security, Large-Language-Models, Research]
 ---

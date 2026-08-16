@@ -1,9 +1,11 @@
 ---
 layout: redesign
 permalink: /friends/
-title: Friends
+title: "Friends"
+og_title: "Friends & Colleagues"
+description: "The people alongside Amirreza Vishteh through Sharif, IUST, and the DML lab — friends, labmates, and collaborators."
 tags: [Friends]
-modified: 4-10-2019
+last_modified_at: 2019-04-10
 comments: true
 gallery:
   - url: /assets/images/dml-lab-hamidreza-rabiee.jpg

@@ -1,13 +1,12 @@
 ---
 layout: redesign
 permalink: /blog/
-title: "Research & Publications - Amirreza Vishteh"
-og_title: "Research Publications & Blog - AI Safety & LLM Security"
+title: "Research & Publications"
+og_title: "Research Publications & Blog — AI Safety & LLM Security"
+description: "Peer-reviewed papers and technical write-ups by Amirreza Vishteh on backdoor attacks and defenses in large language models, AI safety, and Persian NLP."
 og_description: "Explore peer-reviewed research, papers, and technical blog posts on AI Safety, Large Language Model Security, and Trustworthy AI."
-og_image: "/assets/images/BAIT-Large-Language-Model-Backdoor-Scanning-by-Inverting-Attack-Target.png"
-twitter_card: "summary_large_image"
 tags: [research, publications]
-modified: 08-09-2026
+last_modified_at: 2026-08-09
 ---
 
 <section class="rd-hero rd-hero--text-only">
