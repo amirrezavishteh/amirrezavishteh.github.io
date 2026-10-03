@@ -8,6 +8,7 @@ export async function GET(context) {
     title: `${profile.name} — Blog`,
     description: `Research write-ups by ${profile.name} on AI safety, LLM security, and NLP.`,
     site: context.site,
+    stylesheet: '/rss.xsl',
     items: posts.map((p) => ({
       title: p.data.title,
       description: p.data.description,
