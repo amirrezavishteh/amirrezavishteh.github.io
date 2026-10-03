@@ -10,5 +10,5 @@ repo: "https://github.com/amirrezavishteh/Devign_v2"
 post: "/blog/devign-reproduction/"
 language: "Python"
 topics: ["graph neural networks", "vulnerability detection", "reproducibility"]
-period: "Aug 2025"
+period: "Aug 2026"
 ---
