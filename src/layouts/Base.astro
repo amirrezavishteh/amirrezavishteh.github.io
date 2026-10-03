@@ -1,0 +1,99 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Lightbox from '../components/Lightbox.astro';
+import profile from '../data/profile.json';
+import cv from '../data/cv.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  published?: Date;
+}
+
+const { title, description, image, type = 'website', noindex = false, published } = Astro.props;
+const site = Astro.site!;
+const fullTitle = title ? `${title} — ${profile.name}` : `${profile.name} — ${profile.headline}`;
+const desc = description || `${profile.name} — ${profile.headline}. ${profile.bioShort}`;
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL(image || '/og-card.png', site).href;
+const sameAs = Object.values(profile.links).filter(Boolean);
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  alternateName: 'امیررضا ویشته',
+  jobTitle: profile.headline,
+  email: `mailto:${profile.email}`,
+  image: new URL(profile.photo, site).href,
+  url: new URL('/', site).href,
+  sameAs,
+  alumniOf: cv.education.map((e) => ({ '@type': 'CollegeOrUniversity', name: e.institution })),
+  knowsAbout: profile.interests,
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <meta name="author" content={profile.name} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#060a13" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title={`${profile.name} — Blog`} href="/rss.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={profile.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    {published && <meta property="article:published_time" content={published.toISOString()} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Amirrezav1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700&display=swap" />
+
+    <script is:inline>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add('js');
+        var t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+        var dark = t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        d.setAttribute('data-theme-resolved', dark ? 'dark' : 'light');
+      })();
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <Lightbox />
+    <script>
+      import '../scripts/site';
+    </script>
+  </body>
+</html>

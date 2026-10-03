@@ -1,0 +1,84 @@
+{
+  "education": [
+    {
+      "institution": "Sharif University of Technology",
+      "degree": "Master of Science in Computer Engineering",
+      "major": "AI Safety, Trustworthy AI & NLP",
+      "period": "2024 – Present",
+      "gpa": "",
+      "thesis": "",
+      "supervisor": "",
+      "supervisorUrl": ""
+    },
+    {
+      "institution": "Iran University of Science and Technology (IUST)",
+      "degree": "Bachelor of Science in Computer Engineering",
+      "major": "",
+      "period": "2020 – 2024",
+      "gpa": "",
+      "thesis": "",
+      "supervisor": "",
+      "supervisorUrl": ""
+    }
+  ],
+  "work": [
+    {
+      "organization": "DentalMind",
+      "role": "Founder",
+      "period": "2024 – Present",
+      "description": "Built an AI-assisted dental diagnostics tool that applies trustworthy-AI principles to per-tooth radiograph analysis — designed to support, not replace, a clinician's judgment. Python, PyTorch, computer vision, FastAPI and React."
+    }
+  ],
+  "research": [
+    {
+      "lab": "Data Science and Machine Learning Laboratory",
+      "institution": "Sharif University of Technology",
+      "period": "2024 – Present",
+      "description": "Research on AI safety and trustworthy AI, centred on backdoor attacks and defenses for large language models: controlled backdoor planting with LoRA, stress-testing published scanners, causal auditing of recovered triggers, and trigger-agnostic detectors."
+    },
+    {
+      "lab": "NLP Lab",
+      "institution": "Iran University of Science and Technology",
+      "period": "2023 – 2024",
+      "description": "Research internship in natural language processing: literature review, Persian NLP, speech emotion recognition, and the Psychological Health Chatbot project published at AbjadNLP 2025."
+    }
+  ],
+  "teaching": [
+    { "course": "Stochastic Processes", "term": "Fall 2025", "instructor": "", "duty": "Instruction, grading, and guiding student research projects.", "institution": "Sharif University of Technology" },
+    { "course": "Machine Learning", "term": "2024 – Present", "instructor": "", "duty": "Instruction, grading, and guiding student research projects.", "institution": "Sharif University of Technology" },
+    { "course": "Natural Language Processing", "term": "2020 – 2024", "instructor": "", "duty": "Curriculum design, lectures and labs, and mentoring student research.", "institution": "Iran University of Science and Technology" },
+    { "course": "Artificial Intelligence", "term": "2020 – 2024", "instructor": "", "duty": "Curriculum design, lectures and labs, and mentoring student research.", "institution": "Iran University of Science and Technology" },
+    { "course": "Theory of Languages and Automata", "term": "2020 – 2024", "instructor": "", "duty": "Curriculum design, lectures and labs, and mentoring student research.", "institution": "Iran University of Science and Technology" },
+    { "course": "Computer Architecture", "term": "2020 – 2024", "instructor": "", "duty": "Curriculum design, lectures and labs, and mentoring student research.", "institution": "Iran University of Science and Technology" }
+  ],
+  "activities": [
+    {
+      "title": "HBC 2024 Advanced Seminar",
+      "period": "Mar 2024",
+      "description": "Attended the Healthcare, Bioinformatics and Computational Biology advanced seminar, with lectures from leading researchers in the field.",
+      "link": "/certificates/",
+      "linkLabel": "Certificate"
+    },
+    {
+      "title": "Coursera — Machine Learning & Deep Learning",
+      "period": "2023 – 2024",
+      "description": "Four certified courses from DeepLearning.AI, Stanford Online and IBM, from supervised learning to AI workflows for vision and NLP.",
+      "link": "/certificates/",
+      "linkLabel": "Certificates"
+    }
+  ],
+  "service": [],
+  "honors": [
+    { "title": "Ranked #475 nationally in Iran's university entrance exam (Mathematics) — top 0.3% of 150,000+ applicants", "year": "2020", "link": "" }
+  ],
+  "skills": [
+    { "group": "AI safety & security", "items": ["Backdoor detection", "LLM auditing", "LoRA fine-tuning", "Interpretability signals", "Adversarial evaluation"] },
+    { "group": "Machine learning", "items": ["PyTorch", "Transformers", "LLM fine-tuning", "NLP", "Persian NLP", "Wav2Vec2", "Computer vision", "Graph neural networks"] },
+    { "group": "Engineering", "items": ["Python", "FastAPI", "React", "Docker", "SQL", "VHDL", "Kotlin / Android"] }
+  ],
+  "courses": [
+    { "level": "Graduate & research", "items": ["Machine Learning", "Stochastic Processes", "Natural Language Processing", "Deep Learning"] },
+    { "level": "Undergraduate", "items": ["Artificial Intelligence", "Computer Vision", "Computer Aided Design (VHDL)", "Algorithm Design", "Advanced Programming", "Fundamentals of Programming", "Mobile Networks", "Operating Systems", "Web Design"] }
+  ],
+  "languages": []
+}

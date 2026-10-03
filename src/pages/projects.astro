@@ -1,0 +1,88 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import profile from '../data/profile.json';
+import { getProjects } from '../lib/utils';
+import { PROJECT_CATEGORIES } from '../lib/constants';
+
+const all = await getProjects();
+const featured = all.filter((p) => p.data.featured && !p.data.fork);
+const rest = all.filter((p) => !p.data.featured && !p.data.fork);
+const forks = all.filter((p) => p.data.fork);
+const originals = all.length - forks.length;
+const cats = PROJECT_CATEGORIES.map((c) => [c, rest.filter((p) => p.data.category === c).length] as const).filter(([, n]) => n);
+---
+<Base title="Projects" description={`Research code, AI-safety tooling, and software projects by ${profile.name}.`}>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Open source</p>
+      <h1>Projects</h1>
+      <p class="lead">
+        Research code, end-to-end ML systems, and tools I've built — {originals} projects spanning LLM backdoor detection,
+        NLP and speech, healthcare AI, networks, and software engineering.
+      </p>
+      <div class="actions">
+        {profile.links.github && <a class="btn" href={profile.links.github} target="_blank" rel="noopener"><Icon name="github" size={16} /> View GitHub profile</a>}
+      </div>
+    </div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="container block">
+      <h2 class="block-title">Featured</h2>
+      <div class="grid grid-3">{featured.map((p) => <ProjectCard project={p} maxTopics={4} />)}</div>
+    </section>
+  )}
+
+  {rest.length > 0 && (
+    <section class="container block" data-filter-scope>
+      <div class="block-head">
+        <h2 class="block-title">More projects</h2>
+        <input class="search" type="search" placeholder="Search projects, topics…" aria-label="Search projects" data-search />
+      </div>
+      <div class="filters" role="group" aria-label="Filter by category">
+        <button class="filter-btn" data-filter="all" aria-pressed="true">All <span class="count">{rest.length}</span></button>
+        {cats.map(([c, n]) => <button class="filter-btn" data-filter={c} aria-pressed="false">{c} <span class="count">{n}</span></button>)}
+      </div>
+      <div class="grid grid-3">{rest.map((p) => <ProjectCard project={p} />)}</div>
+      <p class="empty-state" data-empty hidden>No projects match your search.</p>
+    </section>
+  )}
+
+  {forks.length > 0 && (
+    <section class="container block">
+      <details class="forks">
+        <summary>
+          <span>
+            <h2 class="block-title">Research forks</h2>
+            <span class="muted">{forks.length} upstream projects I've forked to study and build on — credit belongs to their original authors.</span>
+          </span>
+          <Icon name="chevron-right" size={22} class="chev" />
+        </summary>
+        <div class="grid grid-3">{forks.map((p) => <ProjectCard project={p} />)}</div>
+      </details>
+    </section>
+  )}
+</Base>
+
+<style>
+  .block { padding-bottom: 48px; }
+  .block-title { margin-bottom: 18px; font-size: 1.35rem; }
+  .block-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .block-head .block-title { margin: 0; }
+  .forks { padding: 6px 20px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
+  .forks[open] { padding-bottom: 20px; }
+  .forks summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 0; list-style: none; cursor: pointer; }
+  .forks summary::-webkit-details-marker { display: none; }
+  .forks summary .block-title { margin: 0 0 4px; }
+  .forks summary .muted { font-size: 0.9rem; }
+  .forks :global(.chev) { flex: none; color: var(--muted); transition: transform 0.2s; }
+  .forks[open] :global(.chev) { transform: rotate(90deg); }
+  .forks .grid { margin-top: 8px; }
+</style>
+
+<script>
+  import { initFilters } from '../scripts/filter';
+  initFilters();
+</script>

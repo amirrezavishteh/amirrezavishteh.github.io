@@ -1,0 +1,8 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "_site", "vendor", "_posts", "_layouts", "_includes", "Amirreza branch homepage redesign"],
+  "compilerOptions": {
+    "resolveJsonModule": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Amirreza Vishteh — AI Safety & LLM Security Researcher",
+  "short_name": "A. Vishteh",
+  "description": "AI safety researcher at Sharif University of Technology working on backdoor attacks and defenses for large language models.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060a13",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/brand/logo-mark.png", "sizes": "256x256", "type": "image/png" }
+  ]
+}

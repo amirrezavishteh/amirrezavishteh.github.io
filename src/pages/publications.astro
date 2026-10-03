@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import PubCard from '../components/PubCard.astro';
+import profile from '../data/profile.json';
+import { getPublications, pubMeta, linkAttrs } from '../lib/utils';
+
+const pubs = await getPublications();
+const years = [...new Set(pubs.map((p) => p.data.year))].sort((a, b) => b - a);
+const FILTERS = ['Journal', 'Conference', 'Under review / preprint'];
+const counts = Object.fromEntries(FILTERS.map((f) => [f, pubs.filter((p) => pubMeta(p.data).cats.includes(f)).length]));
+---
+<Base title="Publications" description={`Peer-reviewed papers and manuscripts by ${profile.name} on AI safety, LLM security, and NLP.`}>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Research</p>
+      <h1>Publications</h1>
+      <p class="lead">
+        Peer-reviewed papers and manuscripts in progress. My name is highlighted in author lists; it also appears as{" "}
+        <em>Amireza Vishte</em> in some publication records. Longer research write-ups live on the <a href="/blog/">blog</a>.
+      </p>
+      <div class="actions">
+        {profile.links.scholar && <a class="btn" href={profile.links.scholar} target="_blank" rel="noopener"><Icon name="scholar" size={16} /> Google Scholar</a>}
+        {profile.publicationsFile && <a class="btn" {...linkAttrs(profile.publicationsFile, { download: true })}><Icon name="download" size={16} /> Full list (PDF)</a>}
+      </div>
+    </div>
+  </section>
+
+  <section class="container" data-filter-scope>
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filter publications">
+        <button class="filter-btn" data-filter="all" aria-pressed="true">All <span class="count">{pubs.length}</span></button>
+        {FILTERS.filter((f) => counts[f]).map((f) => (
+          <button class="filter-btn" data-filter={f} aria-pressed="false">{f} <span class="count">{counts[f]}</span></button>
+        ))}
+      </div>
+      <input class="search" type="search" placeholder="Search title, author, venue…" aria-label="Search publications" data-search />
+    </div>
+
+    {years.map((y) => (
+      <div class="year-group" data-item-group>
+        <h2 class="year-label mono">{y}</h2>
+        <div class="pub-list">
+          {pubs.filter((p) => p.data.year === y).map((p) => (
+            <div data-item data-cats={pubMeta(p.data).cats.join('|')} data-text={[p.data.title, p.data.authors, p.data.venue].join(' ').toLowerCase()}>
+              <PubCard pub={p} />
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+    <p class="empty-state" data-empty hidden>No publications match your search.</p>
+  </section>
+</Base>
+
+<style>
+  .year-group { display: grid; grid-template-columns: 90px 1fr; gap: 24px; padding-block: 18px; border-top: 1px solid var(--line); }
+  .year-group:first-of-type { border-top: 0; }
+  .year-label { position: sticky; top: calc(var(--header-h) + 16px); align-self: start; margin: 6px 0 0; color: var(--brand); font-size: 1.5rem; font-weight: 500; }
+  .pub-list { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  @media (width <= 720px) {
+    .year-group { grid-template-columns: 1fr; gap: 10px; }
+    .year-label { position: static; font-size: 1.2rem; }
+  }
+</style>
+
+<script>
+  import { initFilters } from '../scripts/filter';
+  initFilters();
+</script>

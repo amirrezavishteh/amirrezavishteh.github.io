@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="Page not found" noindex>
+  <section class="container nf">
+    <p class="code mono grad-text">404</p>
+    <h1>This page wandered off</h1>
+    <p class="lead muted">Like Barak on a hike. Let's get you somewhere useful.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="/"><Icon name="home" size={16} /> Back home</a>
+      <a class="btn" href="/blog/">Read the blog</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 60vh; padding-block: 64px; text-align: center; }
+  .code { margin: 0 0 12px; font-size: clamp(5rem, 18vw, 9rem); font-weight: 500; line-height: 1; }
+  .actions { justify-content: center; margin-top: 12px; }
+</style>

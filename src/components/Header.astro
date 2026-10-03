@@ -1,0 +1,53 @@
+---
+import Icon from './Icon.astro';
+import profile from '../data/profile.json';
+import { linkAttrs } from '../lib/utils';
+
+export const NAV = [
+  { href: '/', label: 'Home' },
+  { href: '/cv/', label: 'CV' },
+  { href: '/publications/', label: 'Publications' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/certificates/', label: 'Certificates' },
+  { href: '/gallery/', label: 'Gallery' },
+  { href: '/blog/', label: 'Blog' },
+];
+
+const path = Astro.url.pathname;
+const current = (href: string) => (href === '/' ? path === '/' : path.startsWith(href)) ? 'page' : undefined;
+const [first, ...rest] = profile.name.split(' ');
+const cv = linkAttrs(profile.cvFile, { download: true });
+---
+<header class="site-header" data-header>
+  <div class="container bar">
+    <a href="/" class="brand" aria-label={`${profile.name} — home`}>
+      <img src="/brand/logo-mark.png" alt="" width="36" height="36" />
+      <span class="brand-name">{first} <span>{rest.join(' ')}</span></span>
+    </a>
+    <nav class="nav-desktop" aria-label="Primary">
+      {NAV.map((n) => <a href={n.href} aria-current={current(n.href)}>{n.label}</a>)}
+    </nav>
+    <div class="bar-actions">
+      {profile.cvFile && (
+        <a class="btn btn-sm btn-primary cv-btn" {...cv}><Icon name="download" size={16} /> <span>CV</span></a>
+      )}
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <Icon name="sun" class="i-sun" />
+        <Icon name="moon" class="i-moon" />
+      </button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
+        <Icon name="menu" size={22} class="i-open" />
+        <Icon name="close" size={22} class="i-close" />
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile" data-mobile-nav hidden>
+    <div class="container">
+      {NAV.map((n) => <a href={n.href} aria-current={current(n.href)}>{n.label}<Icon name="chevron-right" /></a>)}
+      <div class="mobile-cta">
+        {profile.cvFile && <a class="btn btn-primary" {...cv}><Icon name="download" size={16} /> Download CV</a>}
+        <a class="btn" href={`mailto:${profile.email}`}><Icon name="mail" size={16} /> Email me</a>
+      </div>
+    </div>
+  </nav>
+</header>

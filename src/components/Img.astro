@@ -1,0 +1,27 @@
+---
+import { resolveImage } from '../lib/img';
+
+interface Props {
+  src: string;
+  alt: string;
+  sizes?: string;
+  max?: number;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  class?: string;
+}
+const { src, alt, sizes = '100vw', max = 1400, loading = 'lazy', fetchpriority, class: cls } = Astro.props;
+const img = resolveImage(src, max)!;
+---
+<img
+  class={cls}
+  src={img.src}
+  srcset={img.srcset}
+  sizes={img.srcset ? sizes : undefined}
+  width={img.width}
+  height={img.height}
+  alt={alt}
+  loading={loading}
+  decoding="async"
+  fetchpriority={fetchpriority}
+/>

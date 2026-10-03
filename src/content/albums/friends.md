@@ -1,0 +1,31 @@
+---
+draft: false
+title: "Friends"
+category: "Life"
+order: 40
+description: "A few of the people I’ve studied and built things with."
+cover: "/assets/images/friendsb.jpeg"
+images:
+  - src: "/assets/images/friendsb.jpeg"
+    caption: "Sina Alinejad, Mohammad Hossein Abaspor, Navid Ebrahimi & Mohammad Osolian"
+  - src: "/assets/images/amirsina.jpeg"
+    caption: "With Sina Alinejad"
+  - src: "/assets/images/amirmammd.jpeg"
+    caption: "With Mohammad Osolian"
+  - src: "/assets/images/friendsf.jpeg"
+  - src: "/assets/images/mamadamir3.jpeg"
+    caption: "With Mohammad Osolian"
+  - src: "/assets/images/sinavishteh.jpeg"
+    caption: "With Sina Alinejad"
+  - src: "/assets/images/sinavishteh2.jpeg"
+    caption: "With Sina Alinejad"
+  - src: "/assets/images/sinaamir.jpeg"
+    caption: "With Sina Alinejad"
+  - src: "/assets/images/abasamir.jpeg"
+  - src: "/assets/images/friendsc.jpeg"
+    caption: "Mohammad Hossein Abaspor, Navid Ebrahimi & Vahid"
+  - src: "/assets/images/friendsd.jpeg"
+    caption: "Farzan Rahmani, Sina Alinejad, Mohammad Hossein Abaspor, Navid Ebrahimi & Vahid"
+  - src: "/assets/images/realfriends.jpeg"
+  - src: "/assets/images/all.jpeg"
+---

@@ -1,0 +1,43 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from './Icon.astro';
+import Img from './Img.astro';
+import { fmtDate, readingTime } from '../lib/utils';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+const { post } = Astro.props;
+const d = post.data;
+---
+<a class="post card card-hover" href={`/blog/${post.id}/`}>
+  {d.cover ? (
+    <div class="thumb"><Img src={d.cover} alt={d.coverAlt || ''} sizes="(max-width: 640px) 100vw, 360px" max={800} /></div>
+  ) : (
+    <div class="thumb placeholder" aria-hidden="true"><Icon name="pen" size={26} /><span>{d.tags[0] ?? 'notes'}</span></div>
+  )}
+  <div class="body">
+    <span class="meta mono">{fmtDate(d.date)} · {readingTime(post.body)} min read</span>
+    <h2>{d.title}</h2>
+    {d.description && <p>{d.description}</p>}
+    <span class="more">Read post <Icon name="arrow-right" size={16} /></span>
+  </div>
+</a>
+
+<style>
+  .post { display: flex; flex-direction: column; overflow: hidden; color: inherit; }
+  .post:hover { text-decoration: none; }
+  .thumb { aspect-ratio: 16/9; overflow: hidden; border-bottom: 1px solid var(--line); background: #fff; }
+  .thumb :global(img) { width: 100%; height: 100%; object-fit: contain; }
+  .placeholder {
+    display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;
+    background: radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--brand-2) 22%, transparent), transparent 60%),
+      linear-gradient(135deg, var(--surface-2), var(--brand-soft));
+    color: var(--brand); font: 500 0.75rem var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .body { display: flex; flex: 1; flex-direction: column; gap: 8px; padding: 20px; }
+  .meta { color: var(--muted); font-size: 0.76rem; }
+  h2 { margin: 0; font-size: 1.12rem; }
+  p { margin: 0; color: var(--text-2); font-size: 0.93rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .more { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 8px; color: var(--brand); font-size: 0.92rem; font-weight: 600; }
+</style>

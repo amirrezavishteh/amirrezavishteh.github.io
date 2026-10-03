@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import PostCard from '../../components/PostCard.astro';
+import profile from '../../data/profile.json';
+import { getPosts, slugify } from '../../lib/utils';
+
+const posts = await getPosts();
+const tagCounts = new Map<string, number>();
+posts.forEach((p) => p.data.tags.forEach((t) => tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1)));
+const tags = [...tagCounts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+---
+<Base title="Blog" description={`Research write-ups and notes by ${profile.name} on LLM backdoors, AI safety, NLP, and machine learning.`}>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Writing</p>
+      <h1>Blog</h1>
+      <p class="lead">Research write-ups on LLM backdoors and AI safety, paper reviews and reproductions, and notes from projects in NLP, speech, and systems.</p>
+      <div class="actions"><a class="btn btn-sm" href="/rss.xml"><Icon name="rss" size={15} /> RSS feed</a></div>
+    </div>
+  </section>
+  <section class="container">
+    {tags.length > 0 && (
+      <div class="chips tag-row">
+        {tags.map(([t, n]) => <a class="chip" href={`/blog/tags/${slugify(t)}/`}><Icon name="tag" size={13} /> {t} <span class="muted">{n}</span></a>)}
+      </div>
+    )}
+    <div class="grid grid-3">{posts.map((p) => <PostCard post={p} />)}</div>
+  </section>
+</Base>
+
+<style>
+  .tag-row { margin-bottom: 24px; }
+  .tag-row .chip:hover { border-color: var(--brand); color: var(--brand); text-decoration: none; }
+</style>

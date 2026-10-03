@@ -13,3 +13,9 @@ Gemfile.lock
 node_modules
 npm-debug.log*
 vendor/*
+
+# Astro
+dist
+.astro
+public/_img
+src/generated

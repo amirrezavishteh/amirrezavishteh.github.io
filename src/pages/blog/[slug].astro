@@ -1,0 +1,70 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import Img from '../../components/Img.astro';
+import profile from '../../data/profile.json';
+import { getPosts, fmtDate, readingTime, slugify } from '../../lib/utils';
+import { resolveImage } from '../../lib/img';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  // Newest first: "previous" is the older post, "next" the newer one.
+  return posts.map((post, i) => ({ params: { slug: post.id }, props: { post, older: posts[i + 1], newer: posts[i - 1] } }));
+}
+
+const { post, older, newer } = Astro.props;
+const d = post.data;
+const { Content } = await render(post);
+const avatar = resolveImage(profile.photo, 400);
+---
+<Base title={d.title} description={d.description} type="article" image={d.cover ? resolveImage(d.cover)?.src : undefined} published={d.date}>
+  <article class="container narrow post">
+    <header>
+      <a href="/blog/" class="back"><Icon name="arrow-left" size={16} /> All posts</a>
+      <h1>{d.title}</h1>
+      {d.description && <p class="lead">{d.description}</p>}
+      <div class="meta">
+        <img src={avatar?.src} alt="" width="40" height="40" class="avatar" />
+        <span>
+          <strong>{profile.name}</strong><br />
+          <time datetime={d.date.toISOString()}>{fmtDate(d.date)}</time> · {readingTime(post.body)} min read
+          {d.updated && <> · updated {fmtDate(d.updated)}</>}
+        </span>
+      </div>
+      {d.tags.length > 0 && <div class="chips">{d.tags.map((t) => <a class="chip" href={`/blog/tags/${slugify(t)}/`}>#{t}</a>)}</div>}
+    </header>
+    {d.cover && (
+      <figure class="cover"><Img src={d.cover} alt={d.coverAlt || ''} sizes="(max-width: 780px) 100vw, 780px" loading="eager" /></figure>
+    )}
+    <div class="prose"><Content /></div>
+    <nav class="pager" aria-label="More posts">
+      {older ? <a href={`/blog/${older.id}/`} class="card card-hover pg"><small>← Older</small><span>{older.data.title}</span></a> : <span></span>}
+      {newer && <a href={`/blog/${newer.id}/`} class="card card-hover pg next"><small>Newer →</small><span>{newer.data.title}</span></a>}
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .post { padding-block: clamp(32px, 6vw, 64px) 24px; }
+  .back { display: flex; align-items: center; gap: 6px; width: fit-content; margin-bottom: 22px; font-size: 0.9rem; font-weight: 600; }
+  h1 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
+  .lead { color: var(--muted); font-size: 1.15rem; }
+  .meta { display: flex; align-items: center; gap: 12px; margin: 18px 0 14px; color: var(--muted); font-size: 0.88rem; line-height: 1.4; }
+  .meta strong { color: var(--text); }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: top; }
+  .chips .chip:hover { border-color: var(--brand); color: var(--brand); text-decoration: none; }
+  .cover { margin: 28px 0 8px; }
+  .cover :global(img) { width: 100%; border-radius: var(--radius-lg); background: #fff; }
+  .prose { margin-top: 32px; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .pg { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; color: var(--text); }
+  .pg:hover { text-decoration: none; }
+  .pg small { color: var(--muted); }
+  .pg span { font: 600 0.98rem var(--font-display); }
+  .pg.next { grid-column: 2; text-align: right; }
+  @media (width <= 640px) {
+    .pager { grid-template-columns: 1fr; }
+    .pg.next { grid-column: 1; }
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+import Icon from './Icon.astro';
+import profile from '../data/profile.json';
+import { linkAttrs } from '../lib/utils';
+
+const L = profile.links;
+const connect = [
+  L.github && { href: L.github, icon: 'github', label: 'GitHub' },
+  L.scholar && { href: L.scholar, icon: 'scholar', label: 'Google Scholar' },
+  L.linkedin && { href: L.linkedin, icon: 'linkedin', label: 'LinkedIn' },
+  L.x && { href: L.x, icon: 'x', label: 'X / Twitter' },
+].filter(Boolean) as { href: string; icon: string; label: string }[];
+
+const docs = [
+  profile.cvFile && { href: profile.cvFile, label: 'Academic CV (PDF)' },
+  profile.workCvFile && { href: profile.workCvFile, label: 'Work experience CV (PDF)' },
+  profile.publicationsFile && { href: profile.publicationsFile, label: 'Publications (PDF)' },
+].filter(Boolean) as { href: string; label: string }[];
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-brand">
+      <img class="logo-full" src="/brand/logo-full.png" alt={`${profile.name} logo`} width="170" height="137" loading="lazy" />
+      <p class="muted">{profile.headline}. {profile.tagline}.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h4>Explore</h4>
+      <a href="/cv/">Curriculum Vitae</a>
+      <a href="/publications/">Publications</a>
+      <a href="/projects/">Projects</a>
+      <a href="/certificates/">Certificates</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href={`mailto:${profile.email}`}><Icon name="mail" size={16} /> {profile.email}</a>
+      {connect.map((c) => <a href={c.href} target="_blank" rel="noopener"><Icon name={c.icon} size={16} /> {c.label}</a>)}
+      <a href="/rss.xml"><Icon name="rss" size={16} /> RSS feed</a>
+    </div>
+    <div class="footer-col">
+      <h4>Documents</h4>
+      {docs.map((d) => <a {...linkAttrs(d.href, { download: true })}><Icon name="file" size={16} /> {d.label}</a>)}
+      {L.calendly && <a href={L.calendly} target="_blank" rel="noopener"><Icon name="calendar" size={16} /> Book a meeting</a>}
+    </div>
+  </div>
+  <div class="container legal">
+    <span>© {new Date().getFullYear()} {profile.name}</span>
+    <span>Built with Astro · Hosted on GitHub Pages</span>
+  </div>
+</footer>

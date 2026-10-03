@@ -47,9 +47,56 @@ Python · PyTorch · NLP · Persian NLP · AI Safety · Backdoor Detection · LL
 
 ## About this repository
 
-This repo is the source for my personal site ([amirrezavishteh.github.io](https://amirrezavishteh.github.io)) — a Jekyll site built on `minimal-mistakes-jekyll`, hosted on GitHub Pages.
+This repo is the source for my personal site ([www.amirrezavishteh.ir](https://www.amirrezavishteh.ir)) — an [Astro](https://astro.build) static site with a git-backed admin panel ([Sveltia CMS](https://github.com/sveltia/sveltia-cms)), built by GitHub Actions and hosted on GitHub Pages.
+
+### Run locally
 
 ```
-bundle install
-bundle exec jekyll serve
+npm install
+npm run dev        # http://localhost:4321
+npm run build      # production build into dist/
 ```
+
+`npm run dev` / `build` first run `scripts/optimize-images.mjs`, which writes responsive WebP variants of every image in `public/assets/images` and `public/uploads` to `public/_img` (git-ignored, cached).
+
+### Where things live
+
+| What | File(s) | Admin panel section |
+| --- | --- | --- |
+| Name, bio, photo, links, hero facts & badges, stats, "Currently", news | `src/data/profile.json` | Profile & CV → Profile |
+| Education, research, teaching, honors, skills, courses | `src/data/cv.json` | Profile & CV → CV sections |
+| Blog posts | `src/content/blog/*.md` | Blog posts |
+| Publications | `src/content/publications/*.md` | Publications |
+| Projects (live GitHub stars fetched at build) | `src/content/projects/*.md` | Projects |
+| Certificates | `src/content/certificates/*.md` | Certificates |
+| Gallery albums | `src/content/albums/*.md` | Gallery albums |
+| Logo & icons | `scripts/brand/logo-source.png` → `node scripts/build-brand.mjs` | — |
+
+Old Jekyll URLs (e.g. `/Post-FTTNAS/`, `/friends/`, `/code-data/`) redirect to their new pages — see `redirects` in `astro.config.mjs`.
+
+### Admin panel
+
+Open **`/admin/`** on the live site. Every save is a commit to `master`; the deploy workflow rebuilds the site in ~1–2 minutes.
+
+Sign-in uses a **fine-grained personal access token**:
+
+1. GitHub → Settings → Developer settings → Personal access tokens → *Fine-grained tokens* → **Generate new token**.
+2. Repository access: *Only select repositories* → `amirrezavishteh.github.io`.
+3. Permissions: **Contents → Read and write** (Metadata read-only is added automatically).
+4. Paste the token into "Sign In Using Access Token". It stays in your browser only.
+
+On `localhost`, the panel can also edit your local clone directly ("Work with Local Repository", Chrome/Edge).
+
+To enable a "Sign in with GitHub" button instead, deploy [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth) and follow the comment at the top of `public/admin/config.yml`.
+
+### Updating the CMS
+
+`public/admin/index.html` pins a Sveltia CMS version with a Subresource Integrity hash. To upgrade, change the version in the URL and recompute the hash:
+
+```
+curl -sL https://unpkg.com/@sveltia/cms@<version>/dist/sveltia-cms.js | openssl dgst -sha384 -binary | openssl base64 -A
+```
+
+### Deployment (one-time setup)
+
+In the repository **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**. The workflow in `.github/workflows/deploy.yml` then builds and publishes on every push to `master`. The custom domain is kept via `public/CNAME`.

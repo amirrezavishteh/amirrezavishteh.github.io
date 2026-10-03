@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Img from '../components/Img.astro';
+import profile from '../data/profile.json';
+import { fmtMonth } from '../lib/utils';
+import { resolveImage } from '../lib/img';
+
+const certs = (await getCollection('certificates')).sort((a, b) => a.data.order - b.data.order);
+const groups = [
+  {
+    title: 'Specializations & Professional Certificates',
+    note: 'Multi-course programs.',
+    items: certs.filter((c) => ['Specialization', 'Professional Certificate', 'Program'].includes(c.data.kind)),
+  },
+  {
+    title: 'Courses',
+    note: 'Individual courses in machine learning and deep learning.',
+    items: certs.filter((c) => c.data.kind === 'Course'),
+  },
+  {
+    title: 'Seminars & Workshops',
+    note: 'Advanced seminars and research events.',
+    items: certs.filter((c) => c.data.kind === 'Seminar'),
+  },
+].filter((g) => g.items.length);
+---
+<Base title="Certificates" description={`Certificates and courses completed by ${profile.name} in machine learning and deep learning.`}>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Continuous learning</p>
+      <h1>Certificates</h1>
+      <p class="lead">
+        {certs.length} certificates in machine learning, deep learning, and AI. Tap a certificate to view it full size, or use{" "}
+        <em>Verify</em> to check it with the issuer.
+      </p>
+    </div>
+  </section>
+
+  {groups.map((g) => (
+    <section class="container group">
+      <div class="group-head">
+        <h2>{g.title} <span class="count">{g.items.length}</span></h2>
+        <p class="muted">{g.note}</p>
+      </div>
+      <div class="grid grid-3">
+        {g.items.map((c) => {
+          const d = c.data;
+          const full = d.image ? resolveImage(d.image)!.src : null;
+          return (
+            <article class:list={['cert card card-hover', { highlight: d.ai }]}>
+              {d.image && full ? (
+                <a class="thumb" href={full} data-lb="certs" data-caption={`${d.title} — ${d.issuer}`} data-alt={d.title}>
+                  <Img src={d.image} alt={`${d.title} certificate`} sizes="(max-width: 640px) 100vw, 340px" max={800} />
+                </a>
+              ) : (
+                <div class="thumb placeholder"><Icon name="award" size={32} /><span>{d.platform}</span></div>
+              )}
+              <div class="body">
+                <div class="tags">
+                  <span class="badge badge-conf">{d.kind}</span>
+                  {d.ai && <span class="badge badge-journal">AI</span>}
+                </div>
+                <h3>{d.title}</h3>
+                <p class="issuer">{d.issuer}</p>
+                {d.details && <p class="details">{d.details}</p>}
+                <div class="foot">
+                  <span class="mono">{d.platform}{d.date && ` · ${fmtMonth(d.date)}`}</span>
+                  {d.verify && <a href={d.verify} target="_blank" rel="noopener" class="verify">Verify <Icon name="external" size={13} /></a>}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+</Base>
+
+<style>
+  .cert { display: flex; flex-direction: column; overflow: hidden; }
+  .cert.highlight { border-color: color-mix(in srgb, var(--brand) 35%, var(--line)); }
+  .thumb { display: block; aspect-ratio: 1.29; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--surface-2); cursor: zoom-in; }
+  .thumb :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s; }
+  .cert:hover .thumb :global(img) { transform: scale(1.03); }
+  .placeholder {
+    display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px; cursor: default;
+    background: linear-gradient(135deg, var(--surface-2), var(--brand-soft)); color: var(--brand); font: 600 0.85rem var(--font-mono);
+  }
+  .body { display: flex; flex: 1; flex-direction: column; gap: 6px; padding: 16px 18px 18px; }
+  .tags { display: flex; gap: 6px; }
+  h3 { margin: 4px 0 0; font-size: 1rem; line-height: 1.35; }
+  .issuer { margin: 0; color: var(--text-2); font-size: 0.88rem; }
+  .details { margin: 0; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: auto; padding-top: 10px; color: var(--muted); font-size: 0.78rem; }
+  .verify { display: inline-flex; align-items: center; gap: 4px; font-size: 0.85rem; font-weight: 600; }
+  .group { padding-bottom: 52px; }
+  .group-head { margin-bottom: 20px; }
+  .group-head h2 { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; font-size: clamp(1.2rem, 2.4vw, 1.5rem); }
+  .group-head p { margin: 0; }
+  .count { padding: 2px 9px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); font: 600 0.75rem var(--font-mono); }
+</style>

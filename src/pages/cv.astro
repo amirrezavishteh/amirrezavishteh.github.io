@@ -1,0 +1,288 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import profile from '../data/profile.json';
+import cv from '../data/cv.json';
+import { linkAttrs } from '../lib/utils';
+
+// Teaching grouped by institution, preserving order of first appearance.
+const teaching = cv.teaching.reduce<Record<string, typeof cv.teaching>>((acc, t) => {
+  (acc[t.institution] ||= []).push(t);
+  return acc;
+}, {});
+
+const sections = [
+  { id: 'education', label: 'Education', show: cv.education.length },
+  { id: 'experience', label: 'Experience', show: cv.work.length },
+  { id: 'research', label: 'Research', show: cv.research.length || cv.activities.length },
+  { id: 'teaching', label: 'Teaching', show: cv.teaching.length },
+  { id: 'honors', label: 'Honors', show: cv.honors.length },
+  { id: 'service', label: 'Volunteering', show: cv.service.length },
+  { id: 'skills', label: 'Skills', show: cv.skills.length },
+  { id: 'courses', label: 'Courses', show: cv.courses.length },
+  { id: 'languages', label: 'Languages', show: cv.languages.length },
+].filter((s) => s.show);
+const has = (id: string) => sections.some((s) => s.id === id);
+---
+<Base title="Curriculum Vitae" description={`The CV of ${profile.name}: education, research experience, teaching, honors, and skills.`}>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Curriculum Vitae</p>
+      <h1>Experience &amp; <span class="grad-text">background</span></h1>
+      <p class="lead">A web version of my CV. For the typeset versions, open the PDFs.</p>
+      <div class="actions">
+        {profile.cvFile && <a class="btn btn-primary" {...linkAttrs(profile.cvFile, { download: true })}><Icon name="download" size={16} /> Academic CV (PDF)</a>}
+        {profile.workCvFile && <a class="btn" {...linkAttrs(profile.workCvFile, { download: true })}><Icon name="briefcase" size={16} /> Work experience CV (PDF)</a>}
+      </div>
+    </div>
+  </section>
+
+  <div class="container cv-layout">
+    <nav class="toc" aria-label="CV sections">
+      {sections.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
+    </nav>
+    <div class="cv-body">
+      {has('education') && (
+        <section id="education" class="cv-sec">
+          <h2><Icon name="graduation" size={22} /> Education</h2>
+          <div class="timeline">
+            {cv.education.map((e) => (
+              <article class="tl-item">
+                <div class="tl-head"><h3>{e.institution}</h3><span class="period mono">{e.period}</span></div>
+                <p class="role">{e.degree}{e.major && <> — <strong>{e.major}</strong></>}</p>
+                {e.gpa && <p class="chip-line"><span class="chip chip-brand">GPA {e.gpa}</span></p>}
+                {(e.thesis || e.supervisor) && (
+                  <p class="detail">
+                    {e.thesis && <><span class="muted">Thesis:</span> <em>{e.thesis}</em><br /></>}
+                    {e.supervisor && <><span class="muted">Supervisor:</span> {e.supervisorUrl ? <a {...linkAttrs(e.supervisorUrl)}>{e.supervisor}</a> : e.supervisor}</>}
+                  </p>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {has('experience') && (
+        <section id="experience" class="cv-sec">
+          <h2><Icon name="briefcase" size={22} /> Work experience</h2>
+          <div class="timeline">
+            {cv.work.map((w) => (
+              <article class="tl-item">
+                <div class="tl-head"><h3>{w.organization}</h3><span class="period mono">{w.period}</span></div>
+                {w.role && <p class="role">{w.role}</p>}
+                {w.description && <p class="detail">{w.description}</p>}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {has('research') && (
+        <section id="research" class="cv-sec">
+          <h2><Icon name="flask" size={22} /> Research experience</h2>
+          <div class="timeline">
+            {cv.research.map((r) => (
+              <article class="tl-item">
+                <div class="tl-head"><h3>{r.lab}</h3><span class="period mono">{r.period}</span></div>
+                <p class="role">{r.institution}</p>
+                {r.description && <p class="detail">{r.description}</p>}
+              </article>
+            ))}
+          </div>
+          {cv.activities.length > 0 && (
+            <div class="activities">
+              {cv.activities.map((a) => (
+                <article class="card act">
+                  <span class="period mono">{a.period}</span>
+                  <h3>{a.title}</h3>
+                  <p>{a.description}</p>
+                  {a.link && <a {...linkAttrs(a.link)} class="link-arrow">{a.linkLabel || 'Link'} <Icon name="arrow-right" size={14} /></a>}
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
+
+      {has('teaching') && (
+        <section id="teaching" class="cv-sec">
+          <h2><Icon name="users" size={22} /> Teaching assistant experience</h2>
+          <p class="muted intro">{cv.teaching.length} courses across {Object.keys(teaching).length} universities.</p>
+          {Object.entries(teaching).map(([inst, rows]) => (
+            <div class="teach-group">
+              <h3 class="teach-inst">{inst} <span class="count">{rows.length}</span></h3>
+              <div class="teach-table" role="table">
+                {rows.map((t) => (
+                  <div class="teach-row" role="row">
+                    <span class="t-term mono" role="cell">{t.term}</span>
+                    <span class="t-main" role="cell"><strong>{t.course}</strong>{t.instructor && <small>{t.instructor}</small>}</span>
+                    <span class="t-duty" role="cell">{t.duty}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
+
+      {has('honors') && (
+        <section id="honors" class="cv-sec">
+          <h2><Icon name="award" size={22} /> Honors &amp; awards</h2>
+          <ul class="list">
+            {cv.honors.map((h) => (
+              <li>
+                <span class="bullet"><Icon name="check" size={13} /></span>
+                <span>
+                  {h.title}{h.year && <span class="muted"> · {h.year}</span>}
+                  {h.link && <> <a {...linkAttrs(h.link)} class="inline-link">Document <Icon name="external" size={12} /></a></>}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {has('service') && (
+        <section id="service" class="cv-sec">
+          <h2><Icon name="heart" size={22} /> Volunteering &amp; service</h2>
+          <div class="timeline">
+            {cv.service.map((s: any) => (
+              <article class="tl-item">
+                <div class="tl-head"><h3>{s.role}</h3><span class="period mono">{s.period}</span></div>
+                <p class="role">{s.organization}</p>
+                {s.description && <p class="detail">{s.description}{s.link && <> <a {...linkAttrs(s.link)} class="inline-link">Document <Icon name="external" size={12} /></a></>}</p>}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {has('skills') && (
+        <section id="skills" class="cv-sec">
+          <h2><Icon name="wrench" size={22} /> Skills</h2>
+          <div class="skills">
+            {cv.skills.map((g) => (
+              <div class="card skill">
+                <h3>{g.group}</h3>
+                <div class="chips">{g.items.map((i) => <span class="chip">{i}</span>)}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {has('courses') && (
+        <section id="courses" class="cv-sec">
+          <h2><Icon name="book" size={22} /> Selected courses</h2>
+          <div class="skills">
+            {cv.courses.map((c) => (
+              <div class="card skill">
+                <h3>{c.level}</h3>
+                <ul class="course-list">{c.items.map((i) => <li>{i}</li>)}</ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {has('languages') && (
+        <section id="languages" class="cv-sec">
+          <h2><Icon name="languages" size={22} /> Languages</h2>
+          <div class="chips">{cv.languages.map((l: any) => <span class="chip chip-brand">{l.name} · {l.level}</span>)}</div>
+        </section>
+      )}
+    </div>
+  </div>
+</Base>
+
+<style>
+  .cv-layout { display: grid; grid-template-columns: 180px 1fr; align-items: start; gap: 48px; padding-bottom: 32px; }
+  .toc { position: sticky; top: calc(var(--header-h) + 20px); display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--line); }
+  .toc a { margin-left: -1px; padding: 6px 14px; border-left: 2px solid transparent; color: var(--muted); font-size: 0.9rem; }
+  .toc a:hover, .toc a.active { color: var(--brand); border-left-color: var(--brand); text-decoration: none; }
+  .cv-body { min-width: 0; }
+  .cv-sec { padding-block: 8px 44px; }
+  .cv-sec h2 { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; font-size: clamp(1.35rem, 2.6vw, 1.7rem); }
+  .cv-sec h2 :global(svg) { flex: none; color: var(--brand); }
+  .intro { margin-top: -10px; }
+
+  .timeline { position: relative; display: flex; flex-direction: column; gap: 22px; padding-left: 26px; }
+  .timeline:before { content: ""; position: absolute; top: 8px; bottom: 8px; left: 6px; width: 2px; border-radius: 2px; background: linear-gradient(var(--brand), var(--line)); }
+  .tl-item { position: relative; }
+  .tl-item:before { content: ""; position: absolute; top: 7px; left: -26px; width: 14px; height: 14px; border-radius: 50%; border: 3px solid var(--brand); background: var(--bg); }
+  .tl-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
+  .tl-head h3 { margin: 0; font-size: 1.08rem; }
+  .period { color: var(--muted); white-space: nowrap; font-size: 0.78rem; }
+  .role { margin: 4px 0 0; color: var(--text-2); }
+  .chip-line { margin: 8px 0 0; }
+  .detail { margin: 8px 0 0; color: var(--text-2); font-size: 0.95rem; }
+
+  .activities { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 14px; margin-top: 30px; }
+  .act { display: flex; flex-direction: column; gap: 6px; padding: 18px; }
+  .act h3 { margin: 0; font-size: 1rem; }
+  .act p { margin: 0; color: var(--text-2); font-size: 0.9rem; }
+  .act .link-arrow { margin-top: auto; padding-top: 6px; font-size: 0.88rem; }
+
+  .teach-group + .teach-group { margin-top: 28px; }
+  .teach-inst { display: flex; align-items: center; gap: 10px; font-size: 1.02rem; }
+  .count { padding: 2px 8px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); font: 600 0.72rem var(--font-mono); }
+  .teach-table { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .teach-row { display: grid; grid-template-columns: 120px 1.1fr 1fr; align-items: center; gap: 16px; padding: 12px 18px; border-top: 1px solid var(--line); }
+  .teach-row:first-child { border-top: 0; }
+  .t-term { color: var(--brand); font-size: 0.8rem; }
+  .t-main { display: flex; flex-direction: column; }
+  .t-main strong { font-size: 0.95rem; }
+  .t-main small { color: var(--muted); font-size: 0.8rem; }
+  .t-duty { color: var(--text-2); font-size: 0.87rem; }
+
+  .list { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+  .list li { display: flex; align-items: flex-start; gap: 12px; color: var(--text-2); }
+  .bullet { flex: none; display: grid; place-items: center; width: 22px; height: 22px; margin-top: 2px; border-radius: 50%; background: var(--brand-soft); color: var(--brand); }
+  .inline-link { display: inline-flex; align-items: center; gap: 3px; font-size: 0.85rem; font-weight: 600; }
+
+  .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 14px; }
+  .skill { padding: 18px 20px; }
+  .skill h3 { margin-bottom: 12px; font-size: 0.95rem; }
+  .course-list { margin: 0; padding-left: 1.1em; columns: 2 180px; column-gap: 20px; color: var(--text-2); font-size: 0.9rem; }
+  .course-list li { break-inside: avoid; margin-bottom: 4px; }
+
+  @media (width <= 900px) {
+    .cv-layout { grid-template-columns: 1fr; gap: 0; }
+    .toc {
+      top: var(--header-h); z-index: 10; flex-direction: row; overflow-x: auto; scrollbar-width: none;
+      margin: 0 calc(var(--gutter) * -1) 20px; padding: 8px var(--gutter);
+      border-left: 0; border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    }
+    .toc::-webkit-scrollbar { display: none; }
+    .toc a { flex: none; margin: 0; padding: 6px 12px; border-left: 0; border-radius: 999px; }
+    .toc a.active { background: var(--brand-soft); }
+  }
+  @media (width <= 640px) {
+    .teach-row { grid-template-columns: 1fr; gap: 2px; padding: 12px 14px; }
+    .timeline { padding-left: 22px; }
+    .tl-item:before { left: -22px; }
+  }
+</style>
+
+<script>
+  // Highlight the TOC entry for the section in view (and keep it visible on the mobile strip).
+  const links = document.querySelectorAll<HTMLAnchorElement>('.toc a');
+  const byId = new Map(Array.from(links).map((a) => [a.getAttribute('href')!.slice(1), a]));
+  const io = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        links.forEach((a) => a.classList.remove('active'));
+        const a = byId.get(e.target.id);
+        if (!a) return;
+        a.classList.add('active');
+        const bar = a.parentElement!;
+        if (bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: a.offsetLeft - bar.clientWidth / 2 + a.clientWidth / 2, behavior: 'smooth' });
+      }),
+    { rootMargin: '-30% 0px -60% 0px' },
+  );
+  document.querySelectorAll('.cv-sec').forEach((s) => io.observe(s));
+</script>

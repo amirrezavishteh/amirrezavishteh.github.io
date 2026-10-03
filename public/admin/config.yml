@@ -1,0 +1,361 @@
+# CMS configuration (Sveltia CMS / Decap CMS compatible)
+# Everything you edit here is saved as a commit to the repository;
+# GitHub Actions then rebuilds and redeploys the site (~1–2 minutes).
+# Field names must stay in sync with src/content.config.ts.
+
+backend:
+  name: github
+  repo: amirrezavishteh/amirrezavishteh.github.io
+  branch: master
+  # Token sign-in only. "Sign in with GitHub" (OAuth) needs an auth proxy;
+  # to enable it, deploy sveltia-cms-auth (README → "Admin panel"), then use:
+  #   auth_methods: [oauth, token]
+  #   base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
+  auth_methods: [token]
+  commit_messages:
+    create: 'content: create {{collection}} “{{slug}}”'
+    update: 'content: update {{collection}} “{{slug}}”'
+    delete: 'content: delete {{collection}} “{{slug}}”'
+    uploadMedia: 'media: upload “{{path}}”'
+    deleteMedia: 'media: delete “{{path}}”'
+
+site_url: https://www.amirrezavishteh.ir
+display_url: https://www.amirrezavishteh.ir
+logo_url: /brand/logo-mark.png
+publish_mode: simple
+
+media_folder: public/uploads/misc
+public_folder: /uploads/misc
+
+collections:
+  # ------------------------------------------------------------------ BLOG
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    icon: edit_note
+    folder: src/content/blog
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    preview_path: 'blog/{{slug}}'
+    media_folder: /public/uploads/blog
+    public_folder: /uploads/blog
+    sortable_fields: [date, title]
+    summary: '{{title}} — {{date}}{{draft | ternary(" (draft)", "")}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Short description, name: description, widget: text, required: false, hint: 'Shown on cards, search engines and social previews.' }
+      - { label: Publish date, name: date, widget: datetime, format: YYYY-MM-DD, time_format: false, date_format: YYYY-MM-DD }
+      - { label: Updated on, name: updated, widget: datetime, format: YYYY-MM-DD, time_format: false, date_format: YYYY-MM-DD, required: false }
+      - { label: Cover image, name: cover, widget: image, required: false }
+      - { label: Cover image description (alt text), name: coverAlt, widget: string, required: false }
+      - { label: Tags, name: tags, widget: list, required: false, default: [] }
+      - { label: Draft (hidden from the site), name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown }
+
+  # ------------------------------------------------------------ PUBLICATIONS
+  - name: publications
+    label: Publications
+    label_singular: Publication
+    icon: menu_book
+    folder: src/content/publications
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    sortable_fields: [year, title, order]
+    summary: '{{year}} · {{title}} ({{status}})'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Authors, name: authors, widget: string, hint: 'Comma-separated. Your name (and the spellings listed under Profile → Name variants) is highlighted automatically.' }
+      - { label: Year, name: year, widget: number, value_type: int }
+      - { label: Type, name: type, widget: select, options: ['Journal article', 'Conference paper', 'Preprint', 'Book chapter', 'Thesis', 'Workshop paper'], default: 'Conference paper' }
+      - { label: Status, name: status, widget: select, options: ['Published', 'Under review', 'Preprint', 'In progress'], default: 'Published' }
+      - { label: Venue, name: venue, widget: string }
+      - { label: Summary, name: summary, widget: text, required: false }
+      - { label: Main link (publisher page), name: url, widget: string, required: false }
+      - { label: DOI link, name: doi, widget: string, required: false }
+      - { label: arXiv link, name: arxiv, widget: string, required: false }
+      - { label: PDF, name: pdf, widget: file, required: false, media_folder: /public/files, public_folder: /files }
+      - { label: Code link, name: code, widget: string, required: false }
+      - { label: Presentation note, name: presentation, widget: string, required: false }
+      - { label: Extra note, name: note, widget: string, required: false }
+      - { label: Featured on home page, name: featured, widget: boolean, default: false }
+      - { label: Draft (hidden from the site), name: draft, widget: boolean, default: false }
+      - { label: Sort order within year (lower first), name: order, widget: number, value_type: int, default: 100 }
+
+  # ---------------------------------------------------------------- PROJECTS
+  - name: projects
+    label: Projects
+    label_singular: Project
+    icon: code
+    folder: src/content/projects
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    media_folder: /public/uploads/projects
+    public_folder: /uploads/projects
+    sortable_fields: [title, order, category]
+    summary: '{{title}} · {{category}}{{featured | ternary(" ★", "")}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - AI Safety & Security
+          - NLP & Speech
+          - Computer Vision & Healthcare AI
+          - Networks & Systems
+          - Software & Coursework
+      - { label: Repository URL, name: repo, widget: string, required: false }
+      - { label: Demo / project page URL, name: demo, widget: string, required: false }
+      - { label: 'Blog write-up (e.g. /blog/my-post/)', name: post, widget: string, required: false }
+      - { label: Primary language, name: language, widget: string, required: false }
+      - { label: License, name: license, widget: string, required: false }
+      - { label: Topics, name: topics, widget: list, required: false, default: [] }
+      - { label: 'Period (e.g. Sep 2025)', name: period, widget: string, required: false }
+      - { label: 'Is this a fork?', name: fork, widget: boolean, default: false }
+      - { label: Upstream repository (for forks), name: upstream, widget: string, required: false }
+      - { label: Featured, name: featured, widget: boolean, default: false }
+      - { label: Hidden, name: hidden, widget: boolean, default: false }
+      - { label: Sort order (lower first), name: order, widget: number, value_type: int, default: 100 }
+      - { label: 'GitHub stars (fallback; live count is fetched at build)', name: stars, widget: number, value_type: int, required: false }
+
+  # ------------------------------------------------------------ CERTIFICATES
+  - name: certificates
+    label: Certificates
+    label_singular: Certificate
+    icon: workspace_premium
+    folder: src/content/certificates
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    media_folder: /public/uploads/certificates
+    public_folder: /uploads/certificates
+    sortable_fields: [order, title, date]
+    summary: '{{order}}. {{title}} · {{platform}} · {{kind}}'
+    description: 'Grouped on the site by kind: programs first, then courses, then seminars. Use “order” to fine-tune within a group.'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Issuer, name: issuer, widget: string }
+      - { label: Platform, name: platform, widget: select, options: [Coursera, Udemy, Kaggle, 365 Data Science, LinkedIn Learning, edX, Other], default: Coursera }
+      - { label: Kind, name: kind, widget: select, options: [Specialization, Professional Certificate, Program, Course, Seminar], default: Course }
+      - { label: AI / machine-learning related, name: ai, widget: boolean, default: false }
+      - { label: Date, name: date, widget: datetime, format: YYYY-MM-DD, time_format: false, date_format: YYYY-MM-DD, required: false }
+      - { label: Certificate image, name: image, widget: image, required: false }
+      - { label: Verification link, name: verify, widget: string, required: false }
+      - { label: 'Details (courses included, etc.)', name: details, widget: text, required: false }
+      - { label: Sort order (lower first), name: order, widget: number, value_type: int, default: 100 }
+
+  # ----------------------------------------------------------------- GALLERY
+  - name: albums
+    label: Gallery albums
+    label_singular: Album
+    icon: photo_library
+    folder: src/content/albums
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    preview_path: 'gallery/{{slug}}'
+    media_folder: /public/uploads/gallery
+    public_folder: /uploads/gallery
+    sortable_fields: [order, title]
+    summary: '{{order}}. {{title}} ({{category}})'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Category, name: category, widget: select, options: [Academic, Life], default: Life }
+      - { label: 'Period shown on the album (e.g. May 2024)', name: period, widget: string, required: false }
+      - { label: Date (for reference), name: date, widget: datetime, format: YYYY-MM-DD, time_format: false, date_format: YYYY-MM-DD, required: false }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Cover image, name: cover, widget: image, required: false, hint: 'Leave empty to use the first photo.' }
+      - { label: Sort order (lower first), name: order, widget: number, value_type: int, default: 100 }
+      - { label: Draft (hidden), name: draft, widget: boolean, default: false }
+      - label: Photos
+        name: images
+        widget: list
+        summary: '{{fields.caption}}'
+        fields:
+          - { label: Photo, name: src, widget: image }
+          - { label: Caption, name: caption, widget: string, required: false }
+
+  # ------------------------------------------------------- PROFILE & CV DATA
+  - name: settings
+    label: Profile & CV
+    icon: person
+    editor:
+      preview: false
+    files:
+      - name: profile
+        label: Profile, home page & documents
+        file: src/data/profile.json
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Name variants (highlighted in author lists), name: nameVariants, widget: list, required: false }
+          - { label: Headline, name: headline, widget: string }
+          - { label: Tagline (footer), name: tagline, widget: string }
+          - { label: Location, name: location, widget: string }
+          - { label: Profile photo, name: photo, widget: image, media_folder: /public/uploads/profile, public_folder: /uploads/profile }
+          - { label: Short bio (hero), name: bioShort, widget: text }
+          - { label: Bio paragraphs, name: bio, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+          - { label: Email, name: email, widget: string }
+          - { label: Phone, name: phone, widget: string, required: false }
+          - { label: Show phone on the site, name: showPhone, widget: boolean, default: false }
+          - label: Academic CV (PDF or link)
+            name: cvFile
+            widget: file
+            media_folder: /public/files
+            public_folder: /files
+            hint: 'Upload a PDF, or paste a link (e.g. Google Drive). Used by every "Download CV" button.'
+          - { label: Work experience CV (PDF or link), name: workCvFile, widget: file, required: false, media_folder: /public/files, public_folder: /files }
+          - { label: Publications list (PDF), name: publicationsFile, widget: file, required: false, media_folder: /public/files, public_folder: /files }
+          - label: Links
+            name: links
+            widget: object
+            fields:
+              - { label: GitHub, name: github, widget: string, required: false }
+              - { label: Google Scholar, name: scholar, widget: string, required: false }
+              - { label: LinkedIn, name: linkedin, widget: string, required: false }
+              - { label: X / Twitter, name: x, widget: string, required: false }
+              - { label: Calendly, name: calendly, widget: string, required: false }
+          - label: Hero facts (under the intro)
+            name: facts
+            widget: list
+            summary: '{{fields.text}}'
+            fields:
+              - { label: Icon, name: icon, widget: select, options: [graduation, flask, pin, briefcase, award, book, shield, code, globe] }
+              - { label: Text, name: text, widget: string }
+          - label: Photo badges (max 2)
+            name: badges
+            widget: list
+            max: 2
+            summary: '{{fields.title}} — {{fields.detail}}'
+            fields:
+              - { label: Style, name: kind, widget: select, options: [{ label: 'Live dot ("Now")', value: now }, { label: Award icon, value: award }] }
+              - { label: Title, name: title, widget: string }
+              - { label: Detail, name: detail, widget: string }
+          - { label: Research interests, name: interests, widget: list, field: { label: Interest, name: interest, widget: string } }
+          - label: Currently (home page box)
+            name: current
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Detail, name: detail, widget: string }
+          - label: Stats (home page, 4 work best)
+            name: stats
+            widget: list
+            summary: '{{fields.value}} {{fields.label}}'
+            fields:
+              - { label: Value, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+          - label: News (newest first)
+            name: news
+            widget: list
+            summary: '{{fields.date}} — {{fields.text}}'
+            fields:
+              - { label: 'Date (free text, e.g. Sep 2026)', name: date, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Link (optional), name: link, widget: string, required: false }
+
+      - name: cv
+        label: CV sections
+        file: src/data/cv.json
+        fields:
+          - label: Education
+            name: education
+            widget: list
+            summary: '{{fields.institution}} — {{fields.degree}}'
+            fields:
+              - { label: Institution, name: institution, widget: string }
+              - { label: Degree, name: degree, widget: string }
+              - { label: Major, name: major, widget: string, required: false }
+              - { label: Period, name: period, widget: string }
+              - { label: GPA, name: gpa, widget: string, required: false }
+              - { label: Thesis, name: thesis, widget: string, required: false }
+              - { label: Supervisor, name: supervisor, widget: string, required: false }
+              - { label: Supervisor URL, name: supervisorUrl, widget: string, required: false }
+          - label: Work experience
+            name: work
+            widget: list
+            summary: '{{fields.organization}} ({{fields.period}})'
+            fields:
+              - { label: Organization, name: organization, widget: string }
+              - { label: Role, name: role, widget: string, required: false }
+              - { label: Period, name: period, widget: string }
+              - { label: Description, name: description, widget: text, required: false }
+          - label: Research experience
+            name: research
+            widget: list
+            summary: '{{fields.lab}}'
+            fields:
+              - { label: Lab, name: lab, widget: string }
+              - { label: Institution, name: institution, widget: string }
+              - { label: Period, name: period, widget: string }
+              - { label: Description, name: description, widget: text, required: false }
+          - label: Teaching (newest first)
+            name: teaching
+            widget: list
+            summary: '{{fields.term}} · {{fields.course}}'
+            fields:
+              - { label: Course, name: course, widget: string }
+              - { label: Term, name: term, widget: string, required: false }
+              - { label: Instructor, name: instructor, widget: string, required: false }
+              - { label: Duty, name: duty, widget: string, required: false }
+              - { label: Institution, name: institution, widget: string }
+          - label: Other activities
+            name: activities
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Period, name: period, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Link, name: link, widget: string, required: false }
+              - { label: Link label, name: linkLabel, widget: string, required: false }
+          - label: Volunteering & service (newest first)
+            name: service
+            widget: list
+            required: false
+            summary: '{{fields.period}} · {{fields.role}}'
+            fields:
+              - { label: Role, name: role, widget: string }
+              - { label: Organization, name: organization, widget: string }
+              - { label: Period, name: period, widget: string }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: Link, name: link, widget: string, required: false }
+          - label: Honors & awards
+            name: honors
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Year, name: year, widget: string, required: false }
+              - { label: Link, name: link, widget: string, required: false }
+          - label: Skills
+            name: skills
+            widget: list
+            summary: '{{fields.group}}'
+            fields:
+              - { label: Group, name: group, widget: string }
+              - { label: Items, name: items, widget: list, field: { label: Item, name: item, widget: string } }
+          - label: Selected courses
+            name: courses
+            widget: list
+            summary: '{{fields.level}}'
+            fields:
+              - { label: Level, name: level, widget: string }
+              - { label: Courses, name: items, widget: list, field: { label: Course, name: course, widget: string } }
+          - label: Languages
+            name: languages
+            widget: list
+            required: false
+            summary: '{{fields.name}} ({{fields.level}})'
+            fields:
+              - { label: Language, name: name, widget: string }
+              - { label: Level, name: level, widget: string }

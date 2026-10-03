@@ -1,0 +1,34 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Icon from '../../../components/Icon.astro';
+import PostCard from '../../../components/PostCard.astro';
+import { getPosts, slugify } from '../../../lib/utils';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  const tags = new Map<string, string>();
+  posts.forEach((p) => p.data.tags.forEach((t) => tags.set(slugify(t), t)));
+  return [...tags].map(([slug, name]) => ({
+    params: { tag: slug },
+    props: { name, posts: posts.filter((p) => p.data.tags.some((t) => slugify(t) === slug)) },
+  }));
+}
+const { name, posts } = Astro.props;
+---
+<Base title={`Posts tagged “${name}”`} description={`Blog posts about ${name}.`}>
+  <section class="page-hero">
+    <div class="container">
+      <a href="/blog/" class="back"><Icon name="arrow-left" size={16} /> All posts</a>
+      <p class="eyebrow">Tag</p>
+      <h1>#{name}</h1>
+      <p class="lead">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
+    </div>
+  </section>
+  <section class="container">
+    <div class="grid grid-3">{posts.map((p) => <PostCard post={p} />)}</div>
+  </section>
+</Base>
+
+<style>
+  .back { display: flex; align-items: center; gap: 6px; width: fit-content; margin-bottom: 18px; font-size: 0.9rem; font-weight: 600; }
+</style>

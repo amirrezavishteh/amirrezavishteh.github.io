@@ -1,0 +1,68 @@
+{
+  "name": "Amirreza Vishteh",
+  "nameVariants": ["Amireza Vishte", "Amir Reza Vishteh", "Amirreza Vishte"],
+  "headline": "AI Safety & LLM Security Researcher",
+  "tagline": "AI safety · LLM backdoor detection · Trustworthy & healthcare AI · Persian NLP",
+  "location": "Tehran, Iran",
+  "photo": "/assets/images/amirrezaG.png",
+  "bioShort": "I study how large language models can be secretly backdoored — and build the tools that find, audit, and explain those hidden behaviours.",
+  "bio": [
+    "I'm an AI safety researcher focused on trustworthy AI and large language models. I'm pursuing my M.Sc. in Computer Engineering at Sharif University of Technology, where I'm a member of the Data Science and Machine Learning Laboratory.",
+    "Most of my research is about backdoors in LLMs: planting them in controlled settings, stress-testing state-of-the-art scanners against harder variants, and building detectors that work without knowing the trigger in advance — from attention-based signals to small watchdog models for LoRA adapters. I care as much about whether a detector explains the backdoor correctly as about whether it raises a flag.",
+    "Before Sharif, I earned my B.Sc. in Computer Engineering at Iran University of Science and Technology (IUST), where I worked on Persian NLP and co-authored a mental-health chatbot paper published at AbjadNLP 2025. I've also served as a teaching assistant for courses from Stochastic Processes and Machine Learning to NLP and Computer Architecture, and I build applied healthcare-AI tools such as DentalMind."
+  ],
+  "email": "amireza.vishteh@gmail.com",
+  "phone": "",
+  "showPhone": false,
+  "cvFile": "https://drive.google.com/file/d/1vi0JG6xi0mc17y_-keFPMJG1IE3fjTwA/view?usp=sharing",
+  "workCvFile": "https://drive.google.com/file/d/13Jy6l2MFsJsLm8TnT_01PdxcsyHnPImm/view?usp=sharing",
+  "publicationsFile": "",
+  "links": {
+    "github": "https://github.com/amirrezavishteh",
+    "scholar": "https://scholar.google.com/citations?user=ukjmhFwAAAAJ",
+    "linkedin": "https://www.linkedin.com/in/amirreza-vishteh",
+    "x": "https://x.com/Amirrezav1",
+    "calendly": "https://calendly.com/amireza-vishteh"
+  },
+  "facts": [
+    { "icon": "graduation", "text": "M.Sc. Computer Engineering · Sharif University of Technology" },
+    { "icon": "flask", "text": "DML Lab · AI safety research" },
+    { "icon": "pin", "text": "Tehran, Iran" }
+  ],
+  "badges": [
+    { "kind": "now", "title": "Now", "detail": "LLM backdoor detection" },
+    { "kind": "award", "title": "Top 0.3%", "detail": "National entrance exam" }
+  ],
+  "interests": [
+    "AI Safety",
+    "Trustworthy AI",
+    "LLM Backdoor Detection",
+    "Large Language Models",
+    "Interpretability",
+    "Healthcare AI",
+    "Persian NLP",
+    "Speech Processing"
+  ],
+  "current": [
+    { "title": "M.Sc. student & researcher", "detail": "Data Science & Machine Learning Lab, Sharif University of Technology" },
+    { "title": "LLM backdoor research", "detail": "Detecting, auditing, and stress-testing hidden triggers in fine-tuned models" },
+    { "title": "Teaching Assistant", "detail": "Stochastic Processes & Machine Learning, Sharif University of Technology" },
+    { "title": "DentalMind", "detail": "Trustworthy AI for per-tooth dental radiograph analysis" }
+  ],
+  "stats": [
+    { "value": "Top 0.3%", "label": "National entrance exam (#475)" },
+    { "value": "15+", "label": "Research write-ups" },
+    { "value": "20+", "label": "Open-source repos" },
+    { "value": "6", "label": "Courses as TA" }
+  ],
+  "news": [
+    { "date": "Feb 2026", "text": "Published a review and from-scratch implementation of MECP-GAP, a GNN approach to mobility-aware edge-computing planning.", "link": "/blog/mecp-gap/" },
+    { "date": "Nov 2025", "text": "Built a watchdog model that flags backdoored LoRA adapters without knowing the trigger.", "link": "/blog/watchdog-for-backdoored-lora/" },
+    { "date": "Oct 2025", "text": "Released “The Sentinel's Dilemma”, a survey of backdoor attacks and defenses for large language models.", "link": "/blog/the-sentinels-dilemma/" },
+    { "date": "Fall 2025", "text": "Teaching Assistant for Stochastic Processes at Sharif University of Technology." },
+    { "date": "Aug 2025", "text": "Built a “weakness zoo” that exposes a reproducible blind spot in a state-of-the-art LLM backdoor scanner.", "link": "/blog/bait-weakness-zoo/" },
+    { "date": "Jan 2025", "text": "Our Psychological Health Chatbot paper was published at AbjadNLP 2025 (ACL Anthology).", "link": "https://aclanthology.org/2025.abjadnlp-1.8/" },
+    { "date": "2024", "text": "Started my M.Sc. in Computer Engineering at Sharif University of Technology and joined the DML Lab." },
+    { "date": "Mar 2024", "text": "Attended the Healthcare, Bioinformatics and Computational Biology (HBC 2024) advanced seminar.", "link": "/certificates/" }
+  ]
+}

@@ -1,0 +1,15 @@
+---
+import Icon from './Icon.astro';
+---
+<dialog class="lb" data-lightbox aria-label="Image viewer">
+  <div class="lb-top">
+    <span class="lb-count" data-lb-count></span>
+    <button type="button" class="lb-btn" data-lb-close aria-label="Close"><Icon name="close" size={22} /></button>
+  </div>
+  <figure class="lb-stage" data-lb-stage>
+    <img data-lb-img alt="" />
+    <figcaption data-lb-caption></figcaption>
+  </figure>
+  <button type="button" class="lb-btn lb-nav lb-prev" data-lb-prev aria-label="Previous image"><Icon name="chevron-left" size={26} /></button>
+  <button type="button" class="lb-btn lb-nav lb-next" data-lb-next aria-label="Next image"><Icon name="chevron-right" size={26} /></button>
+</dialog>

@@ -1,0 +1,55 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from './Icon.astro';
+import { highlightAuthors, pubMeta, linkAttrs } from '../lib/utils';
+
+interface Props {
+  pub: CollectionEntry<'publications'>;
+  compact?: boolean;
+}
+const { pub, compact = false } = Astro.props;
+const p = pub.data;
+const { badge } = pubMeta(p);
+const main = p.url || p.doi || p.arxiv || p.pdf;
+const extras = [
+  p.doi && p.doi !== main && { href: p.doi, icon: 'external', label: 'DOI' },
+  p.arxiv && p.arxiv !== main && { href: p.arxiv, icon: 'file', label: 'arXiv' },
+  p.pdf && p.pdf !== main && { href: p.pdf, icon: 'download', label: 'PDF' },
+  p.code && { href: p.code, icon: 'github', label: 'Code' },
+].filter(Boolean) as { href: string; icon: string; label: string }[];
+---
+<article class:list={['pub card', { compact }]}>
+  <div class="meta">
+    <span class:list={['badge', badge.cls]}>{badge.label}</span>
+    <span class="year mono">{p.year}</span>
+  </div>
+  <h3 class="title">{main ? <a {...linkAttrs(main)}>{p.title}</a> : p.title}</h3>
+  <p class="authors" set:html={highlightAuthors(p.authors)} />
+  <p class="venue">{p.venue}</p>
+  {!compact && p.summary && <p class="summary">{p.summary}</p>}
+  {!compact && p.presentation && <p class="note">{p.presentation}</p>}
+  {!compact && p.note && <p class="note">{p.note}</p>}
+  {(main || (!compact && extras.length > 0)) && (
+    <div class="links">
+      {main && <a class="btn btn-sm" {...linkAttrs(main)}>View publication <Icon name="external" size={14} /></a>}
+      {!compact && extras.map((x) => <a class="btn btn-sm btn-ghost" {...linkAttrs(x.href, { download: x.label === 'PDF' })}><Icon name={x.icon} size={14} /> {x.label}</a>)}
+    </div>
+  )}
+</article>
+
+<style>
+  .pub { display: flex; flex-direction: column; gap: 6px; padding: clamp(18px, 2.5vw, 26px); height: 100%; }
+  .pub:hover { border-color: var(--line-strong); }
+  .meta { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .year { color: var(--muted); font-size: 0.8rem; }
+  .title { margin: 0; font-size: clamp(1.02rem, 1.6vw, 1.15rem); line-height: 1.4; }
+  .title a { color: var(--text); }
+  .title a:hover { color: var(--brand); text-decoration: none; }
+  .authors { margin: 0; color: var(--text-2); font-size: 0.92rem; }
+  .authors :global(.me) { color: var(--text); font-weight: 650; }
+  .venue { margin: 0; color: var(--muted); font-size: 0.9rem; font-style: italic; }
+  .summary { margin: 6px 0 0; color: var(--text-2); font-size: 0.94rem; }
+  .note { margin: 0; color: var(--muted); font-size: 0.82rem; }
+  .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .compact .links { margin-top: auto; padding-top: 10px; }
+</style>
